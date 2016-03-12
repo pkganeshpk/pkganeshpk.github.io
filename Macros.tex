@@ -1,0 +1,348 @@
+% General 
+\newcommand{\gensimp}{\mathcal{S}}
+\newcommand{\genpoly}{\mathcal{P}}
+\newcommand{\Int} {\mathrm{Int}}
+\newcommand{\Hull} {\mathrm{Hull}}
+\newcommand{\hyp}[1] {\mathcal{H}_{#1}}
+
+\newcommand{\vm}{\mathbb{V}}
+\newcommand{\Vol}{\mathrm{Vol}} 
+
+\newcommand{\favn} {\mathcal{F}}
+\newcommand{\favk} {\mathcal{F}_{K+1}}
+
+\newcommand{\unfav} {\mathcal{U}} 
+
+\newcommand{\unfavn} {\mathcal{U}}
+\newcommand{\hypn}{\mathcal{H}} 
+\newcommand{\hsp}{\mathcal{HS}}
+\newcommand{\scf}[1]{\mathrm{s_{f#1}}}
+
+
+% Ordered and Unordered 
+\newcommand{\upos}[1]{x_{#1}}
+\newcommand{\pos}[1]{  \mathtt{x}_{#1}}
+\newcommand{\uposvec}{\mathbf{x}}
+\newcommand{\posvec}{\mathbf{\mathtt{x}}}
+
+\newcommand{\psimp}[1] {\mathcal{P}_{#1}} 
+\newcommand{\psimpn} {\mathcal{P}} 
+
+\newcommand{\Trans} {^\mathrm{T}}
+\newcommand{\rvupos}[1] {X_{#1}}
+\newcommand{\rvuposvec} {\mathbf{X}}
+\newcommand{\rvpos}[1] {\mathtt{ X}_{#1}}
+\newcommand{\rvposvec} { \mathbf{\mathtt{X}}}
+\newcommand{\rvsvec} {\mathbf{S}}
+
+\newcommand{\jupos} {f_{\mathbf{X}} (\uposvec)}
+\newcommand{\jpos} { f_{\mathtt{X}} (\posvec)}
+\newcommand{\Jpos} {F_{\mathtt{X}} (\posvec)}
+
+\newcommand{\probvec} {\mathbf{p}}
+\newcommand{\avec}{\mathbf{a}}
+
+
+\newcommand{\G} {\mathcal{G}}
+% Spring: changed {i} to {#1}
+\newcommand{\mupos}[1] {f_{X_{#1}} (\upos{#1})}
+\newcommand{\Mupos}[1] {F_{X_{#1}} (\upos{#1})}
+\newcommand{\mpos}[1] {f_{X^{\rightarrow}_{#1}} (\pos{#1})}
+% \newcommand{\Mpos}[1] {F_{X^{\rightarrow}_{#1}} (\pos{#1})}
+\newcommand{\msla}[1] {f_{S_{#1}} (\si{#1})}   
+\newcommand{\mfsla}[1] {f_{\tilde{S}_{#1}} (\fsi{#1})}  
+\newcommand{\mfpos}[1] {f_{\tilde{T}_{#1}} (\shpos{#1})}    
+
+% Weighted params 
+\newcommand{\wsvec}{\mathbf{s}_w}
+\newcommand{\wsi}[1] {s_{w#1}} 
+\newcommand{\wposi}[1] {t_{w#1}} 
+\newcommand{\wposvec}{\mathbf{t}_w}
+
+\newcommand{\svi}[1]{\mathbf{s}_{v#1}}
+\newcommand{\tvi}[1]{\mathbf{t}_{v#1}}
+
+\newcommand{\fpar}{_{p}f}
+\newcommand{\Fpar}{_{p}F} 
+
+\newcommand{\fparvec}{_{p} \mathbf{f}}
+\newcommand{\Fparvec}{_{p} \mathbf{F}}
+
+
+
+\newcommand{\Poi}[1]{\mathrm{Poi}(#1)}
+
+
+
+% Shifted and free
+\newcommand{\rvshposvec}{\tilde{\mathbf{T}}}
+\newcommand{\rvfsvec}{\tilde{\mathbf{S}}}
+\newcommand{\nsla}{\tilde{\sla}}
+\newcommand{\shpos}[1] {\tilde{\pos{#1}}}
+\newcommand{\rvfsi}[1]{\tilde{S}_{#1}}
+\newcommand{\rfavn} {\tilde{\favn}}
+\newcommand{\rvshpos}[1]{\tilde{T}_{#1}}
+
+
+\newcommand{\sbar} {\bar{s}}
+
+\newcommand{\num}{\mathrm{num}}
+\newcommand{\den}{\mathrm{den}}
+
+% Problems
+\newcommand{\PSAT} {\mathsf{PCON}}
+\newcommand{\SharpP} {\mathsf{\#P}}
+\newcommand{\PH} {\mathsf{\#PH}}
+\newcommand{\PseudoP}{pseudo-$\mathsf{P}$ }
+\newcommand{\PC} {\mathsf{\#PC}}
+\newcommand{\EXP}{\mathsf{\#EXP}}
+
+
+\newcommand{\VOLFAV} {\mathsf{VOLFAV}}
+\newcommand{\GENSAT} {\mathsf{GENSAT}}
+\newcommand{\DECSAT} {\mathsf{DECSAT}}
+\newcommand{\VX} {\mathbb{X}}
+\newcommand{\CoNPC} {\mathsf{coNPC}}
+\newcommand{\Poly} {\mathsf{P}}
+\newcommand{\NPH} {\mathsf{NPH}}
+\newcommand{\GIC} {\mathsf{GIC}}
+\newcommand{\SAMPSAT}{\mathsf{SAMPSAT}}
+\newcommand{\INTSIMP}{\mathsf{INTSIMP}}
+\newcommand{\VHSP}{\mathsf{VHSP}}
+\newcommand{\KNAP}{\mathsf{KNAPSACK}}
+
+\newcommand{\PERM}{\mathsf{PERM}}
+\newcommand{\PERMINT}{\mathsf{PERMINT}}
+\newcommand{\PERMBOOL}{\mathsf{PERMBOOL}}
+
+\newcommand{\zero}{\mathbb{O}} 
+\newcommand{\FINDCDF}{\mathsf{FINDCDF}}
+\newcommand{\FINDCDFI}{\mathsf{FINDCDF\text{-}I}}
+
+
+\newcommand{\holes}{\mathrm{H}} 
+\newcommand{\hole}{\mathrm{H}}
+\newcommand{\len}{\mathrm{len}} 
+\newcommand{\ra}{\mathtt{r}}
+\newcommand{\rab}{\overline{\ra}}
+\newcommand{\AMat}{\mathbb{A}}
+
+
+\newcommand{\FINDMOM}{\mathsf{FINDMOM}}
+\newcommand{\FINDPDF} {\mathsf{FINDPDF}}
+
+\newcommand{\IBeta}[3] {\mathrm{I}{(#1|#2,#3)}} 
+\newcommand{\ixs}{\mathtt{ind}}
+\newcommand{\exps}{\mathtt{exo}}
+\newcommand{\satflag}{\mathtt{issat}}
+
+\newcommand{\Cone}{\mathscr{C}}
+
+\newcommand{\ison} {\mathtt{ison}}
+\newcommand{\findlength}{\mathtt{findlength}}
+\newcommand{\findparam} {\mathtt{findparam}}
+\newcommand{\findpt} {\mathtt{findpoint}}
+
+\newcommand{\findpdf} {\mathtt{findpdf}}
+\newcommand{\findcdf} {\mathtt{findcdf}}
+
+\newcommand{\corr}{\mathbf{\sum}}
+\newcommand{\muvec} {\mathbf{\mu}}
+
+\newcommand{\xarg} {\posvec_0} 
+\newcommand{\fxarg}{\mathit{v}}
+\newcommand{\Time}{\mathcal{T}}
+
+% n 
+\newcommand{\npos} {n}
+\newcommand{\nzpos} {\npos - 1}
+\newcommand{\ns} {\npos + 1}  
+\newcommand{\uint}{\mathcal{I}}
+
+\newcommand{\size}{\mathrm{size}}
+
+\newcommand{\Env}{\mathcal{E}}
+
+\newcommand{\state}{\mathrm{state}}
+% Slacks
+\newcommand{\sla} {s} 
+\newcommand{\si}[1]{s_{#1}}
+\newcommand{\svec} {\mathbf{s}}
+\newcommand{\rsvec}{\bar{\svec}}
+\newcommand{\osi}[1] {\mathtt{s}_{#1}}
+\newcommand{\orvsi}[1]{ \mathtt{S}_{#1}}
+\newcommand{\osvec} {\mathbf{\mathtt{s}}}
+\newcommand{\orsvec}{\mathbf{\mathtt{S}}}
+
+
+\newcommand{\Bo}{\mathcal{B}}
+
+\newcommand{\Inten}{{\Lambda}}
+\newcommand{\Inter[1]}{\mathcal{I}_{#1}}
+\newcommand{\inten} {{\lambda}}
+\newcommand{\fsi}[1] {\tilde{s}_{#1}}
+\newcommand{\fsla}{\tilde{s}}
+\newcommand{\fsvec}{\tilde{\svec}}
+\newcommand{\fposvec} {\tilde{\posvec}}
+\newcommand {\fsimpn} {\tilde{\gensimp}_n}
+
+\newcommand{\cbits}{\mathtt{cb}}
+\newcommand{\mrs}{\mathtt{mrs}}
+
+\newcommand{\nh}{\mathrm{nh}}
+\newcommand{\ssimpn}{\mathcal{S}}
+
+
+\newcommand{\bitpos}{\mathtt{bitpos}}
+% Random variables
+
+\newcommand{\rvsla}[1] {S_{#1}}
+\newcommand{\jsla} {f_{\mathbf{S}} (\mathbf{s})}
+\newcommand{\jfsla} {f_{\mathbf{\tilde{S}}}(\mathbf{\tilde{s})}}
+\newcommand{\rvfsla}[1] {\tilde{\rvsla{i}}}
+\newcommand{\rvfpos}[1] {\tilde{\rvpos{i}}}
+
+
+\newcommand{\nmin}{n_{\min}}
+\newcommand{\nmax}{n_{\max}}
+\newcommand{\nex}{n_{\rm{ex}}}
+
+\newcommand{\eye}{\mathbb{I}}
+
+\newcommand{\disk}[1] {\mathcal{D}_{#1}}
+% matrices
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\1}{\mathbf{1}}
+
+\newcommand{\rad}{r}
+\newcommand{\dia}{R}
+\newcommand{\rsat} {\tilde{\sat}}
+\newcommand{\nor}{n}
+
+\newcommand{\psat}{\pcon}
+\newcommand{\sat}{\con}
+\newcommand{\con}{d}
+\newcommand{\coni}[1]{d_{#1}}
+\newcommand{\pcon} {p_{\mathsf{con}}}
+
+\newcommand{\satint}{[0,\sat]}
+\newcommand{\rob}[1]{R_{#1}}
+\newcommand{\Rob}{\mathcal{R}}
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Ber}{\mathrm{Ber}}
+
+\newcommand{\rvn}{\mathrm{N}}
+\newcommand{\parkc} {n_{pc}}
+
+\newcommand{\alphavec} {\boldsymbol{\alpha}}
+
+\newcommand{\vertset} {\mathcal{V}}
+\newcommand{\vvec}{\mathbf{v}}
+\newcommand{\vi}[1] {v_{#1}}
+
+\newcommand{\genhyp}[1]{\mathcal{H}_{#1}}
+
+\newcommand{\ind} {\mathbf{I}}
+\newcommand{\Uni} {\mathrm{U}} 
+
+\newcommand{\per}{\mathrm{per}}
+
+\newcommand{\Beta}[3]{\mathrm{Beta}(#1|#2,#3)} 
+\newcommand{\Exp}[1] {\mathbb{E}(#1)}
+\newcommand{\Mode}[1] {\mathit{mode}(#1)} 
+\newcommand{\Var}[1] {\mathcal{V}(#1)}
+\newcommand{\Cov}[2] {\mathcal{C}(#1,#2)} 
+
+\newcommand{\Perm} {{\pi}}
+\newcommand{\todo}[1] {{\color{magenta} #1} }
+%\newcommand{\done}[1] {{\color{green} #1} }
+
+
+\newcommand{\Sat} {\mathsf{Sat}} % Sat Event
+
+\newcommand{\Fac}[1]{\mathscr{F}_{#1}}
+\newcommand{\BFac}[1]{\mathscr{BF}_{#1}}
+\newcommand{\CFac}[1]{\mathscr{CF}_{#1}}
+\newcommand{\BFact}{\mathbb{B}\mathbb{F}}
+\newcommand{\CFact}{\mathbb{C}\mathbb{F}}
+
+\newcommand{\Fact} {\mathbb{F}}
+\newcommand{\Pyr} [1] {\mathscr{P}_{#1}}
+\newcommand{\Pyrt} {\mathbb{P}} 
+\newcommand{\Sk}{\mathscr{Sk}} 
+\newcommand{\Covm}[1] {\mathbb{C}({#1})}
+\newcommand{\Transm} {\mathbb{T}} 
+\newcommand{\Indm} {\mathbb{J}}  %{\mathscr{I}}
+
+\newcommand{\epsat}{\hat{p}(\Sat)}
+\newcommand{\esta} {\hat{a}}
+\newcommand{\estb} {\hat{b}} 
+\newcommand{\ECovm}[1]{\hat{\mathbb{C}}({#1})} 
+\newcommand{\rvzvec}{\mathbf{Z}}
+\newcommand{\zi}[1] {z_{#1}}
+\newcommand{\rvzi}[1] {Z_{#1}}
+\newcommand{\zvec}{\mathbf{z}}
+
+\newcommand{\cansimp}{\Delta} 
+\newcommand{\canhyp} {\mathcal{C}}
+
+
+\newcommand{\meas}{\mathbf{\mathrm{Leb}}}
+\newcommand{\ev}[1]{\hat{e}_{#1}}
+\newcommand{\pseq} {(p_i)} 
+\newcommand{\prob}{\mathbb{P}}
+\newcommand{\rvna}{\mathbf{N}_{A}}
+\newcommand{\rvnd}{\mathbf{N}_{D}}
+\newcommand{\Mat}{\mathbb{M}}
+\newcommand{\LMat} {\mathbb{L}}
+
+\newcommand{\stv}{\mathbf{q}} 
+\newcommand{\sys}{\mathsf{S}}
+
+\newcommand{\tst}[1]{\gamma_{#1}}
+\newcommand{\rvtst} {\Gamma}
+\newcommand{\rvtvec}{\boldsymbol{\Gamma}}
+\newcommand{\Wie}{\mathscr{W}}
+
+\newcommand{\err}{\epsilon}
+
+\newcommand{\ddt}{\frac{\mathrm{d}}{\mathrm{d} t}}
+
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+\newcommand{\cmp}{\mathrm{Cmp}} 
+\newcommand{\Red}{\mathrm{Red}}
+\newcommand{\lcmp} {\mathrm{Lcmp}}
+\newcommand{\cover}{\mathrm{Cov}}
+
+\def \problemautorefname{Prob. \negthinspace}
+%\newcommand*{\problemautorefname}{Prob.\negthinspace}
+
+
+\newtheorem{example} {Example} 
+\newtheorem{problem} {Problem} 
+
+
+\def\algorithmautorefname{Algorithm}
+\renewcommand{\sectionautorefname}{Sec.\negthinspace}
+\renewcommand{\figureautorefname}{Fig.\negthinspace}
+\renewcommand{\equationautorefname}{Eq.\negthinspace}
+\newcommand{\exampleautorefname}{Eg.\negthinspace}
+
+
+% bold line
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline} 
+
+
+\newcommand\undermat[2]{%
+  \makebox[0pt][l]{$\smash{\underbrace{\phantom{%
+    \begin{matrix}#2\end{matrix}}}_{\text{$#1$}}}$}#2}
+
+

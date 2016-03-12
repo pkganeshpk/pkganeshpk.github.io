@@ -1,0 +1,143 @@
+<section>		
+$$ 
+\newcommand{\Poly}{\mathcal{P}}
+\newcommand{\G} {\mathcal{G}}
+$$
+
+$$
+\newcommand{\uposvec}{\mathbf{x}}
+\newcommand{\posvec}{\mathbf{\mathtt{x}}}
+\newcommand{\psimp}[1] {\mathcal{P}_{#1}} 
+\newcommand{\psimpn} {\mathcal{P}} 
+\newcommand{\psimpcf}{\mathcal{P}_{\rm{CF}}}
+\newcommand{\ssimpcf}{\mathcal{S}_{\rm{CF}}}
+\newcommand{\Trans} {^\mathrm{T}}
+\newcommand{\rvupos}[1] {X_{#1}}
+\newcommand{\rvuposvec} {\mathbf{X}}
+\newcommand{\rvpos}[1] {\mathtt{ X}_{#1}}
+\newcommand{\rvposvec} { \mathbf{\mathtt{X}}}
+\newcommand{\rvsvec} {\mathbf{S}}
+\newcommand{\jupos} {f_{\mathbf{X}} (\uposvec)}
+\newcommand{\jpos} { f_{\mathtt{X}} (\posvec)}
+\newcommand{\Jpos} {F_{\mathtt{X}} (\posvec)}
+\newcommand{\mupos}[1] {f_{X_{#1}} (\upos{#1})}
+\newcommand{\Mupos}[1] {F_{X_{#1}} (\upos{#1})}
+\newcommand{\mpos}[1] {f_{\mathtt{X}_{#1}} (\pos{#1})}
+\newcommand{\msla}[1] {f_{S_{#1}} (\si{#1})}   
+\newcommand{\mfsla}[1] {f_{\tilde{S}_{#1}} (\fsi{#1})}  
+\newcommand{\mfpos}[1] {f_{\tilde{T}_{#1}} (\shpos{#1})}    
+\newcommand{\probvec} {\mathbf{p}}
+\newcommand{\avec}{\mathbf{a}}
+\newcommand{\fpar}{h}
+\newcommand{\Fpar}{H} 
+\newcommand{\fparvec}{ \mathbf{h}}
+\newcommand{\Fparvec}{ \mathbf{H}}
+\newcommand{\Poi}[1]{\mathrm{Poi}(#1)}
+\newcommand{\sbar} {\bar{s}}
+\newcommand{\num}{\mathrm{num}}
+\newcommand{\den}{\mathrm{den}}
+\newcommand{\PCON} {\mathsf{PCON}}
+\newcommand{\EPCON} {\mathsf{EPECON}}
+\newcommand{\OPCON} {\mathsf{OPCON}} 
+\newcommand{\APCON}{\mathsf{APCON}}
+\newcommand{\SharpP} {\mathsf{\#P}}
+\newcommand{\PH} {\mathsf{\#PH}}
+\newcommand{\PseudoP}{pseudo-$\mathsf{P}$ }
+\newcommand{\PC} {\mathsf{\#PC}}
+\newcommand{\EXP}{\mathsf{\#EXP}}
+\newcommand{\VOLFAV} {\mathsf{VOLFAV}}
+\newcommand{\GENSAT} {\mathsf{GENSAT}}
+\newcommand{\DECSAT} {\mathsf{DECSAT}}
+\newcommand{\VX} {\mathbb{X}}
+\newcommand{\CoNPC} {\mathsf{coNPC}}
+\newcommand{\Poly} {\mathsf{P}}
+\newcommand{\NPH} {\mathsf{NPH}}
+\newcommand{\GIC} {\mathsf{GIC}}
+\newcommand{\SAMPSAT}{\mathsf{SAMPSAT}}
+\newcommand{\INTSIMP}{\mathsf{INTSIMP}}
+\newcommand{\VHSP}{\mathsf{VHSP}}
+\newcommand{\KNAP}{\mathsf{KNAPSACK}}
+\newcommand{\PERM}{\mathsf{PERM}}
+\newcommand{\NPC}{\mathsf{NPC}} 
+\newcommand{\zero}{\mathbb{O}} 
+\newcommand{\FINDCDF}{\mathsf{FINDCDF}}
+\newcommand{\FINDCDFI}{\mathsf{FINDCDF\text{-}I}}
+\newcommand{\LMat}{\mathbb{L}}
+\newcommand{\PERMINT}{\mathsf{PERMINT}}
+\newcommand{\PERMBOOL}{\mathsf{PERMBOOL}}
+\newcommand{\holes}{\mathrm{H}} 
+\newcommand{\hole}{\mathrm{H}}
+\newcommand{\len}{\mathrm{len}} 
+\newcommand{\ra}{\mathtt{r}}
+\newcommand{\rab}{\overline{\ra}}
+\newcommand{\AMat}{\mathbb{A}}
+\newcommand{\FINDMOM}{\mathsf{FINDMOM}}
+\newcommand{\FINDPDF} {\mathsf{FINDPDF}}
+\newcommand{\IBeta}[3] {\mathrm{I}{(#1|#2,#3)}} 
+\newcommand{\ixs}{\mathtt{ind}}
+\newcommand{\exps}{\mathtt{exo}}
+\newcommand{\satflag}{\mathtt{issat}}
+\newcommand{\Cone}{\mathscr{C}}
+\newcommand{\ison} {\mathtt{ison}}
+\newcommand{\findlength}{\mathtt{findlength}}
+\newcommand{\findparam} {\mathtt{findparam}}
+\newcommand{\findpt} {\mathtt{findpoint}}
+\newcommand{\findpdf} {\mathtt{findpdf}}
+\newcommand{\findcdf} {\mathtt{findcdf}}
+\newcommand{\corr}{\mathbf{\sum}}
+\newcommand{\muvec} {\mathbf{\mu}}
+\newcommand{\xarg} {\posvec_0} 
+\newcommand{\fxarg}{\mathit{v}}
+\newcommand{\Time}{\mathcal{T}}% n 
+\newcommand{\npos} {n}
+\newcommand{\nzpos} {\npos - 1}
+\newcommand{\ns} {\npos + 1}  
+\newcommand{\uint}{\mathcal{I}}
+\newcommand{\size}{\mathrm{size}}
+\newcommand{\Env}{\mathcal{E}}
+\newcommand{\state}{\mathrm{state}}
+\newcommand{\sla} {s} 
+\newcommand{\si}[1]{s_{#1}}
+\newcommand{\svec} {\mathbf{s}}
+\newcommand{\rsvec}{\bar{\svec}}
+\newcommand{\osi}[1] {\mathtt{s}_{#1}}
+\newcommand{\orvsi}[1]{ \mathtt{S}_{#1}}
+\newcommand{\osvec} {\mathbf{\mathtt{s}}}
+\newcommand{\orsvec}{\mathbf{\mathtt{S}}}
+\newcommand{\svi}[1] {v_{#1}}
+\newcommand{\wsvec}{\mathbf{w}}
+\newcommand{\wsi}[1]{s_{w#1}}
+\newcommand{\wposi}[1]{x_{w#1}}
+\newcommand{\repos}[1] {\bar{x}_{#1}}    % \check
+\newcommand{\reposvec} {\bar{\mathtt{x}}} 
+\newcommand{\resla}[1] {\bar{s}_{#1}} 
+\newcommand{\reslavec} {\bar{\mathbf{s}}} 
+\newcommand{\rvresla}[1] {\bar{S}_{#1}}
+\newcommand{\rvrepos}[1] {\bar{\tt{X}}_{#1}}
+\newcommand{\rvreslavec} {\bar{\bf{S}}}
+\newcommand{\rvreposvec} {\bar{\tt{X}}}
+\newcommand{\remvec}{\mathtt{x}^r}
+\newcommand{\rempos}[1]{x^r_{#1}}
+\newcommand{\remslavec}{\mathbf{s}^r}
+\newcommand{\Bo}{\mathcal{B}}
+\newcommand{\Inten}{{\Lambda}}
+\newcommand{\Inter[1]}{\mathcal{I}_{#1}}
+\newcommand{\inten} {{\lambda}}
+\newcommand{\fsi}[1] {\tilde{s}_{#1}}
+\newcommand{\fsla}{\tilde{s}}
+\newcommand{\fsvec}{\tilde{\svec}}
+\newcommand{\fposvec} {\tilde{\posvec}}
+\newcommand {\fsimpn} {\tilde{\gensimp}_n}
+\newcommand{\cbits}{\mathtt{cb}}
+\newcommand{\mrs}{\mathtt{mrs}}
+\newcommand{\nh}{\mathrm{nh}}
+\newcommand{\ssimpn}{\mathcal{S}}
+\newcommand{\bitpos}{\mathtt{bitpos}}
+\newcommand{\rvsla}[1] {S_{#1}}
+\newcommand{\jsla} {f_{\mathbf{S}} (\mathbf{s})}
+\newcommand{\jfsla} {f_{\mathbf{\tilde{S}}}(\mathbf{\tilde{s})}}
+\newcommand{\rvfsla}[1] {\tilde{\rvsla{i}}}
+\newcommand{\rvfpos}[1] {\tilde{\rvpos{i}}}
+$$
+</section>	
+

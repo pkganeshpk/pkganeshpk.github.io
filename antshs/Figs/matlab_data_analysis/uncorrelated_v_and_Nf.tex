@@ -1,0 +1,52 @@
+% Upper-case    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+% Lower-case    a b c d e f g h i j k l m n o p q r s t u v w x y z
+% Digits        0 1 2 3 4 5 6 7 8 9
+% Exclamation   !           Double quote "          Hash (number) #
+% Dollar        $           Percent      %          Ampersand     &
+% Acute accent  '           Left paren   (          Right paren   )
+% Asterisk      *           Plus         +          Comma         ,
+% Minus         -           Point        .          Solidus       /
+% Colon         :           Semicolon    ;          Less than     <
+% Equals        =           Greater than >          Question mark ?
+% At            @           Left bracket [          Backslash     \
+% Right bracket ]           Circumflex   ^          Underscore    _
+% Grave accent  `           Left brace   {          Vertical bar  |
+% Right brace   }           Tilde        ~
+
+%
+% Copyright (c) 2013 by the authors
+% All rights reserved.
+%
+
+\documentclass{acm_proc_article-sp}
+\input{preamble}
+% rubber: depend macros.tex
+
+\RequirePackage{pstricks}
+\RequirePackage{pstricks-add}
+\RequirePackage{pst-node}
+\RequirePackage{pst-eps}
+\RequirePackage{mathtools}
+\RequirePackage{amssymb}
+
+\pagestyle{empty}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{sfmath}
+\begin{document}
+\begin{TeXtoEPS}
+    \newpsobject{thumbtack}{psdot}{linecolor=white}
+    \psset{xAxisLabel={Time (s)},xAxisLabelPos={c,-0.32in},%
+           yAxisLabel={(ant-cm/s)},yAxisLabelPos={-0.32in,c}}
+    \begin{psgraph}[Dx=50,Dy=1]{->}%
+        (0,0)(155,3.5){3.0in}{1in}
+        \rput(155,3.5){\thumbtack(0.05in,0.05in)}
+        \rput(0,0){\thumbtack(-0.05in,-0.05in)}
+        %
+        \readdata{\ENfEv}{matlab_data_analysis/uncorrelated_v_and_Nf_ENfEv.txt}
+        \readdata{\ENfv}{matlab_data_analysis/uncorrelated_v_and_Nf_ENfv.txt}
+        \listplot[arrowscale=1.25,linecolor=gray,linestyle=solid]{\ENfv}
+        \listplot[arrowscale=1.25,linecolor=black,linestyle=dashed]{\ENfEv}
+    \end{psgraph}
+\end{TeXtoEPS}
+\end{document}
