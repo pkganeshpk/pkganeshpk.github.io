@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Stochastic Boundary Coverage</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Ganesh P Kumar">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+
+			
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+  		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript"
+		  src="./MathJax-master/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+
+	
+
+
+		  <link rel="import" href="Macros.html">
+	</head>
+
+	<body>
+		<?
+		readfile("./Macros.php");
+		?>
+		
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3> Stochastic Boundary Coverage Strategies for Multi-Robot Systems</h3>
+					<h4><b> Ganesh P Kumar</b></h4>
+					<p> <b> Autonomous Collective Systems Lab</b>	</p>
+ 					<p> <b> Arizona State University </b> </p>
+
+					<img src="Figs/ASU_Logo.jpg"  height="50" width="150" style="position:absolute; TOP:-100px; LEFT:350px;"/>
+				
+					<img src="Figs/sideview_white.jpg"  height="100" width="250" style="position:absolute; TOP:350px; LEFT:-350px;"/>	
+
+					<img src="Figs/Pheeno1.jpg"  height="150" width="250" style="position:absolute; TOP:350px; RIGHT:-350px;"/>	
+
+					<img src="Figs/RoboZyme_problem_cartoon.png"  height="120" width="200" style="position:absolute; TOP:410px; RIGHT:300px;"/>
+
+
+				</section>
+
+			
+				
+
+				<div class="slides">
+				<section> 
+
+					<section>
+					<h3> ACS Lab </h3>
+					<style type="text/css">
+		  			tr.noBorder td {border: 0; }
+					table {border : none;}
+					</style>
+					
+					<table style="width:1200px">
+					<tr class = "noBorder">
+					<td>	
+					 <figure>
+					<img src="Figs/Spring.png"  height="150" width="150"/>	
+					   <figcaption> <normal> Prof.Spring Berman </normal></figcaption>
+					</figure>
+					</td>
+
+		
+
+					<td>	
+					 <figure>
+					<img src="Figs/Sean.png"  height="150" width="150"/>	
+					   <figcaption> <normal> Sean Wilson  </normal></figcaption>
+					</figure>	
+					</td>
+
+
+
+					<td>
+					 <figure>
+					<img src="Figs/Ruben.png"  height="150" width="150"/>	
+					   <figcaption> <normal> Ruben Gameros </normal></figcaption>
+					</figure>
+					</td>
+
+					</table>	
+					</section>
+
+					<section>
+					<h3> Collaborators </h3> 
+					<style type="text/css">
+		  			tr.noBorder td {border: 0; }
+					</style>
+					
+					<table height="75%">
+					<tr class = "noBorder">
+					<td>	
+					 <figure>
+					<img src="Figs/Ted.png"  height="150" width="150"/>	
+					   <figcaption> <normal> Prof. Ted Pavlic  <p> <small> <b> FSE / SOLS </b> </small> </p>  </normal></figcaption>
+					</figure>
+					</td>
+					
+					<td>	
+					 <figure>
+					<img src="Figs/Aurelie.png"  height="150" width="150"/>	
+					   <figcaption> <normal> Dr. Aurelie Buffin  <p> <small> <b> SOLS </b> </small> </p>   </normal></figcaption>
+					</figure>	
+					</td>	
+
+								
+
+					<td>
+					 <figure>
+					<img src="Figs/Stephen.png"  height="150" width="150"/>	
+					   <figcaption> <normal> Prof. Stephen Pratt <p><small> <b> SOLS </b> </small> </normal></figcaption>
+					</figure>
+					</td>
+					</tr>
+					</table> 					
+
+					<small>
+					<table> 
+					<tr class = "noBorder"> <td> <b>FSE </b>:<td>Fulton Schools of Engg. </td> </tr> 
+					<tr class = "noBorder" > <td> <b>SOLS </b>: </td> <td> School of Life Sciences </td> <tr>
+					</table>
+					</small>
+
+					<img src="Figs/ant-exp.jpeg"  height="200" width="300" style="position:absolute; BOTTOM:-100px; LEFT:-300px;"/>
+
+					</section>
+
+
+				</section>
+
+									
+
+				
+
+			
+
+				<section>
+					<section>
+					<h3>Collective Transport (CT)</h3>
+
+					<style type="text/css">
+		  			tr.noBorder td {border: 0; }
+					</style>
+
+					<table  style="width=2000px"> 
+					<tr class = "noBorder">
+					<td>	
+					 <figure>
+					<img src="Figs/search+rescue.png"  height="300" width="300"/>
+					   <figcaption> <normal> <b> Search and Rescue  </normal></figcaption>
+					</figure>
+					</td>
+					
+					<td>	
+					 <figure>
+					<img src="Figs/construction.png"  height="300" width="300"/>	
+					   <figcaption> <normal> <b> Construction  </normal></figcaption>
+					</figure>	
+					</td>
+
+					
+											
+
+					<td>	
+					 <figure>
+					<img src="Figs/Pheeno_transport.png"  height="300" width="300"/>	
+					   <figcaption> <normal> <b> Collective Lifting  </b> </normal></figcaption>
+					</figure>
+					</td>
+					
+					</tr>
+					</table>
+					
+					
+
+					</section>
+
+					<section>
+					<h3>STOCHASTIC COVERAGE SCHEMES (SCS)</h3>
+
+					<table  style="width=2000px">
+					<tr class="noBorder">
+
+					<td>	
+					 <figure>
+					<img src="Figs/DrugDel.jpg"  height="250" width="350"/>
+					   <figcaption> <normal> <b>  Drug Delivery </b> </normal>  
+						<p> <small> <a href="http://goo.gl/zXVHGw" > Sinha et al., Mol. Cancer. Ther. '06  <small> </p> </a>
+						</figcaption>
+					</figure>
+
+					
+					<td>		
+					 <figure>
+					<img src="Figs/CancerCell.png"  height="300" width="300"/>	
+					   <figcaption> <normal> <b>  Imaging Cancer Cells  </b>  </normal> 
+									<p> <small>  <a href="http://goo.gl/ZhRYSb "> Qin et al., Adv. Funct. Mater. '12 </a> </small>  </p> 
+									</normal></figcaption>
+					</figure>
+
+					<td>
+
+					
+					 <figure>
+					<img src="Figs/DistSens.png"  height="300" width="300"/>	
+					   <figcaption> <normal> <b> Distributed Sensing  </b> </normal>
+						<p> <small>  <a href="http://goo.gl/utjpbc"> J. Brandon, Digital Trends '11 </a> </small>  </p> 
+						</figcaption>
+
+					
+					</td>
+					</figure>	
+
+					</tr>
+					</table>	
+
+
+					
+
+					</section>
+					
+					
+
+					<section>	
+					<h3> STOCHASTIC COVERAGE SCHEMES (SCS) </h3>						
+					 <b> Goal: Claim <i>random</i> positions on boundary  </b> 
+					
+					<p class = "fragment" 	data-fragment-index="1" align="left">  Robot capabilities 	
+
+					<p  class="fragment" data-fragment-index="2" align="left">&#10003; Sense / Communicate within limited range </p>
+					<p  class="fragment" data-fragment-index="2" align="left">&#10006; Global Localization </p>
+					<p  class="fragment" data-fragment-index="2" align="left">&#10006; Environment Map </p>
+
+
+					<normal class="fragment" data-fragment-index="3" > <b> <small> Multi-Boundary Coverage  <p>  <a href="http://goo.gl/5pCqCg">  Pavlic et al., <i> ISRR '13</i> </a></small></p> </b>  </normal> 
+					<video width="420" height="315" controls autoplay class="fragment" data-fragment-index="3" style="position:absolute; BOTTOM:-50px; RIGHT:-150px;">
+						<source  src="Videos/netlogo-sim.mp4" type="video/mp4"/>
+
+					</video>
+					
+
+					</section>
+
+						
+		
+
+					
+				</section>
+					
+		
+
+				
+
+
+
+				
+				<section>
+					<section>
+					<h3>Novel Contributions</h3>
+						<b> Devised Stochastic Hybrid System (SHS) model of CT in <i>A. Cockerelli</i> </b>
+						<p>
+						<small> <b>  <a href="https://goo.gl/SqG93d"> Kumar et al., HSCC '13</a> </b>  </small></p>
+						<img src="Figs/sideview_white.jpg"  height="100" width="300" style="position:absolute; BOTTOM:-200px; RIGHT:300px;"/>	
+					</section>
+
+					
+					<section>
+					<h3>Novel Contributions</h3>
+					<b> Formulated stochastic controller for Multi-Boundary Boundary Coverage </b>
+						<p>
+						<small> <a href="http://goo.gl/5pCqCg"> <b> Pavlic et al., <i> ISRR '13</i> </b> </a></small>
+						</p>
+						
+						<ul>
+							<li> Proved robust to environmental variations  </li>
+							<p> <small> <a href="https://goo.gl/DFligW"> <b> Pavlic et al., <i> ASME '14 </i> </b> </a> </small>
+					
+							<li> May be modified to simulate <i>A. Cockerelli  </i> </li>
+							<p> <small> <a href="https://goo.gl/DbbUC1"> <b> Wilson et al., <i> Swarm Int '14 </i> </b> </a> </small>
+						</ul>
+						<img src="Figs/RoboZyme_thinks.png"  height="100" width="300" style="position:absolute; BOTTOM:-100px; RIGHT:300px;"/>	
+						
+					</section>
+
+					<section>
+					$$ 
+					\newcommand{\Poly}{\mathcal{P}}
+					\newcommand{\G} {\mathcal{G}}
+					\newcommand{\pcon}{p_{\mathsf{con}}}
+					$$
+					
+					<h3>Novel Contributions</h3>
+					<b> Analyzed Communication Graph $\G$ on Boundary  </b>
+						<ul>
+							<li> Computed connectivity probability $\pcon(\G)$ and spatial statistics for uniform coverage  </li>
+								<p> <small> <a href="https://goo.gl/z2OhbC" > Kumar and Berman, <i> ICRA '14 </i> </a>  </small>  </p>
+							<li>  Spatial statistics over connected communication graphs </li>
+								<p> <small> Kumar and Berman, <i> IEEE-TRO (under review) </i>  </small>  </p>	
+								
+							<li> Non-uniform SCS, Non-iid SCS, Finite Robots </li>
+								<p> <small> Kumar and Berman, <i> SICOMP (in prep.) </i>  </small>  </p>
+	
+						</ul>
+						<figure style="position:absolute; TOP: 300px; RIGHT:-200px;">
+						<img src="Figs/config.svg"  height="75" width="400" />
+
+						</figure>
+					</section>
+
+					<section>
+					<h3> Outline </h3>
+					
+					<ul>
+						
+					<li>Maintaining a Connected Network on Boundary  </li>	
+					<li>Integrating Multi-Robot and Wi-fi Simulators </li>
+
+					</ul>
+					</section>
+					
+				</section> 	
+
+
+<!-- bcover conn -->
+
+
+
+
+<section>
+
+<section>
+<h3> Analyzing the Wireless Network of an SCS</h3>
+</section>
+
+<section>
+$$
+\newcommand{\Bo}{\mathcal{B}}
+\newcommand{\conn}{d}
+\newcommand{\Rob}[1]{\mathcal{R}_{#1}}
+\newcommand{\dia}{\delta}
+\newcommand{\upos}[1]{x'_{#1}}
+\newcommand{\uposvec}{\mathbf{x}'}
+\newcommand{\rvupos}[1]{X'_{#1}}
+\newcommand{\rvuposvec}{\mathbf{X}}
+$$
+<h3> Problem Setting</h3>
+
+<p  class="fragment" 	data-fragment-index="1">
+<ul>
+<li>  Environment has coloured line segment boundary $\Bo$ 
+<li>  Robots $\Rob{1:n}$ placed in environment
+	<ul>
+	<li> each of diameter $\dia$
+	<li> communication and sensing radius $\conn$
+	</ul>
+<li>  Robots walk randomly and attach to $\Bo$ 
+</ul>
+</p>
+
+<p  class="fragment" 	data-fragment-index="2"> <b> Goal </b> : <i> Cover </i> the boundary, forming a connected network
+
+
+
+
+</section>
+
+<section> 
+
+<h3> Robot Configuration </h3>
+
+<p  class="fragment" 	data-fragment-index="1">
+<ul>
+<li> Boundary has length $s$ 
+<li> Position of $\Rob{i}$ = position of its left end = $\upos{i}$ on $\Bo$
+<li> Configuration = <i>unordered</i> positions $\uposvec = \upos{1:n}$ 
+<li> Configuration is <it>collision-free (CF) </it> iff $|\upos{i} - \upos{j}| \geq \delta$
+</ul>
+</p>
+
+<p  class="fragment" 	data-fragment-index="2"> Only CF configurations considered from now. </p>
+
+</section>
+
+
+
+<section>
+
+<h3> Robot communication</h3>
+
+
+<ul>
+<li>  Captures the notion of robots "being close enough to each other"
+<li> $\Rob{i}$ and $\Rob{j}$ inter-communicate iff $|\upos{i} - \upos{j} |  \leq \conn$
+</ul>
+
+</section>
+
+
+
+
+<section>
+<h3> Communication Graph $\mathcal{G}$ </h3>
+
+<p class="fragment" 	data-fragment-index="1" align="left">
+Define the communication graph $\mathcal{G}$ as one with
+<ul class="fragment" 	data-fragment-index="1" align="left">
+<li class="fragment" 	data-fragment-index="1"> vertices at each position $\upos{i}$ 
+<li class="fragment" 	data-fragment-index="1"> edges connecting pairs of inter-communicating robots
+</ul>
+</p>
+
+
+<p class="fragment" 	data-fragment-index="2" align="left">
+We define $\G$ to be <i>connected</i> when
+
+<ul class="fragment" 	data-fragment-index="2" align="left">
+<li class="fragment" 	data-fragment-index="2"> $\G$ forms a connected graph, and
+<li class="fragment" 	data-fragment-index="2">  every point on $\Bo$ is within range from at least one $\Rob{i}$
+</ul>
+</p>
+</section>
+
+<section>
+$$
+\newcommand{\pos}[1]{{x}_{#1}}
+\newcommand{\posvec}{\mathbf{x}}
+\newcommand{\rvpos}[1]{{X}_{#1}}
+\newcommand{\rvposvec}{\mathbf{X}}
+\newcommand{\si}[1]{s_{#1}}
+\newcommand{\svec} {\mathbf{s}}
+$$
+<h3> Order Statistics </h3>
+
+<ul class="fragment" 	data-fragment-index="1" align="left">  <b> Order Statistics :</b> Sorted positions $\posvec = \pos{1:n}$ <a href="https://goo.gl/4nzdyK"> (David &amp; Nagaraja '03) </a>
+<li class="fragment" 	data-fragment-index="2" align="left"> Virtual Robots : $\pos{0} := -\dia, \pos{n+1} := s$
+<li class="fragment" 	data-fragment-index="3" align="left">  $\uposvec$ is called <i> parent </i> of $\posvec$  
+</ul>
+</p>
+
+
+
+</section>
+
+<section>
+<h3> Slacks </h3>
+
+<ul class="fragment" 	data-fragment-index="1" align="left"> 
+<li class="fragment" 	data-fragment-index="1" align="left"> <b> Slacks </b> are interrobot distances $$\si{i} :=\pos{i} - \pos{i-1}$$
+<li class="fragment" 	data-fragment-index="2" align="left"> <b> Slack vector </b> $\svec := \si{1:n+1}$
+<li class="fragment" 	data-fragment-index="3" align="left"> CF requires $\si{i} \geq \dia$
+
+<li class="fragment" 	data-fragment-index="4" align="left"> Connectivity requires $\si{i} \leq \conn$
+
+ </ul>
+</p>
+
+
+
+</section>
+
+
+<section>
+<h3> Communication Graph $\mathcal{G}$ </h3>
+
+<ul class="fragment" 	data-fragment-index="1" align="left">
+<li class="fragment" 	data-fragment-index="2"> $\G$ is a <i> Geometric Graph </i>
+<li class="fragment" data-fragment-index="3"> When $\upos{i}$ are drawn from iid rv's, $G$ is a<i> Random Geometric Graph (RGG) </i>  <a href="https://goo.gl/LGVqWr"> (Penrose '03)</a>
+<li class="fragment" data-fragment-index="4"> $\G$ is  <i>Gilbert's Disk Graph </i> <a href="https://goo.gl/LxWbzh" > (Haenggi '12)</a> in $\mathbb{R}^1$ 
+
+</ul>
+
+</section>
+
+
+
+<section>
+$$
+\newcommand{\upos}[1]{x_{#1}}
+\newcommand{\rvupos}[1] {X_{#1}}
+\newcommand{\rvuposvec}{\mathbf{X}}
+\newcommand{\fpar}{h}
+\newcommand{\Fpar}{H}
+\newcommand{\rvsi}[1] {S_{#1}}
+$$
+<h3> Problem Statement - I</h3>
+
+<p class="fragment" 	data-fragment-index="1" align="left">Suppose $\upos{i}$ are realizations of iid parents $\rvupos{i}$ each with pdf $\fpar(t)$ supported on $\Bo=\{t:0\leq t\leq s\}$. 
+<p class="fragment" 	data-fragment-index="1" align="left"> Determine:
+
+<ul class="fragment" 	data-fragment-index="1" align="left"> 
+<li class="fragment" 	data-fragment-index="2" align="left"> Probability $\pcon$ that $\G$ is connected.
+<li class="fragment" 	data-fragment-index="3" align="left"> PDFs of $\rvpos{i}$ and $\rvsi{i}$ for general $\G$
+<li class="fragment" 	data-fragment-index="4" align="left"> PDFs of  $\rvpos{i}$ and $\rvsi{i}$ when $\G$ is <i> connected </i>. 
+</ul> 
+
+
+</section>
+
+<section>
+
+<h3> Problem Statement - II</h3>
+
+<p class="fragment" 	data-fragment-index="1" align="left">Extend the analysis in Part I to the cases when: 
+<p class="fragment" 	data-fragment-index="1" align="left"> 
+
+<ul class="fragment" 	data-fragment-index="2" align="left"> 
+<li class="fragment" 	data-fragment-index="2" align="left"> robots have distinct communication radii $d_i$ 
+<li class="fragment" 	data-fragment-index="2" align="left"> parents $\rvuposvec$ are inid
+</ul> 
+<p class="fragment" 	data-fragment-index="3" align="left"> Determine the complexity of computing $\pcon$. 
+
+
+</section>
+
+
+					
+</section> <!-- problem setting -->
+
+
+<section>
+
+<section>
+<h3> Problem Solving Tools</h3>
+
+
+
+<ul class="fragment" 	data-fragment-index="1" align="left">
+<li class="fragment" 	data-fragment-index="2"> Geometric interpretation of $\posvec$ and $\svec$ 
+<li class="fragment" data-fragment-index="3"> Order Statistics  
+<li class="fragment" data-fragment-index="4"> Polytopes  
+<li class="fragment" data-fragment-index="5"> Complexity of simplex/hypercube intersection   
+
+</ul>
+
+</section>
+
+
+<section>
+<h3> Position Simplex </h3>
+$$
+\newcommand{R}{\mathbb{R}}
+\newcommand{\psimp}{\mathcal{P}}
+$$
+
+<p ul class="fragment" 	data-fragment-index="1" align="left"> Consider <i>point</i> robots, for which CF is irrelevant </p>
+
+<ul class="fragment" 	data-fragment-index="1" align="left">
+<li class="fragment" 	data-fragment-index="2"> Think of $\posvec$ (and $\uposvec$) as a point in $\R^n$
+<li class="fragment" data-fragment-index="3"> Valid (sorted) positions have 
+$$
+\pos{0} = 0\leq \pos{1} \leq \ldots \pos{n} \leq \pos{n+1} =s
+$$
+
+<li class="fragment" data-fragment-index="4"> Set of such positions forms <i> position simplex </i> $\psimp$  
+<li class="fragment" data-fragment-index="5"> Vertices of $\psimp$ are of the form $$(0,0,\ldots,0,s,s,\ldots,s)$$   
+
+</ul>
+
+</section>
+
+<section>
+<h3> Slack Simplex </h3>
+$$
+\newcommand{\ssimp}{\mathcal{S}}
+\newcommand{\1}{\mathbf{1}}
+$$
+
+<ul class="fragment" 	data-fragment-index="1" align="left">
+<li class="fragment" 	data-fragment-index="2"> Think of $\svec$ as a point in $\R^{n+1}$
+<li class="fragment" data-fragment-index="3"> Valid slack vectors have 
+$$
+\begin{align}
+\si{i} \geq 0 \\
+ \sum_{i=1}^{n+1} \si{i} = s, ~\text{or as a half space}~ \sum_{i=1}^{n}  \si{i} \leq s.
+\end{align}
+$$
+
+<li class="fragment" data-fragment-index="4"> Set of such vectors forms <i> slack simplex </i> $\ssimp$  
+
+</ul>
+
+</section>
+
+
+<section>
+<h3> Defining Connectivity </h3>
+$$
+\newcommand{\hyp}{\mathcal{hyp}}
+\newcommand{\1}{\mathbf{1}}
+$$
+
+<ul class="fragment" 	data-fragment-index="1" align="left">
+<li class="fragment" 	data-fragment-index="2"> Connected slack vectors have $0 \leq \si{i} \leq \conn$
+<li class="fragment" data-fragment-index="3"> All these vectors lie in a hypercube 
+$$
+\hyp := \{ \svec \in \R^{n+1} : 0\leq \si{i} \leq \conn \}
+$$
+
+<li class="fragment" data-fragment-index="4"> This is immaterial of $\svec$ lying in $\ssimp$.  
+
+</ul>
+
+</section>
+
+<section>
+<h3> Connected and Disconnected Regions </h3>
+$$
+\newcommand{\hyp}{\mathcal{H}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\fav}{\mathcal{F}}
+\newcommand{\unfav}{\mathcal{U}}
+\newcommand{\vvec}{\mathbf{v}}
+$$
+
+<ul class="fragment" 	data-fragment-index="1" align="left">
+<li class="fragment" 	data-fragment-index="2"> For $\G%$ to be connected, we need $\svec \in \ssimp \cap \hyp$
+<li class="fragment" data-fragment-index="3"> Define  the <i> connected region</i> $\fav := \ssimp \cap \hyp$
+<li class="fragment" data-fragment-index="4"> Define the <i> disconnected region </i> $\unfav := \ssimp \setminus \fav$ 
+
+</ul>
+
+</section>
+
+
+<section>
+<h3> Decomposing  $\unfav$ </h3>
+$$
+\newcommand{\hyp}{\mathcal{H}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\fav}{\mathcal{F}}
+\newcommand{\unfav}{\mathcal{U}}
+\newcommand{\vvec}{\mathbf{v}}
+$$
+
+<p align="left" class="fragment" 	data-fragment-index="1"><b> Theorem (<a href="https://goo.gl/B0D4L1"> Kumar and Berman </a>) </b> The disconnected region can be expressed as the intersection of simplices 
+$$
+\unfav := \bigcap\limits_{\vvec \in \{0,1 \} ^{n+1}, \1^T \vvec \geq 1} \ssimp(\vvec), 
+$$
+
+where
+
+$$
+\begin{align}
+\label{eqn:decomp}
+\ssimp(\vvec):= \{ \svec \in \ssimp : s_i \geq \conn ~\text{whenever}~ v_i =1  \}.
+\end{align}
+$$
+
+
+<p align="left" class="fragment" 	data-fragment-index="2"> $\ssimp(\vvec)$ forms a simplex of side $s-d\1^T\vvec$.
+
+
+</section>
+</section> <!-- toools -->
+
+
+<section> <! --- Result summary -->
+
+<section>
+<h3> Summary of Results </h3>
+</section>
+
+<section>
+<h3> Uniform Coverage: Finding $\pcon(\G)$  </h3>
+$$
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\nmin}{n_{\min}}
+$$
+
+<p align="left" class="fragment" 	data-fragment-index="1">
+When parents $\rvupos{i}$ are each uniform on $\Bo$, we have  
+$$
+
+\pcon(\G) =  1 - \sum _{k=1} ^{\nmin} (-1)^{k-1} \binom{n}{k} {(1-kd/s)^n } ~\text{where}~ \nmin = \lfloor \frac{s}{\conn} \rfloor. 
+$$
+</p>
+
+<p align="left" class="fragment" 	data-fragment-index="2">
+Here, $\nmin$ is the minimum number of robots needed for connectivity.
+
+</p>
+
+</section>
+
+<section>
+<h3> IID Coverage: Finding $\pcon(\G)$  </h3>
+$$
+\newcommand{\rvsvec}{\mathbf{S}}
+\newcommand{\jsla}{f_{\rvsvec}(\svec)}
+$$
+
+<ul align="left" class="fragment" 	data-fragment-index="1">
+
+<li  class="fragment" 	data-fragment-index="2">
+When parents $\rvupos{i}$ are each iid on $\Bo$, we have  
+$$
+\pcon(\G) =  \frac{\int_{\svec \in \fav} \jsla d\svec }{\int_{\svec \in \ssimp} \jsla d\svec }.
+$$
+
+<li class="fragment" 	data-fragment-index="3"> No easy way to do this in general!
+<li class="fragment" data-fragment-index="4"> Can be simplified using the probability integral transform $Y'_i := \Fpar_{X'_i}(t)$.
+
+</ul>
+
+</section>
+
+<section>
+<h3> IID Coverage: Order Statistics  </h3>
+
+
+<ul align="left" class="fragment" 	data-fragment-index="1">
+
+<li  class="fragment" 	data-fragment-index="2">
+For general $\G$ <a href="https://goo.gl/4nzdyK"> (David &amp; Nagaraja '03) </a>
+$$
+f_{\rvpos{i}}(t) = \sum \limits_{j=i}^n \Fpar(t)^j (1-\Fpar(t))^{n-j}.
+$$
+
+
+<li class="fragment" 	data-fragment-index="3"> For connected $\G$, we need to marginalize similarly to $\pcon(\G)$.
+<li class="fragment" 	data-fragment-index="4"> Formulas for slacks found by a similar process.
+</ul>
+
+</section>
+
+<section>
+<h3> Finite Robots with IID Coverage  </h3>
+$$
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\nmin}{n_{\min}}
+$$
+
+<p align="left" class="fragment" 	data-fragment-index="1">
+When robots have diameter $\dia$, use $\ssimp_{CF}$ instead of $\ssimp$ 
+$$
+\ssimp_{CF} := \{ \svec \in \ssimp: s_i \geq d  \}.
+$$
+</p>
+
+<p align="left" class="fragment" 	data-fragment-index="2">
+No (simple) formula for any of $\rvpos{i}, S_i$, and $\pcon$! 
+</p>
+
+
+</section>
+
+</section> <!-- Result summary -->
+
+
+<section> <!-- lower bounds -->
+$$
+\newcommand{\PCON} {\mathsf{PCON}}
+\newcommand{\Q}{\mathbb{Q}}
+$$
+<section>
+<h3> Lower bounds for  $\pcon$ </h3>
+
+
+Define the $\PCON(\fpar)$ problem with 
+
+
+<ul>
+<li class="fragment" 	data-fragment-index="1"> <b> Inputs </b>: $(s,d,n) \in \Q_+$ and $\fpar$ is the parent
+<li class="fragment" 	data-fragment-index="2"> <b> Output </b>: $\pcon(\G) \in \Q_+$ 
+</ul>
+
+</section>
+
+
+
+<section>
+
+<h3>  $\PCON(\mathrm{Uni})$ is $\mathrm{Psuedo}-\mathsf{P}$  </h3>
+
+
+<p class="fragment" 	data-fragment-index="1" align="left" >
+<b> Theorem  <a href="" > (Kumar and Berman, to appear) </a></b>  $\PCON(\mathrm{Uni})$ can be solved in $\Omega(n)$ and $O(n \log n)$ time. </b>
+
+<p class="fragment" 	data-fragment-index="2" align="left" >
+<b> Proof  </b>: Straightforward from formula.
+
+
+</section>
+
+
+<section>
+$$
+\newcommand{\PH}{\#\mathsf{PH}}
+$$
+
+<h3>  $\PCON(\mathrm{poly})$ is $\PH$ </h3>
+
+
+<p class="fragment" 	data-fragment-index="1" align="left" >
+<b> Theorem  <a href="" > (Kumar and Berman, to appear) </a></b>  $\PCON$  is $\PH$ for arbitrary polynomial parents supported on $\Bo$.
+
+<p class="fragment" 	data-fragment-index="2" align="left" >
+<b> Proof  </b>: Reduction from <a href="http://goo.gl/nDYL7n" > (Dyer and Frieze '87) </a>.
+
+
+
+</section>
+
+<section>
+<h3> Other hard cases of $\PCON$  </h3>
+
+
+<p class="fragment" 	data-fragment-index="1" align="left" >
+<b> Theorem  <a href="" > (Kumar and Berman, to appear) </a></b>  $\PCON$  is $\PH$ for the following instances:
+
+<ul>
+<li class="fragment" 	data-fragment-index="2"> Uniform parents of robots with distinct radii
+<li class="fragment" 	data-fragment-index="3"> General INID parents
+</ul>
+
+
+
+
+</section>
+
+
+</section> <!-- Lower Bounds -->
+
+<section> <!--- comm sim -->
+
+
+<section>
+<h3> Towards Realistic MultiRobot + Wireless Simulation</h3>
+</section>
+
+<section>
+<h3> ROS </h3>
+<ul>
+<li class="fragment" 	data-fragment-index="1"> Excellent implementation of pose tracking, motion planning, etc.
+<li class="fragment" 	data-fragment-index="2"> <b> Limited </b> Multi-Robot simulation support. 
+</ul>
+
+
+</section>
+
+<section>
+
+<h3> ARGoS  </h3>
+<ul>
+<li class="fragment" 	data-fragment-index="1">Little pose tracking, motion planning, etc.
+<li class="fragment" 	data-fragment-index="2"> <b> Excellent </b> Multi-Robot simulation
+<ul>
+<li class="fragment" 	data-fragment-index="2"> Up to 100,000 Robots supported <a href="http://goo.gl/Eswuj1">(Pinciroli et al., 2011) </a>
+</ul> 
+<li class="fragment" 	data-fragment-index="2"> RoboNetsim patches ARGoS-2 with NS-3 <a href="http://goo.gl/CIcR75"> (Kudelski et al., 2013) </a>
+
+ <ul>
+<li class="fragment" 	data-fragment-index="2"> <b> Does not work with ARGoS3! </b>
+</ul> 
+</ul>
+
+
+</section>
+<section>
+<h3> <a href="https://www.geni.net/?page_id=2"> GENI </a>  </h3>
+<ul>
+<li class="fragment" 	data-fragment-index="1"> Virtual networking lab, with support for MANET
+<li class="fragment" 	data-fragment-index="2"> Can be used for accurate Wi-fi experiments
+<li class="fragment" 	data-fragment-index="3"> Precludes need for simulation
+<li class="fragment" 	data-fragment-index="4"> Not obvious how to combine this with robots 
+ 
+</ul>
+
+
+</section>
+
+
+
+</section> <!-- comm sim -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- comm -->
+
+
+
+
+
+
+
+
+
+
+
+		<!-- these divs close out everything -->
+	
+	
+			</div>
+
+		</div>
+
+		<!-- this should always be here -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+		
+
+
+
+
+
+		
+	
+					
+		
+		
+	</body>
+</html>

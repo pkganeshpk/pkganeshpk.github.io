@@ -45,18 +45,16 @@
 		<script type="text/javascript"
 		  src="./MathJax-master/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 		</script>
+				  <link rel="import" href="Macros.html">
 
-
-	
-
-
-		  <link rel="import" href="Macros.html">
 	</head>
 
 	<body>
 		<?
 		readfile("./Macros.php");
 		?>
+
+		
 		
 		<div class="reveal">
 
@@ -78,75 +76,11 @@
 
 
 				</section>
-
-				<section>
-					<h3> Committee </h3>
 			
-
-					<style type="text/css">
-		  			tr.noBorder td {border: 0; }
-					table {border : none;}
-					</style>
-
-					<small> <b>
-					<table>
-					<tr class = "noBorder">
-					<td>	
-					 <figure>
-					<img src="Figs/Spring.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Prof.Spring Berman </normal></figcaption>
-					</figure>
-					</td>
-
-					<td>	
-					 <figure>
-					<img src="Figs/Georgios.jpeg"  height="150" width="150"/>	
-					   <figcaption> <normal> Prof.Georgios Fainekos  </normal></figcaption>
-					</figure>
-					</td>
-
-					
-					</tr>
-
-					<tr class = "noBorder">
-					<td>	
-					 <figure>
-					<img src="Figs/Rida.jpeg"  height="150" width="175"/>	
-					   <figcaption> <normal> Prof.Rida Bazzi  </normal></figcaption>
-					</figure>
-					</td>
+	
+			<!--
 
 
-					<td>	
-					 <figure>
-					<img src="Figs/Violet.jpeg"  height="150" width="150"/>	
-					   <figcaption> <normal> Prof.Violet Syrotiuk  </normal></figcaption>
-					</figure>
-					</td>
-
-					<td>	
-					 <figure>
-					<img src="Figs/Tom.png"  height="150" width="150"/>	
-					   <figcaption> Prof.Thomas Taylor  </figcaption>
-					</figure>
-					</td>
-					
-					</tr>	
-
-					
-
-					</table>
-					</b>
-					</small>
-
-
-				</section>
-
-
-			
-				
-
-				<div class="slides">
 				<section> 
 
 					<section>
@@ -161,7 +95,7 @@
 					<td>	
 					 <figure>
 					<img src="Figs/Spring.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Prof.Spring <p> Berman </normal></figcaption>
+					   <figcaption> <normal> Prof.Spring Berman </normal></figcaption>
 					</figure>
 					</td>
 
@@ -233,7 +167,6 @@
 
 				</section>
 
-									
 
 				
 
@@ -281,7 +214,7 @@
 					</section>
 
 					<section>
-					<h3>BOUNDARY COVERAGE</h3>
+					<h3>STOCHASTIC COVERAGE SCHEMES (SCS)</h3>
 
 					<table  style="width=2000px">
 					<tr class="noBorder">
@@ -308,13 +241,13 @@
 					
 					 <figure>
 					<img src="Figs/DistSens.png"  height="300" width="300"/>	
-					   <figcaption> <normal> <b> Distributed Sensing with SwarmBots </b> </normal>
+					   <figcaption> <normal> <b> Distributed Sensing  </b> </normal>
 						<p> <small>  <a href="http://goo.gl/utjpbc"> J. Brandon, Digital Trends '11 </a> </small>  </p> 
 						</figcaption>
-					</figure>	
+
 					
 					</td>
-
+					</figure>	
 
 					</tr>
 					</table>	
@@ -327,8 +260,8 @@
 					
 
 					<section>	
-					<h3> BOUNDARY COVERAGE PROBLEM </h3>						
-					 <b> Goal: Claim positions on boundary  </b> 
+					<h3> STOCHASTIC COVERAGE SCHEMES (SCS) </h3>						
+					 <b> Goal: Claim <i>random</i> positions on boundary  </b> 
 					
 					<p class = "fragment" 	data-fragment-index="1" align="left">  Robot capabilities 	
 
@@ -346,40 +279,12 @@
 
 					</section>
 
-					<section>	
-					<h3> WHY STOCHASTIC COVERAGE SCHEMES (SCS) ? </h3>						
-					
-					<ul class="fragment" data-fragment-index="1" align = "left"> 
-					<li class="fragment" data-fragment-index="2"> More robust  to error in lifting and transport
-					<li class="fragment" data-fragment-index="3"> Easier to program than Deterministic Coverage Schemes (DCS)
-					<li class ="fragment"  data-fragment-index="4"> Odometric error leads even DCS to random positions 
-				
-					
-					</ul>
-					<figure class="fragment" data-fragment-index="4">					  		
-					<img src="Figs/OdomError.png"  height="200" width="300"/>	
-					   <figcaption> <small> <b> Odometric error leading to  Gaussian pdf  </b> 
-						 <a href="http://goo.gl/YXnMqD"> (Thrun, et al. 2005) </a> </small> 
-						</figcaption>
-					</figure>
-							
-
-					</section>
-
-
 						
 		
 
 					
 				</section>
-					
-		
 
-				
-
-
-
-				
 				<section>
 					<section>
 					<h3>Novel Contributions</h3>
@@ -392,7 +297,7 @@
 					
 					<section>
 					<h3>Novel Contributions</h3>
-					<b> Formulated stochastic controller for Multi-Boundary Coverage </b>
+					<b> Formulated stochastic controller for Multi-Boundary Boundary Coverage </b>
 						<p>
 						<small> <a href="http://goo.gl/5pCqCg"> <b> Pavlic et al., <i> ISRR '13</i> </b> </a></small>
 						</p>
@@ -401,7 +306,7 @@
 							<li> Proved robust to environmental variations  </li>
 							<p> <small> <a href="https://goo.gl/DFligW"> <b> Pavlic et al., <i> ASME '14 </i> </b> </a> </small>
 					
-							<li> May be modified to simulate CT in <i>A. Cockerelli  </i> </li>
+							<li> May be modified to simulate <i>A. Cockerelli  </i> </li>
 							<p> <small> <a href="https://goo.gl/DbbUC1"> <b> Wilson et al., <i> Swarm Int '14 </i> </b> </a> </small>
 						</ul>
 						<img src="Figs/RoboZyme_thinks.png"  height="100" width="300" style="position:absolute; BOTTOM:-100px; RIGHT:300px;"/>	
@@ -433,72 +338,29 @@
 						</figure>
 					</section>
 
+					<section>
+					<h3> Outline </h3>
+					
+					<ul>
+						
+					<li>Maintaining a Connected Network on Boundary  </li>	
+					<li>Integrating Multi-Robot and Wi-fi Simulators </li>
 
+					</ul>
+					</section>
+					
+				</section> 
 				
 					
-				</section> 	
+			
+					
 
 
-		<?php
-			readfile("./antshs/antshs.php");
-			readfile("./bcover-multi/bcover-multi.php");			
-			readfile("./bcover-conn/bcover-conn.php");
-			readfile("./comm-sim/comm-sim.php");
-		?>
-
-
-		<section>
-<h3> <a href="https://www.geni.net/?page_id=2"> Thank you </a>  </h3>
-
-
-
-</section>
-
-		<!-- these divs close out everything -->
-	
-	
-			</div>
-
-		</div>
-
-		<!-- this should always be here -->
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
-
-		
-
-
-
+			
 
 
 		
-	
+
 					
 		
 		

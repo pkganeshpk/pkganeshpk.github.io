@@ -352,7 +352,7 @@
 					<ul class="fragment" data-fragment-index="1" align = "left"> 
 					<li class="fragment" data-fragment-index="2"> More robust  to error in lifting and transport
 					<li class="fragment" data-fragment-index="3"> Easier to program than Deterministic Coverage Schemes (DCS)
-					<li class ="fragment"  data-fragment-index="4"> Odometric error leads even DCS to random positions 
+					<li class ="fragment"  data-fragment-index="4"> Odometric error leads DCS to random positions 
 				
 					
 					</ul>
