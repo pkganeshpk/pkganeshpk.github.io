@@ -1,0 +1,54 @@
+% Upper-case    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+% Lower-case    a b c d e f g h i j k l m n o p q r s t u v w x y z
+% Digits        0 1 2 3 4 5 6 7 8 9
+% Exclamation   !           Double quote "          Hash (number) #
+% Dollar        $           Percent      %          Ampersand     &
+% Acute accent  '           Left paren   (          Right paren   )
+% Asterisk      *           Plus         +          Comma         ,
+% Minus         -           Point        .          Solidus       /
+% Colon         :           Semicolon    ;          Less than     <
+% Equals        =           Greater than >          Question mark ?
+% At            @           Left bracket [          Backslash     \
+% Right bracket ]           Circumflex   ^          Underscore    _
+% Grave accent  `           Left brace   {          Vertical bar  |
+% Right brace   }           Tilde        ~
+
+%
+% Copyright (c) 2012 by the authors
+% All rights reserved.
+%
+
+\documentclass{acm_proc_article-sp}
+\input{preamble}
+% rubber: depend macros.tex
+
+\RequirePackage{pstricks}
+\RequirePackage{pstricks-add}
+\RequirePackage{pst-node}
+\RequirePackage{pst-eps}
+\RequirePackage{mathtools}
+\RequirePackage{amssymb}
+
+\pagestyle{empty}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{sfmath}
+\begin{document}
+\begin{TeXtoEPS}
+    \newpsobject{thumbtack}{psdot}{linecolor=white}
+    \psset{xAxisLabel={$x$ Position (cm)},xAxisLabelPos={c,-0.35in},%
+           yAxisLabel={$y$ Position (cm)},yAxisLabelPos={-0.35in,c}}
+    \begin{psgraph}[Dx=10,Dy=5]{->}%
+        (0,0)(60,20){1.5in}{0.75in}
+        \rput(60,20){\thumbtack(0.18in,0.2in)}
+        \rput(0,0){\thumbtack(-0.2in,-0.3in)}
+        %
+        %\psxTick(0){0}
+        %
+        \psline[linestyle=dashed](0,0)(57.5324,16.6646)
+        %
+        \readdata{\sampledata}{sample_trajectories/sample_trajectory_3.txt}
+        \listplot[arrows=o-,arrowscale=1.25,linecolor=black]{\sampledata}
+    \end{psgraph}
+\end{TeXtoEPS}
+\end{document}
