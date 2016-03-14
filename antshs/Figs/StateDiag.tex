@@ -1,25 +1,25 @@
 
-\documentclass{article}
-\def\pgfsysdriver{pgfsys-tex4ht.def}
+\documentclass{standalone}
 \usepackage{pgf}
 \usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{arrows,automata}
+\usetikzlibrary{shapes,snakes}
 \tikzstyle{every node}=[font=\Large]
 \usepackage[latin1]{inputenc}
 \begin{document}
-\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=4.8cm,
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=5.8cm,
                     thick,font=\Large]
-  \tikzstyle{every state}=[fill=white,draw=none,text=black]
+  \tikzstyle{every state}=[fill=white,draw,text=black]
 
-  \node[state] 	       (F)                    {$F$};
-  \node[state]         (B) [above right of=F] {$B$};
-  \node[state]         (D) [below right of=F] {$D$};
+  \node[circle] 	       (F)                    {$F$};
+  \node[circle]         (B) [above right of=F] {$B$};
+  \node[circle]         (D) [below right of=F] {$D$};
 
   \path (F) edge [bend left]             node {$r_{FB}$} (B) 
-            edge             node {$r_{FD}$} (D) 
+            edge             		node {$r_{FD}$} (D) 
         (B) edge [bend left]	 	 node {$r_{BF}$} (F) 
-            edge 		 node [near end] {$r_{BD}$} (D)
+            edge 		 node [near start] {$r_{BD}$} (D)
         (D) edge [bend left]             node [near end] {$r_{DF}$} (F)
             edge [bend right]  		node [pos=0.5] {$r_{DB}$} (B);
 \end{tikzpicture}

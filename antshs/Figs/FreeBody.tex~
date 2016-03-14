@@ -1,48 +1,20 @@
-\documentclass{article}
-\def\pgfsysdriver{pgfsys-tex4ht.def}
+\documentclass{standalone}
 \usepackage{pgf}
 \usepackage{amsmath}
-
 \usepackage{tikz}
-\usetikzlibrary{scopes,positioning}
+\usetikzlibrary{shapes,arrows}
+
 \begin{document}
-
-\def\iangle{35} % Angle of the inclined plane
-
-\def\down{-90}
-\def\arcr{0.5cm} % Radius of the arc used to indicate angles
-
-\begin{tikzpicture}[
-    force/.style={>=latex,draw=blue,fill=blue},
-    axis/.style={densely dashed,gray,font=\small},
-    M/.style={rectangle,draw,fill=lightgray,minimum size=0.5cm,thin},
-    m/.style={rectangle,draw=black,fill=none,minimum size=0.5cm, thick},
-    plane/.style={draw=black,fill=blue!10},
-    string/.style={draw=red, thick},
-    pulley/.style={thick},
-]
-
-\tikzstyle{matrix of math nodes}=[%
-  matrix of nodes,
-  nodes={%
-   execute at begin node=$,%
-   execute at end node=$%
-  }%
-]
-
-
-    %%%
-
-    % Free body diagram of m
-    \node[m] (m) {};
-    \draw[axis,->] (m) -- ++(0,-2) node[left] {};
-    {[force,->]
-        \draw (m.north) -- ++(0,1) node[above] {$F_{up} + F_{n}$};
-        \draw (m.south) -- ++(0,-1) node[right] {$m_Lg$};
-    }
-
-
-
-\end{tikzpicture}
-
+   \begin{tikzpicture}[
+    node distance = 0mm,
+every node/.style = {inner sep=2pt}]
+\coordinate                     (a)  at (0,0);
+\coordinate[below=11mm of a]    (b);
+\node[circle,draw,minimum size=3mm, 
+      at=(b)]            (c)    {$m$};
+    \draw (a) -- (c);
+\node[below right=of a]         {$T\uparrow$};
+\node[above left =of a]  (d)    {$\downarrow W_m$};
+\node[above=of d.north west]    {$\uparrow^+$};
+    \end{tikzpicture}
 \end{document}
