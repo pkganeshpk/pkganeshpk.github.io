@@ -478,7 +478,7 @@
 					<li align="left" class="fragment" data-fragment-index="2"> Stochastic Controller for Boundary Coverage developed and validated
 					<li align="left" class="fragment" data-fragment-index="3"> Uses simple random bind/unbind rules for robots with minimal capabilities
 					<li align="left" class="fragment" data-fragment-index="4"> Precludes knowing  $e_b$ and $e_u$
-					<li align="left" class="fragment" data-fragment-index="5"> Modified to mimic ant-based CT (
+					<li align="left" class="fragment" data-fragment-index="5"> Modified to mimic ant-based CT (skipped)
 					
 					</ul>
 					
