@@ -34,7 +34,7 @@
 					</table>	
 					
 					<small>
-					<b> Sources </b> <a href= "http://goo.gl/FKaPtN"> (Pavlic et al., ISRR '13) </a>
+					<b> Sources </b> (<a href= "http://goo.gl/FKaPtN"> Pavlic et al., 13 </a>,<a href="http://goo.gl/92wyF1"> Pavlic et al., 2014 </a>, <a href="http://goo.gl/BpQTal"> Wilson et al., 2015) </a>
 					</small>	
 				</section>
 
@@ -170,7 +170,7 @@
 					<img src="bcover-multi/Figs/crn-cartoon.png"  height="200" width="450" />
 					</figure>
 
-					<table>
+					<table width="1200px">
 					<tr class="noBorder">
 					<td style="vertical-align:top">
 					
@@ -184,11 +184,17 @@
 					<td style="vertical-align:top"> 
 					<ul class="fragment" data-fragment-index="2"> <b> Reactions </b>
 					<li class="fragment" data-fragment-index="2"> Bind   $r + U \xrightarrow{p_b e_u} B$ 
-					<li class="fragment" data-fragment-index="2"> Unbind $r+B \xrightarrow {p_u e_b} R$
-					</ul> 	
+					<li class="fragment" data-fragment-index="2"> Unbind $r+B \xrightarrow {p_u e_b} 2r+U$
+
+					</ul>
+
+					 	
 
 					</td>
-				
+					
+					<td style="vertical-align:top"> 	
+					<p class="fragment" data-fragment-index="2"> The robot ordering unbinding acts as an <i> enzyme</i>.
+					</td>
 					</tr>
 					</table>					
 
@@ -209,7 +215,8 @@
 					<ul align="left" class="fragment" data-fragment-index="2">
 					<li align="left" class="fragment" data-fragment-index="2"> Hard to derive from first principles! 
 					<li align="left" class="fragment" data-fragment-index="2"> Not under designer's control. 
-					</p>
+					
+					</ul>
 				
 				</section>
 
@@ -318,7 +325,11 @@
 					<h3> Correction for Spatial Effects  </h3>
 					<figure>
 					<img src="bcover-multi/Figs/DeltaCartoon.png"  height="400" width="400" />
-					<figcaption align="bottom"  <small> <b> Robot attach too closely to leave space for another in between them.  </small></figcaption>	
+					<figcaption align="bottom">  <small> <b> Partitioning of space between robots. </b>
+ 	The four spaces between each pair of robots have been
+     partitioned into smaller spaces no larger than $\delta_{\text{max}}
+     = 1 + 2a$, which represents the maximum additional arc length that a
+     bound robot can interfere with due to spatial effects. Here $a$ is the avoidance distance between robots.  </small></figcaption>	
 					</figure>	
 
 				
@@ -326,28 +337,152 @@
 				<section>
 					<h3> Correction for Spatial Effects  </h3>
 						
-
+						<ul align="left" class="fragment" data-fragment-index="1">
+					<li align="left" class="fragment" data-fragment-index="2"> In practice, we get less than $100\%$ allocation on disk.
+					<li align="left" class="fragment" data-fragment-index="3"> Let $a$ be the <i>avoidance distance</i> between robots.
+					<li align="left" class="fragment" data-fragment-index="4"> The  $\delta(a)$ function corrects for nonideal allocation:
+					$$
+					\frac{B^*}{U^* + B^*}
+    =     \frac{1}{1 + \delta}
+    \overbrace{\frac{\frac{p_b}{p_u}}{ \frac{p_b}{p_u} + \frac{e_b}{e_u} }}^{{\text{Idealized allocation}}}
+					$$ 
+					
+					</ul>
 				
 				</section>
+
+
+					<section>
+					<h3> CONTROL POLICY </h3>
+
+					<p align="left"> Given $\mathbf{x}_0, \mathbf{x}^*$ and $e_b/e_u$, the policy with
+					<p align="left"> 					
+						
+					$$
+				(p_b, p_u)
+    =
+    \begin{cases}
+        \left(\, \frac{e_bB^*}{e_uU^*} \frac{(1 + \delta)}{1 - \delta B^*/U^*}, 1\,\right) & \text{if } e_b B^* (1 + \delta) < e_u U^* (1 - \delta \frac{B^*}{U^*}),\\
+        \left(\,1, \frac{e_u}{e_b} \frac{U^*}{B^*} \frac{1 - \delta B^*/U^*}{(1 + \delta)}\,\right) & \text{otherwise}.
+    \end{cases}
+					$$ 
+					
+					converges fastest to equilibrium.
+					</p>
+				</section>
+
+		
+
+
+				
 				
 				<section>
+
 					<h3> Validation of Control Strategy  </h3>
+
+					<table>
+					<tr class="noBorder">
+					<td style="vertical-align:top">
 					<figure>
-					<img src="bcover-multi/Figs/ValidationControl.png"  height="400" width="500" />
+					<img src="bcover-multi/Figs/sim_traj.png"  height="500" width="600" />
 					
 					</figure>	
+					</td>
+
+					<td style="vertical-align:top">
+					<small>
+					<p align="justify">
+					Example of a single simulated trajectory of the control policy,
+     allocating 300 robots allocating to 3 disks. The $(p_b,p_u)$ policy was
+     chosen to achieve a mean $B/(B+U)$ allocation of $37.5\%$
+     shown as a dashed horizontal line.
+					</p>
+					</small>
+					</td>
+
+					</tr>
+					</table>
 	
 
 				
 				</section>
 
-				
 				<section>
-					<h3> Robustness to Environmental variations  </h3>
-						
+
+									<h3> Validation of Control Strategy  </h3>
+
+					<table>
+					<tr class="noBorder">
+					<td style="vertical-align:top">
+					<figure>
+					<img src="bcover-multi/Figs/av_traj.png"  height="500" width="600" />
+					
+					</figure>	
+					</td>
+
+					<td style="vertical-align:top">
+					<small>
+					<p align="justify">
+					Average of 10  simulated trajectories of the control policy,
+     allocating 300 robots allocating to 3 disks. The $(p_b,p_u)$ policy was
+     chosen to achieve a mean $B/(B+U)$ allocation of $37.5\%$
+     shown as a dashed horizontal line.
+					</p>
+					</small>
+					</td>
+
+					</tr>
+					</table>
+	
 
 				
 				</section>
+
+
 				
+				<section>
+					<h3> Robustness to Environmental variations  </h3>
+
+					<table align="left">
+					<tr class = "noBorder" >
+					<td style="vertical-align:top">
+					<figure>
+					<img src="bcover-multi/Figs/EnvRob.png"  height="500" width="500" />
+					
+					</figure>	
+					</td>
+
+					<td style="vertical-align:top">
+					<small><p align="justify">
+					Effect of varying environmental parameters on robot allocations.
+        Ten trials were generated for each disk size, and the
+        average across the trials are shown with error bars
+        indicating $\pm 1$ standard error of the mean. A dashed line of
+        unity slope is shown for reference. The solid line represents
+        the predicted curve based on the avoidance distance $a >0$. </p>
+
+					</small>
+
+					</td>
+					</tr>
+					</table>
+				
+				
+				</section>
+
+
+				<section>
+					<h3> Conclusions  </h3>
+
+					<ul align="left" class="fragment" data-fragment-index="1">
+					<li align="left" class="fragment" data-fragment-index="2"> Stochastic Controller for Boundary Coverage developed and validated
+					<li align="left" class="fragment" data-fragment-index="3"> Uses simple random bind/unbind rules for robots with minimal capabilities
+					<li align="left" class="fragment" data-fragment-index="4"> Precludes knowing  $e_b$ and $e_u$
+					<li align="left" class="fragment" data-fragment-index="5"> Modified to mimic ant-based CT (
+					
+					</ul>
+					
+				
+				</section>
 
 				</section> <!-- multi boundary -->
