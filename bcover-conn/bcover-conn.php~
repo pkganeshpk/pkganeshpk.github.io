@@ -133,7 +133,7 @@ $$
 <li class="fragment" data-fragment-index="3"> Design the number of robots $\nor$ and communication range $\conn$ to satisfy a given connectivity probability.
 </ul>
 
-<img src="bcover-conn/Figs/PheenoCap.png"   style="border:none; height:550; width:550;"/>
+<img src="bcover-conn/Figs/PheenoCap.png"   style="border:none; height:350; width:350;position:absolute;bottom:-300px;right:50px;"/>
 </section>
 
 
@@ -168,28 +168,9 @@ $$
 </figure>
 </p>
 
-
-
-
-
-
 </section>
 
-<section>
-<h3> Problem Setting</h3>
 
-
-<ul>
-<li> Single line segment boundary $\Bo$ instead of multiple disks
-<li> $\Bo$ has one end coloured  
-<li>  Robots attach to $\Bo$ using a programmed SCS 
-<div style="color:blue"> Could be just a DCS + noise  </div>  
-</ul>
-
-<figure>
-<img src="bcover-conn/Figs/Env.png"   style="border:none; height:650; width:750;"/>	
-</figure>
-</section>
 
 <section>
 <h3> Robot Capabilities </h3>
@@ -213,7 +194,7 @@ $$
 
 <h3> Robot Configuration </h3>
 
-<p  class="fragment" 	data-fragment-index="1">
+<p>
 <ul>
 <li> Boundary has length $s$ measured by odometry
 <li> Position of $\Rob{i}$ = distance of left end from coloured endpoint = $\upos{i}$ on $\Bo$
@@ -222,13 +203,10 @@ $$
 </ul>
 </p>
 
-<p  class="fragment" 	data-fragment-index="2"> Only CF configurations considered from now. </p>
-
-
 
 <figure>
 <img src="bcover-conn/Figs/Att1.png"   style="border:none; height:800; width:1000;"/>	
-<figcaption> <small> <b>  $\Rob{2}$ and $\Rob{4}$ collide (red circles)</b> </small> </figcaption> 
+<figcaption> <small> <b>  $\Rob{2}$ and $\Rob{4}$ collide (red circles), with unordered positions $\upos{1:4}$</b> </small> </figcaption> 
 </figure>
 </section>
 
@@ -238,7 +216,7 @@ $$
 
 <h3> Robot communication</h3>
 
-$\Rob{i}$ and $\Rob{j}$ inter-communicate iff $|\upos{i} - \upos{j} |  \leq \conn$
+$\Rob{i}$ and $\Rob{j}$ communicate iff $|\upos{i} - \upos{j} |  \leq \conn$
 
 
 <figure>
@@ -277,7 +255,7 @@ Define the communication graph $\mathcal{G}$ as one with
 Several connected communication graphs are possible:
 \begin{align}
 \G&=\{(0,1),(1,3),(2,3),(2,4)\} \\
-\G&=\{(0,1),(1,3),(1,2),(2,4),(3,4)\}.
+\G&=\{(0,1),(1,3),(1,2),(2,3),(3,4)\}.
 \end{align}
 
 
@@ -296,32 +274,46 @@ $$
 \newcommand{\posvec}{\mathbf{x}}
 \newcommand{\rvpos}[1]{{X}_{#1}}
 \newcommand{\rvposvec}{\mathbf{X}}
+\newcommand{\rvuposvec}{\mathbf{X}'}
 \newcommand{\si}[1]{s_{#1}}
+\newcommand{\rvsla}[1]{S_{#1}}
 \newcommand{\svec} {\mathbf{s}}
+\newcommand{\fpar}[1]{h_{#1}}
 $$
 <h3> Order Statistics </h3>
 
-<ul class="fragment" 	data-fragment-index="1" align="left">  <b> Order Statistics :</b> Sorted positions $\posvec = \pos{1:n}$ <a href="https://goo.gl/4nzdyK"> (David &amp; Nagaraja '03) </a>
-<li class="fragment" 	data-fragment-index="2" align="left"> Virtual Robots : $\pos{0} := -\dia, \pos{n+1} := s$
-<li class="fragment" 	data-fragment-index="3" align="left">  $\uposvec$ is called <i> parent </i> of $\posvec$  
+<ul>  <b> Order Statistics :</b> Sorted positions $\posvec = \pos{1:n}$ <a href="https://goo.gl/4nzdyK"> (David'03) </a>
+<li>  $\uposvec$ is called <i> parent </i> of $\posvec$  
+<li>  Each $\upos{i}$ samples a r.v $\rvupos{i}$ with <i>parent pdf</i> $\fpar{i}$ suppoted on $\Bo$
+<li>  Joint pdf of $\rvuposvec$ specifies the SCS   
 </ul>
 </p>
 
-
+<figure>
+<img src="bcover-conn/Figs/Att3.png"   style="border:none; height:800; width:1000;position:absolute; BOTTOM:-150px; RIGHT:250px;"/>	
+<figcaption> <small> <b> Order statistics given by $\posvec:=\pos{1..3}$ </b> </small> </figcaption> 
+</figure>
 
 </section>
 
 <section>
 <h3> Slacks </h3>
 
-<ul class="fragment" 	data-fragment-index="1" align="left"> 
-<li class="fragment" 	data-fragment-index="1" align="left"> <b> Slacks </b> are interrobot distances $$\si{i} :=\pos{i} - \pos{i-1}$$
-<li class="fragment" 	data-fragment-index="2" align="left"> <b> Slack vector </b> $\svec := \si{1:n+1}$
-<li class="fragment" 	data-fragment-index="3" align="left"> CF requires $\si{i} \geq \dia$
+<ul  align="left"> 
+<li  align="left"> <b> Slacks </b> are interrobot distances $\si{i} :=\pos{i} - \pos{i-1}$
+<li  align="left"> <b> Slack vector </b> $\svec := \si{1:n+1}$
+<li  align="left"> CF requires $\si{i} \geq \dia$
 
-<li class="fragment" 	data-fragment-index="4" align="left"> Connectivity requires $\si{i} \leq \conn$
-
+<li  align="left"> Connectivity requires $\si{i} \leq \conn$
+<li  align="left"> Slack samples the rv $\rvsla{i}$ realized by $\rvuposvec$
  </ul>
+
+<br> <br>
+<figure>
+<img src="bcover-conn/Figs/Att3.png"   style="border:none; height:800; width:1000;position:relative"/>	
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> Slacks given by $\svec:=\si{1..4}$ </b> </small> </figcaption> 
+</figure>
+
 </p>
 
 
@@ -329,17 +321,7 @@ $$
 </section>
 
 
-<section>
-<h3> Communication Graph $\mathcal{G}$ </h3>
 
-<ul class="fragment" 	data-fragment-index="1" align="left">
-<li class="fragment" 	data-fragment-index="2"> $\G$ is a <i> Geometric Graph </i>
-<li class="fragment" data-fragment-index="3"> When $\upos{i}$ are drawn from iid rv's, $G$ is a<i> Random Geometric Graph (RGG) </i>  <a href="https://goo.gl/LGVqWr"> (Penrose '03)</a>
-<li class="fragment" data-fragment-index="4"> $\G$ is  <i>Gilbert's Disk Graph </i> <a href="https://goo.gl/LxWbzh" > (Haenggi '12)</a> in $\mathbb{R}^1$ 
-
-</ul>
-
-</section>
 
 
 
@@ -354,13 +336,12 @@ $$
 $$
 <h3> Problem Statement - I</h3>
 
-<p class="fragment" 	data-fragment-index="1" align="left">Suppose $\upos{i}$ are realizations of iid parents $\rvupos{i}$ each with pdf $\fpar(t)$ supported on $\Bo=\{t:0\leq t\leq s\}$. 
-<p class="fragment" 	data-fragment-index="1" align="left"> Determine:
+<p  align="left">Suppose $\upos{i}$ are realizations of iid parents $\rvupos{i}$ each with pdf $\fpar(t)$ supported on $\Bo=\{t:0\leq t\leq s\}$. 
+<p  align="left"> Determine:
 
-<ul class="fragment" 	data-fragment-index="1" align="left"> 
-<li class="fragment" 	data-fragment-index="2" align="left"> Probability $\pcon$ that $\G$ is connected.
-<li class="fragment" 	data-fragment-index="3" align="left"> PDFs of $\rvpos{i}$ and $\rvsi{i}$ for general $\G$
-<li class="fragment" 	data-fragment-index="4" align="left"> PDFs of  $\rvpos{i}$ and $\rvsi{i}$ when $\G$ is <i> connected </i>. 
+<ul  	data-fragment-index="1" align="left"> 
+<li  	data-fragment-index="1" align="left"> Probability $\pcon$ that $\G$ is connected.
+<li  	data-fragment-index="1" align="left"> PDFs of order statistics and slacks.
 </ul> 
 
 
@@ -370,15 +351,20 @@ $$
 
 <h3> Problem Statement - II</h3>
 
-<p class="fragment" 	data-fragment-index="1" align="left">Extend the analysis in Part I to the cases when: 
-<p class="fragment" 	data-fragment-index="1" align="left"> 
+<p 	data-fragment-index="1" align="left">Extend the analysis in Part I to the cases when: 
+<p  	data-fragment-index="1" align="left"> 
 
-<ul class="fragment" 	data-fragment-index="2" align="left"> 
-<li class="fragment" 	data-fragment-index="2" align="left"> robots have distinct communication radii $d_i$ 
-<li class="fragment" 	data-fragment-index="2" align="left"> parents $\rvuposvec$ are inid
+<ul 	data-fragment-index="1" align="left"> 
+<li 	data-fragment-index="1" align="left"> robots have distinct communication radii $d_i$ 
+<li  	data-fragment-index="1" align="left"> parents $\rvuposvec$ are inid
 </ul> 
-<p class="fragment" 	data-fragment-index="3" align="left"> Determine the complexity of computing $\pcon$. 
+<p 	data-fragment-index="1" align="left"> Determine the complexity of computing $\pcon$. 
 
+
+<figure style="float:top;">
+<img src="bcover-conn/Figs/Gaussians.png"   style="border:none; height:250px; width:250px;"/>
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> INID Gaussian parents </b> </small> </figcaption> 
+</figure>
 
 </section>
 
@@ -394,8 +380,8 @@ $$
 
 
 
-<ul class="fragment" 	data-fragment-index="1" align="left">
-<li class="fragment" 	data-fragment-index="2"> Geometric interpretation of $\posvec$ and $\svec$ 
+<ul  	data-fragment-index="1" align="left">
+<li  	data-fragment-index="2"> Geometric interpretation of $\posvec$ and $\svec$ 
 <li class="fragment" data-fragment-index="3"> Order Statistics  
 <li class="fragment" data-fragment-index="4"> Polytopes  
 <li class="fragment" data-fragment-index="5"> Complexity of simplex/hypercube intersection   
@@ -403,6 +389,19 @@ $$
 </ul>
 
 </section>
+
+<section>
+<h3> Communication Graph $\mathcal{G}$ </h3>
+
+<ul class="fragment" 	data-fragment-index="1" align="left">
+<li class="fragment" 	data-fragment-index="2"> $\G$ is a <i> Geometric Graph </i>
+<li class="fragment" data-fragment-index="3"> When $\upos{i}$ are drawn from iid rv's, $G$ is a<i> Random Geometric Graph (RGG) </i>  <a href="https://goo.gl/LGVqWr"> (Penrose '03)</a>
+<li class="fragment" data-fragment-index="4"> $\G$ is  <i>Gilbert's Disk Graph </i> <a href="https://goo.gl/LxWbzh" > (Haenggi '12)</a> in $\mathbb{R}^1$ 
+
+</ul>
+
+</section>
+
 
 
 <section>
