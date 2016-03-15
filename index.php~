@@ -70,11 +70,11 @@
 
 					<img src="Figs/ASU_Logo.jpg"  height="50" width="150" style="position:absolute; TOP:-100px; LEFT:350px;"/>
 				
-					<img src="Figs/sideview_white.jpg"  height="100" width="250" style="position:absolute; TOP:350px; LEFT:-350px;"/>	
+					<img src="Figs/sideview_white.jpg"  height="100" width="250" style="position:absolute; TOP:350px; LEFT:-330px;"/>	
 
-					<img src="Figs/Pheeno1.jpg"  height="150" width="250" style="position:absolute; TOP:350px; RIGHT:-350px;"/>	
+					<img src="Figs/Pheeno1.jpg"  height="150" width="250" style="position:absolute; TOP:350px; RIGHT:-330px;"/>	
 
-					<img src="Figs/RoboZyme_problem_cartoon.png"  height="120" width="200" style="position:absolute; TOP:410px; RIGHT:300px;"/>
+					<img src="Figs/Pheeno_side.jpg"  height="120" width="200" style="position:absolute; TOP:420px; RIGHT:350px;"/>
 
 
 				</section>
@@ -197,7 +197,7 @@
 					<td>	
 					 <figure>
 					<img src="Figs/Ted.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Prof. Ted Pavlic  <p> <small> <b> FSE / SOLS </b> </small> </p>  </normal></figcaption>
+					   <figcaption> <normal> Prof. Ted Pavlic  <p> <small> <b> FSE / GIS / SOLS </b> </small> </p>  </normal></figcaption>
 					</figure>
 					</td>
 					
@@ -221,8 +221,9 @@
 
 					<small>
 					<table> 
-					<tr class = "noBorder"> <td> <b>FSE </b>:<td>Fulton Schools of Engg. </td> </tr> 
-					<tr class = "noBorder" > <td> <b>SOLS </b>: </td> <td> School of Life Sciences </td> <tr>
+					<tr class = "noBorder"> <td> <b>FSE </b><td>Fulton Schools of Engg. </td> </tr> 
+					<tr class = "noBorder" > <td> <b>SOLS </b> </td> <td> School of Life Sciences </td> <tr>
+										<tr class = "noBorder" > <td> <b>GIS </b> </td> <td> Global Institute of Sustainability </td> <tr>	
 					</table>
 					</small>
 
@@ -240,6 +241,94 @@
 			
 
 				<section>
+
+					<section> <h3> Swarms of Low-cost Robots </h3> 
+
+
+					<style type="text/css">
+		  			tr.noBorder td {border: 0; }
+					</style>
+
+					<table  style="width=2000px"> 
+					<tr class = "noBorder">
+					<td>	
+					 <figure>
+					<img src="Figs/drone-swarms.jpeg"  height="300" width="350"/>
+					   <figcaption> <normal> <b> Hummingbird Quadrotors (GRASP Lab, UPenn)  </normal></figcaption>
+					</figure>
+					</td>
+					
+					<td>	
+					 <figure>
+					<img src="Figs/marxbot-swarm.jpg"  height="300" width="300"/>	
+					   <figcaption> <normal> <b> Marxbots (EPFL)  </normal></figcaption>
+					</figure>	
+					</td>
+
+					
+											
+
+					<td>	
+					 <figure>
+					<img src="Figs/Pheeno_transport.png"  height="300" width="300"/>	
+					   <figcaption> <normal> <b> Pheenos (ACS Lab, ASU)  </b> </normal></figcaption>
+					</figure>
+					</td>
+					
+					</tr>
+					</table>
+					
+					
+
+					</section>
+
+					
+
+
+					<section> <h3> Swarm Applications </h3>
+
+
+				
+
+					<style type="text/css">
+		  			tr.noBorder td {border: 0; }
+					</style>
+
+					<table  style="width=2000px"> 
+					<tr class = "noBorder">
+					<td>	
+					 <figure>
+					<img src="Figs/Robonaut.jpeg"  height="300" width="300"/>
+					   <figcaption> <normal> <b> Robonauts (NASA/GM)  </normal></figcaption>
+					</figure>
+					</td>
+					
+					<td>	
+					 <figure>
+					<img src="Figs/nanobots.jpg"  height="300" width="300"/>	
+					   <figcaption> <normal> <b> Nanoscale Robots (Univ. Sheffield)   </normal></figcaption>
+					</figure>	
+					</td>
+
+					
+											
+
+					<td>	
+					 <figure>
+					<img src="Figs/warehouse.jpeg"  height="300" width="300"/>	
+					   <figcaption> <normal> <b> Warehouses (Kiva Systems)  </b> </normal></figcaption>
+					</figure>
+					</td>
+					
+					</tr>
+					</table>
+					
+					
+
+					</section>
+
+
+					
 					<section>
 					<h3>Collective Transport (CT)</h3>
 
@@ -279,6 +368,10 @@
 					
 
 					</section>
+
+
+
+
 
 					<section>
 					<h3>BOUNDARY COVERAGE</h3>
@@ -346,6 +439,11 @@
 
 					</section>
 
+					
+					
+
+
+
 					<section>	
 					<h3> WHY STOCHASTIC COVERAGE SCHEMES (SCS) ? </h3>						
 					
@@ -384,8 +482,12 @@
 					<section>
 					<h3>Novel Contributions</h3>
 						<b> Devised Stochastic Hybrid System (SHS) model of CT in <i>A. Cockerelli</i> </b>
-						<p>
-						<small> <b>  <a href="https://goo.gl/SqG93d"> Kumar et al., HSCC '13</a> </b>  </small></p>
+						<p>  <small> <b> Source: <a href="https://goo.gl/SqG93d"> Kumar et al., HSCC '13</a> </b>  </small> </p> 
+						<p> <div style="color:blue;"> <b> My contributions </b></p>
+						 	
+						   <ul> <li> Devised CRN <li> Derived moments of SHS <li> Helped validate parameter estimation </ul>   
+						</div> 
+
 						<img src="Figs/sideview_white.jpg"  height="100" width="300" style="position:absolute; BOTTOM:-200px; RIGHT:300px;"/>	
 					</section>
 
@@ -394,17 +496,13 @@
 					<h3>Novel Contributions</h3>
 					<b> Formulated stochastic controller for Multi-Boundary Coverage </b>
 						<p>
-						<small> <a href="http://goo.gl/5pCqCg"> <b> Pavlic et al., <i> ISRR '13</i> </b> </a></small>
+						<small> <b> Sources: </b> <a href="http://goo.gl/5pCqCg"> <b> Pavlic et al., <i> ISRR '13</i> </b> </a>; <a href="https://goo.gl/DFligW"> <b> Pavlic et al., <i> SME '14 </i> </b> </a>;<a href="https://goo.gl/DbbUC1"> <b> Wilson et al., <i> Swarm Int '14 </i> </b> </a>  </small>
 						</p>
-						
-						<ul>
-							<li> Proved robust to environmental variations  </li>
-							<p> <small> <a href="https://goo.gl/DFligW"> <b> Pavlic et al., <i> ASME '14 </i> </b> </a> </small>
-					
-							<li> May be modified to simulate CT in <i>A. Cockerelli  </i> </li>
-							<p> <small> <a href="https://goo.gl/DbbUC1"> <b> Wilson et al., <i> Swarm Int '14 </i> </b> </a> </small>
-						</ul>
-						<img src="Figs/RoboZyme_thinks.png"  height="100" width="300" style="position:absolute; BOTTOM:-100px; RIGHT:300px;"/>	
+						<p> <div style="color:blue;"> <b> My contributions </b></p>
+						 	
+						   <ul> <li> Devised a closed-form solution to bimolecular CRN <li> Analyzed the unimolecular approximation to CRN </ul>   
+						</div> 
+						<img src="Figs/RoboZyme_thinks.png"  height="100" width="300" style="position:absolute; BOTTOM:-200px; RIGHT:300px;"/>	
 						
 					</section>
 
@@ -427,10 +525,24 @@
 								<p> <small> Kumar and Berman, <i> SICOMP (in prep.) </i>  </small>  </p>
 	
 						</ul>
+				 
 						<figure style="position:absolute; TOP: 300px; RIGHT:-200px;">
 						<img src="Figs/config.svg"  height="75" width="400" />
 
 						</figure>
+					</section>
+
+					<h3>Agenda</h3>
+					
+						<ul>
+							<li> Study of CT in Desert Ant 
+							<li> Formulating Stochastic Control policies for multi-boundary coverage								
+							<li> Analyzing communication network generated by SCS
+							<li> Challenges in integrating Multi-Robot  simulation with wireless communications 
+	
+						</ul>
+				 
+						
 					</section>
 
 
@@ -446,13 +558,26 @@
 			readfile("./comm-sim/comm-sim.php");
 		?>
 
+		<section>
+		<section>
+		<h3>  Conclusions </h3>	
+		<ul class = "fragment" 	data-fragment-index="1" align="left">
+		<li class = "fragment" 	data-fragment-index="2" align="left"> Devised SHS Model of CT in Desert Ant   </li>
+		<li class = "fragment" 	data-fragment-index="3" align="left"> Formulated stochastic controller for multi-boundary coverage </li>
+		<li  class = "fragment" data-fragment-index="4" align="left"> Investigated the communication network of SCS</li>
+		<li  class = "fragment" data-fragment-index="5" align="left"> <div style="color:blue"> Explored challenges of multi-robot simulation with communication </div>
+		</li>
+		</ul>
+		</section>
+
 
 		<section>
-<h3> <a href="https://www.geni.net/?page_id=2"> Thank you </a>  </h3>
+		<h3> ACS Lab </h3>	
+		<img src="Figs/ACSLab.jpg"  height="400" width="800" />
 
-
-
-</section>
+	
+		</section>
+		</section>	
 
 		<!-- these divs close out everything -->
 	

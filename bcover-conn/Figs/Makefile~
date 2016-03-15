@@ -1,0 +1,6 @@
+FILES:= $(patsubst %.pdf,%.tex,$(wildcard *.tex))
+	
+
+all:
+	echo $(FILES)	
+		

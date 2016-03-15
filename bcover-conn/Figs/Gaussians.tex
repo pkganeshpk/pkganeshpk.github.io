@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{positioning}
+\begin{document}
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+\begin{tikzpicture}
+\begin{axis}[every axis plot post/.append style={
+  mark=none,domain=0:3,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
+  axis x line*=bottom, % no box around the plot, only x and y axis
+  axis y line*=left, % the * suppresses the arrow tips
+  enlargelimits=upper] % extend the axes a bit to the right and top
+  \addplot {gauss(0,0.5)};
+  \addplot {gauss(1,0.5)};
+  \addplot {gauss(2,0.25)}; 
+
+  \node[draw=none,align=left] at (20.5,10.80) {\huge $\mathcal{R}_1$};
+    \node[draw=none,align=left] at (200.5,10.80) {\huge $\mathcal{R}_3$};
+  \node[draw=none,align=left] at (100.5,10.80) {\huge $\mathcal{R}_2$}; 	
+\end{axis}
+\end{tikzpicture}
+\end{document}
