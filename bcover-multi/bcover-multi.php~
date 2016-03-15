@@ -150,8 +150,8 @@
 				<section>
 					<h3> Assumptions: Disk Properties  </h3>
 					<ul>
-						<li class="fragment" data-fragment-index="1"> Placed randomly in environment
-						<li class="fragment" data-fragment-index="2"> Types distinguished by weight, colour, etc.
+						<li  data-fragment-index="1"> Placed randomly in environment
+						<li  data-fragment-index="2"> Types distinguished by weight, colour, etc.
 					</ul>	
 				</section>
 
@@ -176,8 +176,7 @@
 					
 					<ul class="fragment" data-fragment-index="1">  <b> Species </b>
 					<li class="fragment" data-fragment-index="1"> Free robots  $r$ 
-					<li class="fragment" data-fragment-index="1">  Bound zones  $B$
-					<li class="fragment" data-fragment-index="1">  Unbound zones  $U$
+					<li class="fragment" data-fragment-index="1">  Bound/ Unbound zones  $B$/$U$
 					</ul> 
 					</td>
 					
@@ -230,7 +229,7 @@
 					
 					</p>	
 
-					<p align="left" class="fragment" data-fragment-index="2">
+					<p align="left" >
 					Under designer's control
 					</p>
 				
@@ -245,7 +244,7 @@
 					$$\mathbf{x} := \begin{bmatrix} r & U  & B \end{bmatrix}^T$$ 
 					</p>	
 
-					<p align="left" class="fragment" data-fragment-index="2"> <b> ODE System </b>
+					<p align="left" data-fragment-index="2"> <b> ODE System </b>
 					$$
 					\dot{\mathbf{x}} = r(p_u e_b B - p_b e_u U) \begin{bmatrix} 1 & 1 & -1 \end{bmatrix}^T , ~\text{with}~
 					\mathbf{x}_0 ~ \text{given}.
@@ -270,13 +269,13 @@
 					
 					</p>
 					
-					<p align="left" class="fragment" data-fragment-index="2"> <b> Trivial Equilibrium </b> <br> </p>
-					<p align="left" class="fragment" data-fragment-index="2">
+					<p align="left"  data-fragment-index="2"> <b> Trivial Equilibrium </b> <br> </p>
+					<p align="left"  data-fragment-index="2">
 					If  $r_0 +B_0 < B^*$, then we have </p>
 
-					 					<p align="left" class="fragment" data-fragment-index="2">$(r^*,U^*,b^*) = (0, U_0 -r_0, B_0+r_0)$ </p>
+					 					<p align="left"  data-fragment-index="2">$(r^*,U^*,b^*) = (0, U_0 -r_0, B_0+r_0)$ </p>
 		
-										<p align="left" class="fragment" data-fragment-index="2">caused by free robot depletion.
+										<p align="left" data-fragment-index="2">caused by free robot depletion.
 					</p>
 				
 				
@@ -337,10 +336,10 @@
 				<section>
 					<h3> Correction for Spatial Effects  </h3>
 						
-						<ul align="left" class="fragment" data-fragment-index="1">
-					<li align="left" class="fragment" data-fragment-index="2"> In practice, we get less than $100\%$ allocation on disk.
-					<li align="left" class="fragment" data-fragment-index="3"> Let $a$ be the <i>avoidance distance</i> between robots.
-					<li align="left" class="fragment" data-fragment-index="4"> The  $\delta(a)$ function corrects for nonideal allocation:
+						<ul align="left" data-fragment-index="1">
+					<li align="left" data-fragment-index="2"> In practice, we get less than $100\%$ allocation on disk.
+					<li align="left"  data-fragment-index="3"> Let $a$ be the <i>avoidance distance</i> between robots.
+					<li align="left"  data-fragment-index="4"> The  $\delta(a)$ function corrects for nonideal allocation:
 					$$
 					\frac{B^*}{U^* + B^*}
     =     \frac{1}{1 + \delta}
@@ -362,11 +361,11 @@
 				(p_b, p_u)
     =
     \begin{cases}
-        \left(\, \frac{e_bB^*}{e_uU^*} \frac{(1 + \delta)}{1 - \delta B^*/U^*}, 1\,\right) & \text{if } e_b B^* (1 + \delta) < e_u U^* (1 - \delta \frac{B^*}{U^*}),\\
-        \left(\,1, \frac{e_u}{e_b} \frac{U^*}{B^*} \frac{1 - \delta B^*/U^*}{(1 + \delta)}\,\right) & \text{otherwise}.
+        \left(\, \frac{e_bB^*}{e_uU^*} \frac{(1 + \delta)}{1 - \delta B^*/U^*}, 1\,\right) & \text{if } e_b B^* (1 + \delta) < e_u U^* f,\\
+        \left(\,1, \frac{e_u}{e_b} \frac{U^*}{B^*} \frac{1 - \delta B^*/U^*}{(1 + \delta)}\,\right) & \text{otherwise},
     \end{cases}
 					$$ 
-					
+					where $f=1-\delta B^*/U^*$ 			
 					converges fastest to equilibrium.
 					</p>
 				</section>
@@ -471,18 +470,6 @@
 				</section>
 
 
-				<section>
-					<h3> Conclusions  </h3>
-
-					<ul align="left" class="fragment" data-fragment-index="1">
-					<li align="left" class="fragment" data-fragment-index="2"> Stochastic Controller for Boundary Coverage developed and validated
-					<li align="left" class="fragment" data-fragment-index="3"> Uses simple random bind/unbind rules for robots with minimal capabilities
-					<li align="left" class="fragment" data-fragment-index="4"> Precludes knowing  $e_b$ and $e_u$
-					<li align="left" class="fragment" data-fragment-index="5"> Modified to mimic ant-based CT (skipped)
-					
-					</ul>
-					
 				
-				</section>
 
 				</section> <!-- multi boundary -->

@@ -288,10 +288,10 @@ $$
 <li>  Joint pdf of $\rvuposvec$ specifies the SCS   
 </ul>
 </p>
-
+<br> <br>
 <figure>
-<img src="bcover-conn/Figs/Att3.png"   style="border:none; height:800; width:1000;position:absolute; BOTTOM:-150px; RIGHT:250px;"/>	
-<figcaption> <small> <b> Order statistics given by $\posvec:=\pos{1..3}$ </b> </small> </figcaption> 
+<img src="bcover-conn/Figs/Att3.png"   style="border:none; height:800; width:1000;position:relative;"/>	
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> Order statistics given by $\posvec:=\pos{1..3}$ </b> </small> </figcaption> 
 </figure>
 
 </section>
@@ -375,16 +375,18 @@ $$
 
 <section>
 
-<section>
+
+
+<!-- <section>
 <h3> Problem Solving Tools</h3>
 
 
 
 <ul  	data-fragment-index="1" align="left">
-<li  	data-fragment-index="2"> Geometric interpretation of $\posvec$ and $\svec$ 
-<li class="fragment" data-fragment-index="3"> Order Statistics  
-<li class="fragment" data-fragment-index="4"> Polytopes  
-<li class="fragment" data-fragment-index="5"> Complexity of simplex/hypercube intersection   
+<li  	data-fragment-index="2"> Geometric Graphs 
+<li  data-fragment-index="3"> Order Statistics  
+<li  data-fragment-index="4"> Polytopes  
+<li  data-fragment-index="5"> Counting Complexity 
 
 </ul>
 
@@ -393,14 +395,14 @@ $$
 <section>
 <h3> Communication Graph $\mathcal{G}$ </h3>
 
-<ul class="fragment" 	data-fragment-index="1" align="left">
-<li class="fragment" 	data-fragment-index="2"> $\G$ is a <i> Geometric Graph </i>
-<li class="fragment" data-fragment-index="3"> When $\upos{i}$ are drawn from iid rv's, $G$ is a<i> Random Geometric Graph (RGG) </i>  <a href="https://goo.gl/LGVqWr"> (Penrose '03)</a>
-<li class="fragment" data-fragment-index="4"> $\G$ is  <i>Gilbert's Disk Graph </i> <a href="https://goo.gl/LxWbzh" > (Haenggi '12)</a> in $\mathbb{R}^1$ 
+<ul  	data-fragment-index="1" align="left">
+<li  	data-fragment-index="2"> $\G$ is a <i> Geometric Graph </i>
+<li  data-fragment-index="3"> When $\upos{i}$ are drawn from iid rv's, $G$ is a<i> Random Geometric Graph (RGG) </i>  <a href="https://goo.gl/LGVqWr"> (Penrose '03)</a>
+<li  data-fragment-index="4"> $\G$ is  <i>Gilbert's Disk Graph </i> <a href="https://goo.gl/LxWbzh" > (Haenggi '12)</a> in $\mathbb{R}^1$ 
 
 </ul>
 
-</section>
+</section>-->
 
 
 
@@ -411,19 +413,31 @@ $$
 \newcommand{\psimp}{\mathcal{P}}
 $$
 
-<p ul class="fragment" 	data-fragment-index="1" align="left"> Consider <i>point</i> robots, for which CF is irrelevant </p>
+<p	data-fragment-index="1" align="left"> Consider <i>point</i> robots, for which CF is irrelevant </p>
 
-<ul class="fragment" 	data-fragment-index="1" align="left">
-<li class="fragment" 	data-fragment-index="2"> Think of $\posvec$ (and $\uposvec$) as a point in $\R^n$
-<li class="fragment" data-fragment-index="3"> Valid (sorted) positions have 
+<table width="1200px;">
+<tr class="noBorder">
+<td style="vertical-align:top;">
+<ul  	data-fragment-index="1" align="left">
+<li  	data-fragment-index="2"> Think of $\posvec$ (and $\uposvec$) as a point in $\R^n$
+<li  data-fragment-index="3"> Valid (sorted) positions obey the inequalities
 $$
 \pos{0} = 0\leq \pos{1} \leq \ldots \pos{n} \leq \pos{n+1} =s
 $$
 
-<li class="fragment" data-fragment-index="4"> Set of such positions forms <i> position simplex </i> $\psimp$  
-<li class="fragment" data-fragment-index="5"> Vertices of $\psimp$ are of the form $$(0,0,\ldots,0,s,s,\ldots,s)$$   
+<li  data-fragment-index="4"> Set of such positions forms <i> position simplex </i> $\psimp$  
+<li  data-fragment-index="5">  $\psimp$ has vertices of the form $(0,0,\ldots,0,s,s,\ldots,s)$  
 
 </ul>
+</td>
+<td>
+<figure>
+<img src="bcover-conn/Figs/PSimp.png"   style="border:none; height:800; width:1000;position:relative"/>	
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> Position simplex for two points on $\Bo$. </b> </small> </figcaption> 
+</figure>
+</td>
+</tr>
+</table>
 
 </section>
 
@@ -434,19 +448,30 @@ $$
 \newcommand{\1}{\mathbf{1}}
 $$
 
-<ul class="fragment" 	data-fragment-index="1" align="left">
-<li class="fragment" 	data-fragment-index="2"> Think of $\svec$ as a point in $\R^{n+1}$
-<li class="fragment" data-fragment-index="3"> Valid slack vectors have 
+<table width="1200px;">
+<tr class="noBorder">
+<td style="vertical-align:top;">
+<ul  	data-fragment-index="1" align="left">
+<li  	data-fragment-index="2"> Think of $\svec$ as a point in $\R^{n+1}$
+<li  data-fragment-index="3"> Valid slack vectors have 
 $$
-\begin{align}
-\si{i} \geq 0 \\
- \sum_{i=1}^{n+1} \si{i} = s, ~\text{or as a half space}~ \sum_{i=1}^{n}  \si{i} \leq s.
-\end{align}
+\si{i} \geq 0, \text{and} \\
+ \begin{cases} \sum_{i=1}^{n+1} \si{i} = s, \\ \text{or}~  \sum_{i=1}^{n}  \si{i} \leq s \end{cases}.
 $$
 
-<li class="fragment" data-fragment-index="4"> Set of such vectors forms <i> slack simplex </i> $\ssimp$  
-
+<li  data-fragment-index="4"> Set of such vectors forms <i> slack simplex </i> $\ssimp$  
+<li  data-fragment-index="4"> $\ssimp$ is a <i>regular simplex</i> of side $s\sqrt{2}$  
 </ul>
+</td>
+<td>
+<figure>
+<img src="bcover-conn/Figs/SSimp.png"   style="border:none; height:800; width:1000;position:relative"/>	
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> Slack simplex (equilateral triangle) for two points on $\Bo$. </b> </small> </figcaption> 
+</figure>
+</td>
+</tr>
+</table>
+
 
 </section>
 
@@ -454,19 +479,16 @@ $$
 <section>
 <h3> Defining Connectivity </h3>
 $$
-\newcommand{\hyp}{\mathcal{hyp}}
+\newcommand{\hyp}{\mathcal{H}}
 \newcommand{\1}{\mathbf{1}}
 $$
 
-<ul class="fragment" 	data-fragment-index="1" align="left">
-<li class="fragment" 	data-fragment-index="2"> Connected slack vectors have $0 \leq \si{i} \leq \conn$
-<li class="fragment" data-fragment-index="3"> All these vectors lie in a hypercube 
+<ul  	data-fragment-index="1" align="left">
+<li 	data-fragment-index="2"> Connected slack vectors have $0 \leq \si{i} \leq \conn$
+<li  data-fragment-index="3"> All these vectors lie in a hypercube 
 $$
 \hyp := \{ \svec \in \R^{n+1} : 0\leq \si{i} \leq \conn \}
 $$
-
-<li class="fragment" data-fragment-index="4"> This is immaterial of $\svec$ lying in $\ssimp$.  
-
 </ul>
 
 </section>
@@ -481,12 +503,24 @@ $$
 \newcommand{\vvec}{\mathbf{v}}
 $$
 
-<ul class="fragment" 	data-fragment-index="1" align="left">
-<li class="fragment" 	data-fragment-index="2"> For $\G%$ to be connected, we need $\svec \in \ssimp \cap \hyp$
-<li class="fragment" data-fragment-index="3"> Define  the <i> connected region</i> $\fav := \ssimp \cap \hyp$
-<li class="fragment" data-fragment-index="4"> Define the <i> disconnected region </i> $\unfav := \ssimp \setminus \fav$ 
+<table width="1200px;">
+<tr class="noBorder">
+<td style="vertical-align:top;">
+<ul  	data-fragment-index="1" align="left">
+<li 	data-fragment-index="2"> For $\G%$ to be connected, we need $\svec \in \ssimp \cap \hyp$
+<li data-fragment-index="3"> Define  the <i> connected region</i> $\fav := \ssimp \cap \hyp$
+<li  data-fragment-index="4"> Define the <i> disconnected region </i> $\unfav := \ssimp \setminus \fav$ 
 
 </ul>
+</td>
+<td style="vertical-align:top;">
+<figure>
+<img src="bcover-conn/Figs/inters.png"   style="border:none; height:800; width:1000;position:relative"/>	
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b>  Plots of $\ssimp=(0,s)\mbox{--}(s,0)$ and $\hyp$ for $n=1$. For each of the three distinct ranges of $\conn$ m $\hyp$ has a different type of intersection with $\ssimp$. </figcaption>
+</figure>
+</td>
+</tr>
+</table>
 
 </section>
 
@@ -501,7 +535,7 @@ $$
 \newcommand{\vvec}{\mathbf{v}}
 $$
 
-<p align="left" class="fragment" 	data-fragment-index="1"><b> Theorem (<a href="https://goo.gl/B0D4L1"> Kumar and Berman </a>) </b> The disconnected region can be expressed as the intersection of simplices 
+<p align="left" 	data-fragment-index="1"><b> Theorem (<a href="https://goo.gl/B0D4L1"> Kumar and Berman </a>) </b> The disconnected region can be expressed as the intersection of simplices 
 $$
 \unfav := \bigcap\limits_{\vvec \in \{0,1 \} ^{n+1}, \1^T \vvec \geq 1} \ssimp(\vvec), 
 $$
@@ -516,7 +550,7 @@ $$
 $$
 
 
-<p align="left" class="fragment" 	data-fragment-index="2"> $\ssimp(\vvec)$ forms a simplex of side $s-d\1^T\vvec$.
+<p align="left" 	data-fragment-index="2"> $\ssimp(\vvec)$ forms a regular simplex of side $s-d\1^T\vvec$.
 
 
 </section>
@@ -526,7 +560,7 @@ $$
 <section> <! --- Result summary -->
 
 <section>
-<h3> Summary of Results </h3>
+<h3> Summary of Analytical Results </h3>
 </section>
 
 <section>
@@ -536,15 +570,14 @@ $$
 \newcommand{\nmin}{n_{\min}}
 $$
 
-<p align="left" class="fragment" 	data-fragment-index="1">
+<p align="left" 	data-fragment-index="1">
 When parents $\rvupos{i}$ are each uniform on $\Bo$, we have  
 $$
-
-\pcon(\G) =  1 - \sum _{k=1} ^{\nmin} (-1)^{k-1} \binom{n}{k} {(1-kd/s)^n } ~\text{where}~ \nmin = \lfloor \frac{s}{\conn} \rfloor. 
+\pcon(\G) =  1 - \sum _{k=1} ^{\nmin} (-1)^{k-1} \binom{n}{k} {(1-\frac{kd}{s})^n } ~\text{where}~ \nmin = \lfloor \frac{s}{\conn} \rfloor. 
 $$
 </p>
 
-<p align="left" class="fragment" 	data-fragment-index="2">
+<p align="left" 	data-fragment-index="2">
 Here, $\nmin$ is the minimum number of robots needed for connectivity.
 
 </p>
@@ -558,16 +591,16 @@ $$
 \newcommand{\jsla}{f_{\rvsvec}(\svec)}
 $$
 
-<ul align="left" class="fragment" 	data-fragment-index="1">
+<ul align="left"  	data-fragment-index="1">
 
-<li  class="fragment" 	data-fragment-index="2">
+<li  	data-fragment-index="2">
 When parents $\rvupos{i}$ are each iid on $\Bo$, we have  
 $$
 \pcon(\G) =  \frac{\int_{\svec \in \fav} \jsla d\svec }{\int_{\svec \in \ssimp} \jsla d\svec }.
 $$
 
-<li class="fragment" 	data-fragment-index="3"> No easy way to do this in general!
-<li class="fragment" data-fragment-index="4"> Can be simplified using the probability integral transform $Y'_i := \Fpar_{X'_i}(t)$.
+<li 	data-fragment-index="3"> No easy way to do this in general!
+<li  data-fragment-index="4"> Can be simplified using the probability integral transform $Y'_i := \Fpar_{X'_i}(t)$.
 
 </ul>
 
@@ -577,23 +610,40 @@ $$
 <h3> IID Coverage: Order Statistics  </h3>
 
 
-<ul align="left" class="fragment" 	data-fragment-index="1">
+<ul align="left"  	data-fragment-index="1">
 
-<li  class="fragment" 	data-fragment-index="2">
-For general $\G$ <a href="https://goo.gl/4nzdyK"> (David &amp; Nagaraja '03) </a>
+<li   	data-fragment-index="2">
+For general iid parents, <a href="https://goo.gl/4nzdyK"> (David '03) </a>
 $$
+f_{\rvposvec}(x_1,\ldots,x_n) = h(x_1)h(x_2)\ldots h(x_n) ~\text{over}~\psimp, \\ 
 f_{\rvpos{i}}(t) = \sum \limits_{j=i}^n \Fpar(t)^j (1-\Fpar(t))^{n-j}.
 $$
-
-
-<li class="fragment" 	data-fragment-index="3"> For connected $\G$, we need to marginalize similarly to $\pcon(\G)$.
-<li class="fragment" 	data-fragment-index="4"> Formulas for slacks found by a similar process.
+<li 	data-fragment-index="4"> Slacks have
+$$f_{ \rvsla{i}} (t) =  \frac{n!}{(i-1)! (n-i-1)!} \times \\ \int_{x=0} ^{s} {\Fpar(x)}^{i-1} \fpar(x) \fpar(x+t) ( 1 - \Fpar(x+t))^{n-i-1} dx.$$ 
 </ul>
 
 </section>
 
 <section>
-<h3> Finite Robots with IID Coverage  </h3>
+<h3> IID Coverage: Distinct communication radii  </h3>
+
+
+<ul align="left"  	data-fragment-index="1">
+<li> Suppose the communication radii are $(d_i)_{i=1:n}$.
+<li   	data-fragment-index="2">
+The hypercube $\hyp$ needs to be replaced by a union of hypercuboids, 
+$$
+\hyp' := [0,d_1] \times [0,d_1] \times \ldots [0,d_{n/2}] \times [0,d_{n/2}]
+$$
+<li 	data-fragment-index="4"> Computing $\pcon(\G)$ is provably hard : <div style="color:blue"> Complexity Section </div> </li>
+<li> No difference to order statistics.
+</ul>
+
+</section>
+
+
+<section>
+<h3> Finite Robots with IID Parents  </h3>
 $$
 \newcommand{\Vol}{\mathrm{Vol}}
 \newcommand{\nmin}{n_{\min}}
@@ -606,12 +656,48 @@ $$
 $$
 </p>
 
-<p align="left" class="fragment" 	data-fragment-index="2">
-No (simple) formula for any of $\rvpos{i}, S_i$, and $\pcon$! 
+<ul align="left" class="fragment" 	data-fragment-index="2">
+<li> No (simple) formula for any of $\rvpos{i}, S_i$, and $\pcon$! 
+<li> Straightforward replacements of $\ssimp$ with $\ssimp_{CF}$ everywhere.
 </p>
 
 
 </section>
+
+
+<section>
+<h3> Point robots with INID parents </h3>
+$$
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\nmin}{n_{\min}}
+$$
+
+<ul align="left" class="fragment" 	data-fragment-index="2">
+<li> Joint pdf for iid parents no longer valid
+<li> Instead,   <i> Bapat-Beg </i> theorem  <a href="https://goo.gl/4nzdyK"> (David '03) </a> gives the joint CDF as a <i> matrix permanent</i>.
+<li> Computing $\pcon$ is provably hard. 
+</p>
+
+
+</section>
+
+<section>
+<h3> Numerical validation </h3>
+$$
+\newcommand{\Vol}{\mathrm{Vol}}
+\newcommand{\nmin}{n_{\min}}
+$$
+
+<ul align="left" 	data-fragment-index="2">
+<li> Formulae for $\pcon$, order statistics, and slacks exhaustively validated in  (Kumar and Berman, TRO)
+<li> Formuale for select other cases (iid parents, finite robots)  numerically validated by MC sims (<a href="https://gitlab.com/TheDragonDraco/polytope-comps"> repo link </a>)
+<li> Design problem of selecting $(d,n)$ for target $\pcon(\G)$ may be solved by lookup table (Kumar and Berman, ICRA/TRO)
+</ul>
+</p>
+
+
+</section>
+
 
 </section> <!-- Result summary -->
 
@@ -639,16 +725,35 @@ $$
 
 <section>
 
-<h3>  $\PCON(\mathrm{Uni})$ is $\mathrm{Psuedo}-\mathsf{P}$  </h3>
+<h3>  $\PCON(\mathrm{Uni})$ is Pseudo-$\mathsf{P}$  </h3>
 
 
 <p class="fragment" 	data-fragment-index="1" align="left" >
-<b> Theorem  <a href="" > (Kumar and Berman, to appear) </a></b>  $\PCON(\mathrm{Uni})$ can be solved in $\Omega(n)$ and $O(n \log n)$ time. </b>
+<b> Theorem  <a href="" > (Kumar and Berman, to appear) </a></b>  $\PCON(\mathrm{Uni})$ can be solved in $O(n \log n)$ time and $\Omega(n)$ time. </b>
 
 <p class="fragment" 	data-fragment-index="2" align="left" >
-<b> Proof  </b>: Straightforward from formula.
+<b> Proof  </b>: The upper bound comes from formula:
+$$
+\pcon(\G) =  1 - \sum _{k=1} ^{\nmin} (-1)^{k-1} \binom{n}{k} {(1-\frac{kd}{s})^n } ~\text{where}~ \nmin = \lfloor \frac{s}{\conn} \rfloor. 
+$$
 
+The lower bound arises from the number of bits in $\pcon$ for which $s=4d/3$, so $\pcon \approx 1-n/4^n$, consuming $\Omega(n)$ bits. 
 
+</section>
+
+<section>
+$$
+\newcommand{\PH}{\#\mathsf{PH}}
+$$
+
+<h3>  Computing the volume of simplex-hypercube intersection </h3>
+
+<b> Theorem  <a href="http://goo.gl/nDYL7n" > (Dyer and Frieze '87) </a></b> <p align="left"> Computing the volume of intersection between 
+<ul>
+<li> a general simplex and the unit hypercube, and
+<li> a hypercuboid and the unit simplex,
+</ul>
+<p align="left">are both $\PH$.
 </section>
 
 
@@ -657,15 +762,17 @@ $$
 \newcommand{\PH}{\#\mathsf{PH}}
 $$
 
-<h3>  $\PCON(\mathrm{poly})$ is $\PH$ </h3>
+<h3>  $\PCON$ is $\PH$ for iid parents </h3>
+<ul>
+<li  data-fragment-index="1" align="left" > Define an $n$-uniform pdf as follows. Divide the support $\Bo$ into $n$ subintervals, and set $f(t) = a_i$
+when $t$ lies in the $i$-th subinterval. 
 
+<li  data-fragment-index="2" align="left" >
+<b> Theorem  <a href="" > (Kumar and Berman, to appear) </a></b>  $\PCON$  is $\PH$ for a uniform pdf of $n$ pieces supported on $\Bo$.
 
-<p class="fragment" 	data-fragment-index="1" align="left" >
-<b> Theorem  <a href="" > (Kumar and Berman, to appear) </a></b>  $\PCON$  is $\PH$ for arbitrary polynomial parents supported on $\Bo$.
-
-<p class="fragment" 	data-fragment-index="2" align="left" >
+<li  data-fragment-index="3" align="left" >
 <b> Proof  </b>: Reduction from <a href="http://goo.gl/nDYL7n" > (Dyer and Frieze '87) </a>.
-
+</ul>
 
 
 </section>
@@ -682,8 +789,8 @@ $$
 <li class="fragment" 	data-fragment-index="3"> General INID parents
 </ul>
 
-
-
+<p  class="fragment"  data-fragment-index="3" align="left" >
+<b> Proof  </b>: Reduction from <a href="http://goo.gl/nDYL7n" > (Dyer and Frieze '87) </a>.
 
 </section>
 
