@@ -798,6 +798,24 @@ when $t$ lies in the $i$-th subinterval.
 </section> <!-- Lower Bounds -->
 
 
+<section>
+<h3> Critique  </h3>
+
+
+
+
+<ul>
+<li class="fragment" 	data-fragment-index="1"> Idealized model of communication / sensing network
+<ul>
+<li class="fragment" 	data-fragment-index="2"> No path / propagation loss, fading, etc.
+</ul>
+<li class="fragment" 	data-fragment-index="3"> Brought in tools from other disciplines
+<li class="fragment" 	data-fragment-index="4"> Furnished results on hardness
+</ul>
+
+
+</section>
+
 
 
 
