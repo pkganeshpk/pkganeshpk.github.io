@@ -755,9 +755,10 @@ $$
 <li> a hypercuboid and the unit simplex,
 </ul>
 <p align="left">are both $\PH$. 
+We call this problem $\VHSP$.
 </section>
 
-We call this problem $\VHSP$.
+
 
 <section>
 $$

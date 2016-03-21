@@ -793,6 +793,7 @@ when $t$ lies in the $i$-th subinterval.
 
 <p  class="fragment"  data-fragment-index="3" align="left" >
 
+<b> Proof  </b>: Reduction from $\VHSP$.
 
 </section>
 
