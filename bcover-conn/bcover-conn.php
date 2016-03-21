@@ -744,6 +744,7 @@ The lower bound arises from the number of bits in $\pcon$ for which $s=4d/3$, so
 <section>
 $$
 \newcommand{\PH}{\#\mathsf{PH}}
+\newcommand{\VHSP}{\#\mathsf{VHSP}}
 $$
 
 <h3>  Computing the volume of simplex-hypercube intersection </h3>
@@ -753,9 +754,10 @@ $$
 <li> a general simplex and the unit hypercube, and
 <li> a hypercuboid and the unit simplex,
 </ul>
-<p align="left">are both $\PH$.
+<p align="left">are both $\PH$. 
 </section>
 
+We call this problem $\VHSP$.
 
 <section>
 $$
@@ -771,7 +773,7 @@ when $t$ lies in the $i$-th subinterval.
 <b> Theorem  <a href="" > (Kumar and Berman, to appear) </a></b>  $\PCON$  is $\PH$ for a uniform pdf of $n$ pieces supported on $\Bo$.
 
 <li  data-fragment-index="3" align="left" >
-<b> Proof  </b>: Reduction from <a href="http://goo.gl/nDYL7n" > (Dyer and Frieze '87) </a>.
+<b> Proof  </b>: Reduction from $\VHSP$.
 </ul>
 
 
@@ -790,7 +792,8 @@ when $t$ lies in the $i$-th subinterval.
 </ul>
 
 <p  class="fragment"  data-fragment-index="3" align="left" >
-<b> Proof  </b>: Reduction from <a href="http://goo.gl/nDYL7n" > (Dyer and Frieze '87) </a>.
+
+<b> Proof  </b>: Reduction from $\VHSP$.
 
 </section>
 
@@ -812,6 +815,10 @@ when $t$ lies in the $i$-th subinterval.
 <li class="fragment" 	data-fragment-index="3"> Brought in tools from other disciplines
 <li class="fragment" 	data-fragment-index="4"> Furnished results on hardness
 </ul>
+
+<figure style="float:top;">
+<img src="bcover-conn/Figs/proploss.png"  height="200" width="250" style="position:absolute; BOTTOM:-50px; RIGHT:-250px;"/>
+</figure>
 
 
 </section>
