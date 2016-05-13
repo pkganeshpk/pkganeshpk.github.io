@@ -69,7 +69,7 @@
 <table>
 <tr class="noBorder">
 <td>
-<img src="bcover-conn/Figs/Robot-circles.png"  height="200" width="200" style="border:none;"/>
+<img src="bcover-conn/Figs/Robot-circles.png"  height="300" width="300" style="border:none;"/>
 </td>
 
 <td style="vertical-align:top;">
@@ -411,6 +411,7 @@ $$
 $$
 \newcommand{R}{\mathbb{R}}
 \newcommand{\psimp}{\mathcal{P}}
+\newcommand{\Bo}{\mathcal{B}}
 $$
 
 <p	data-fragment-index="1" align="left"> Consider <i>point</i> robots, for which CF is irrelevant </p>
@@ -433,7 +434,7 @@ $$
 <td>
 <figure>
 <img src="bcover-conn/Figs/PSimp.png"   style="border:none; height:800; width:1000;position:relative"/>	
-<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> Position simplex for two points on $\Bo$. </b> </small> </figcaption> 
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> Position simplex for two points on Boundary. </b> </small> </figcaption> 
 </figure>
 </td>
 </tr>
@@ -466,7 +467,7 @@ $$
 <td>
 <figure>
 <img src="bcover-conn/Figs/SSimp.png"   style="border:none; height:800; width:1000;position:relative"/>	
-<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> Slack simplex (equilateral triangle) for two points on $\Bo$. </b> </small> </figcaption> 
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b> Slack simplex (equilateral triangle) for two points on Boundary. </b> </small> </figcaption> 
 </figure>
 </td>
 </tr>
@@ -516,7 +517,7 @@ $$
 <td style="vertical-align:top;">
 <figure>
 <img src="bcover-conn/Figs/inters.png"   style="border:none; height:800; width:1000;position:relative"/>	
-<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b>  Plots of $\ssimp=(0,s)\mbox{--}(s,0)$ and $\hyp$ for $n=1$. For each of the three distinct ranges of $\conn$ m $\hyp$ has a different type of intersection with $\ssimp$. </figcaption>
+<figcaption "style=position:absolute;bottom:0;top:0;left:0;right:0"> <small> <b>  Plots of simplex and hypercube for $n=1$, showing three different types of intersection. </figcaption>
 </figure>
 </td>
 </tr>
@@ -755,9 +756,10 @@ $$
 <li> a hypercuboid and the unit simplex,
 </ul>
 <p align="left">are both $\PH$. 
+We call this problem $\VHSP$.
 </section>
 
-We call this problem $\VHSP$.
+
 
 <section>
 $$

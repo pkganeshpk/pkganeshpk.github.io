@@ -19,7 +19,7 @@
 <table>
 <tr class="noBorder" width="1200px">
 <td>
-<img src="comm-sim/Figs/ros2.png"  height="300" width="300" class="fragment" data-fragment-index="1"/>	
+<img src="comm-sim/Figs/ros2.png"  height="200" width="300" class="fragment" data-fragment-index="1"/>	
 </td>
 
 <td "vertical-align:top;">
@@ -42,7 +42,7 @@
 <table>
 <tr class="noBorder" width="1200px">
 <td>
-<img src="comm-sim/Figs/argos2.jpeg"  height="300" width="300" class="fragment" data-fragment-index="1"/>	
+<img src="comm-sim/Figs/argos2.jpeg"  height="200" width="300" class="fragment" data-fragment-index="1"/>	
 </td>
 
 <td style="vertical-align:top;">
