@@ -22,7 +22,7 @@ body {
   background-color: #f7fbfc; }
 
 .reveal {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Palatino", serif;
   font-size: 36px;
   font-weight: normal;
   color: #333; }
@@ -238,6 +238,10 @@ body {
 .reveal section img.plain {
   border: 0;
   box-shadow: none; }
+
+ reveal section figure figcaption {
+    text-align: center;}
+
 
 .reveal a img {
   -webkit-transition: all 0.15s linear;

@@ -1,44 +1,55 @@
 	<section>
 
-					<section> <h3> Swarms of Low-cost Robots </h3> 
+					<section> 
 
-
-					<style type="text/css">
-		  			tr.noBorder td {border: 0; }
-					</style>
-
-					<table  style="width=2000px"> 
-					<tr class = "noBorder">
-					<td>	
-					 <figure>
-					<img src="Figs/drone-swarms.jpeg"  height="300" width="350"/>
-					   <figcaption> <normal> <b> Hummingbird Quadrotors (GRASP Lab, UPenn)  </normal></figcaption>
-					</figure>
-					</td>
-					
-					<td>	
-					 <figure>
-					<img src="Figs/marxbot-swarm.jpg"  height="300" width="300"/>	
-					   <figcaption> <normal> <b> Marxbots (EPFL)  </normal></figcaption>
-					</figure>	
-					</td>
 
 					
+
+
+						<h3> Swarms of Low-cost Robots </h3> 
+					
+						<table  style="width=2500px"> 
+						<tr class = "noBorder">
+						<td>	
+					 		<figure>
+							<img src="Figs/drone-swarms.jpeg"  height="300" width="350"/>
+					 		  <figcaption> <normal> <b> Hummingbird Quadrotors <p> <i> GRASP Lab, UPenn </i> </p>   </normal></figcaption>
+							</figure>
+						</td>
+					
+						<td>	
+					 	<figure>
+						<img src="Figs/marxbot-swarm.jpg"  height="300" width="400"/>	
+					   	<figcaption> <normal> <b> Marxbots <p> <i> EPFL </i> </p>  </normal></figcaption>
+						</figure>	
+						</td>
+
+						</tr>
+						</table>
+
+					</section>		
+					
+					<section>
+						<h3> Swarms of Low-cost Robots </h3> 
+						
 											
-
-					<td>	
-					 <figure>
-					<img src="Figs/Pheeno_transport.png"  height="300" width="300"/>	
-					   <figcaption> <normal> <b> Pheenos (ACS Lab, ASU)  </b> </normal></figcaption>
-					</figure>
-					</td>
+						<table  style="width=2500px"> 
+						<tr class = "noBorder">
+			
+						<td>	
+					 	<figure>
+						<img src="Figs/Pheeno_transport.png"  height="300" width="450"/>	
+					   	<figcaption> <normal> <b> Pheenos <p> <i> ACS Lab </i> </p>  </b> </normal></figcaption>
+						</figure>
+						</td>
 					
-					</tr>
-					</table>
-					
-					
-
+						</tr>
+						</table>
 					</section>
+					
+					
+
+
 
 					
 
@@ -56,25 +67,38 @@
 					<tr class = "noBorder">
 					<td>	
 					 <figure>
-					<img src="Figs/human_swarm.jpg"  height="300" width="300"/>
-					   <figcaption> <normal> <b> Human Swarm Interaction (Georgia Tech.) </normal></figcaption>
+					<img src="Figs/human_swarm.jpg"  height="300" width="450"/> 
+					   <figcaption> <normal> <b> Human Swarm Interaction <p> <i> Georgia Tech</i> </p>. </normal></figcaption>
 					</figure>
 					</td>
 					
 					<td>	
 					 <figure>
-					<img src="Figs/nanobots.jpg"  height="300" width="300"/>	
-					   <figcaption> <normal> <b> Nanoscale Robots (Univ. Sheffield)   </normal></figcaption>
+					<img src="Figs/nanobots.jpg"  height="300" width="400"/>	
+					   <figcaption> <normal> <b> Nanoscale Robots <p> <i> Univ. Sheffield </i> </p>    </normal></figcaption>
 					</figure>	
 					</td>
 
-					
-											
+					</tr>
+					</table>
+					</section>
+						
+
+					<section> <h3> Swarm Applications </h3>
+
+
+				
+
+					<style type="text/css">
+		  			tr.noBorder td {border: 0; }
+					</style>
+					<table  style="width=2000px"> 
+					<tr class = "noBorder">					
 
 					<td>	
 					 <figure>
 					<img src="Figs/warehouse.jpeg"  height="300" width="300"/>	
-					   <figcaption> <normal> <b> Warehouses (Kiva Systems)  </b> </normal></figcaption>
+					   <figcaption> <normal> <b> Warehouses <p> <i> Kiva Systems </i> </p> </normal></figcaption>
 					</figure>
 					</td>
 					

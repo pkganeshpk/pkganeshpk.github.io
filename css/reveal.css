@@ -276,7 +276,7 @@ html:-moz-full-screen-ancestor {
   right: 8px;
   bottom: 8px;
   z-index: 31;
-  font-family: Helvetica, sans-serif;
+  font-family: Times, serif;
   font-size: 12px;
   line-height: 1;
   color: #fff;
@@ -1055,7 +1055,7 @@ html:-moz-full-screen-ancestor {
 .reveal.rtl .slides h5,
 .reveal.rtl .slides h6 {
   direction: rtl;
-  font-family: sans-serif; }
+  font-family: serif; }
 
 .reveal.rtl pre,
 .reveal.rtl code {
@@ -1303,7 +1303,7 @@ html:-moz-full-screen-ancestor {
   overflow: auto;
   box-sizing: border-box;
   text-align: left;
-  font-family: Helvetica, sans-serif;
+  font-family:  Times, serif; /*Helvetica, sans-serif;*/
   -webkit-overflow-scrolling: touch; }
 
 .reveal .speaker-notes.visible:not(:empty) {

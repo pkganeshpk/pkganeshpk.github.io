@@ -28,12 +28,12 @@
 					table {border : none;}
 					</style>
 					
-					<table style="width:1200px">
+					<table "width=1200px;">
 					<tr class = "noBorder">
 					<td>	
 					 <figure>
 					<img src="Figs/Spring.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Prof.Spring <p> Berman </normal></figcaption>
+					   <figcaption> <normal>  Prof.Spring Berman </normal> </figcaption>
 					</figure>
 					</td>
 
@@ -47,15 +47,17 @@
 					</td>
 
 
-
+					<tr class = "noBorder">
 					<td>
 					 <figure>
 					<img src="Figs/Ruben.png"  height="150" width="150"/>	
 					   <figcaption> <normal> Ruben Gameros </normal></figcaption>
 					</figure>
 					</td>
+					</tr>
+					</table>
 
-					</table>	
+					<img src="Figs/Pheeno_transport.png"  height="250" width="250" style="position:absolute; TOP:350px; RIGHT:-300px;"/>		
 					</section>
 					
 					<section>
