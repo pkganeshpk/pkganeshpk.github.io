@@ -80,11 +80,11 @@
 			
 
 		<?php
-			readfile("./People.php");
+			/*readfile("./People.php");
 			readfile("./CTBC.php");
-			readfile("./Novel.php");			
-			/*readfile("./antshs/antshs.php");
-			readfile("./bcover-multi/bcover-multi.php");			
+			readfile("./Novel.php");*/			
+			readfile("./antshs/antshs.php");
+			/*readfile("./bcover-multi/bcover-multi.php");			
 			readfile("./bcover-conn/bcover-conn.php");
 			readfile("./comm-sim/comm-sim.php");
 			readfile("./Conc.php");	*/

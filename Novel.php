@@ -65,17 +65,17 @@
 					<section>
 					<h3>Agenda</h3>
 					
-						<table > 
+						<table> 
 						<tr class = "noBorder">
 			
-						<td fragment="1">	
+						<td class = "fragment" 	data-fragment-index="1" style="width:1000px">	
 					 	<figure>
 						<img src="Figs/sideview_white.jpg"  height="100" width="225"/>	
 					   	<figcaption> <normal> <b> CT in Ants <p>  </p>  </b> </normal></figcaption>
 						</figure>
 						</td>
 
-						<td fragment="2">	
+						<td class = "fragment" 	data-fragment-index="2" style="width:1000px">	
 					 	<figure>
 						<img src="Figs/RoboZyme_thinks.png"  height="100" width="225"/>	
 					   	<figcaption> <normal> <b> Multi-Boundary Coverage <p>  </p>  </b> </normal></figcaption>
@@ -85,12 +85,19 @@
 						</tr>
 
 						<tr class = "noBorder">
-						<td fragment="3">	
+						<td class = "fragment" 	data-fragment-index="3" style="width:1000px">	
 					 	<figure>
 						<img src="Figs/config.svg"  height="100" width="225"/>	
 					   	<figcaption> <normal> <b> Analyzing $\mathcal{G}$ <p>  </p>  </b> </normal></figcaption>
 						</figure>
 						</td>
+
+						<td class = "fragment" 	data-fragment-index="4" style="width:1000px">	
+					 	<figure>
+						<img src="Figs/Pheeno1.jpg"  height="100" width="225"/>	
+					   	<figcaption> <normal> <b> Experiments <p>  </p>  </b> </normal></figcaption>
+						</figure>
+						</td>	
 
 						</table>
 				 

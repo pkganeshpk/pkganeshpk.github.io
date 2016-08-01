@@ -2,7 +2,7 @@
 				<div class="slides">
 				<section>
 				<section>
-					<h3> Collective Transport in  <i> Aphaenogaster Cockerelli </i> </h3>
+					<h3> C.T.  in </h3>  <p style ="font-size:125%"> <i>Novomessor Cockerelli </i> </font>  
 					<table style="width:1200px">
 					<tr class = "noBorder">
 					<td>	
@@ -40,8 +40,12 @@
 					</table>	
 					
 					<small>
-					<b> Source </b> <a href= "http://goo.gl/FKaPtN"> (Kumar et al., HSCC '13) </a>
+					<p align="center">
+					<a href= "http://goo.gl/FKaPtN"> (Kumar et al., HSCC '13) </a>
+					</p>
 					</small>	
+
+					<img src="antshs/Figs/novo1.jpg"  height="150" width="200"  style="position:absolute; BOTTOM:-200px; RIGHT:-200px;"  />
 				</section>
 
 				
@@ -105,20 +109,30 @@
 
 				<section>
 						<h3> Prior Work </h3>
-						<h5 class = "fragment" data-fragment-index="1" align="center">
-						CT in Ants  </h5>	
-						<ul class="fragment" 	data-fragment-index="1" align="left">	
-						<li class="fragment" 	data-fragment-index="1"> <a href="http://goo.gl/jjZHwU"> (Berman et al., 2011) </a> </li>
-						<li class="fragment"  	data-fragment-index="1"> <a href="https://goo.gl/Oxm0F7"> (Czaczkes and Ratnieks, 2013) </a></li>
-						</ul>	
-				
-						<p> </p>
-						<h5 class = "fragment" data-fragment-index="2" align="center">
-						 pSHS Models of multi-robot transport  </h5>
-						<ul class="fragment" 	data-fragment-index="2" align="left">	
-						<li class="fragment" 	data-fragment-index="2" align="left"> <a href="http://goo.gl/dZmVtV"> (Mather and Hsieh, 2011) </a> </li>
-						<li class="fragment" 	data-fragment-index="2" align="left"> <a href="http://goo.gl/BhmMef"> (Napp et al., 2013) </a> </li>
-						</ul>
+
+						<table>
+						<tr class = "noBorder">
+						<td style="width:1200px;">		
+						<normal class = "fragment" data-fragment-index="1" align="center">
+						CT in Ants
+						</normal>  
+
+						<p>
+						<a href="http://goo.gl/jjZHwU" class = "fragment" data-fragment-index="1"> <small> Berman et al., 2011</small> </a> </li>
+						 <a href="https://goo.gl/Oxm0F7" class = "fragment" data-fragment-index="1"> <small> Czaczkes and Ratnieks, 2013 </small> </a></li>
+							
+
+						<td style="width:1200px;">		
+						<normal class = "fragment" data-fragment-index="2" align="center">
+						 pSHS CT Models 
+							
+						<p>
+						 <a href="http://goo.gl/dZmVtV" class = "fragment" data-fragment-index="2"> <small> Mather and Hsieh, 2011 </small> </a> </li>
+						<br>
+						 <a href="http://goo.gl/BhmMef" class = "fragment" data-fragment-index="2"> <small> Napp et al., 2013 </small> </a> </li>
+
+						</tr>
+						</table>
 
 						<figure class="fragment" data-fragment-index="2" align="center">
 					<img src="antshs/Figs/PSHS.gif"  height="150" width="650" />
@@ -152,18 +166,14 @@
 
 					<table>
 					<tr class="noBorder">
-					<td>
+					<td style="width:600px;height:600px;">
 					 <figure>
-					<img src="antshs/Figs/south-mtn-park.gif"  height="450" width="550" />
+					<img src="antshs/Figs/south-mtn-park.gif"  height="400" width="550"  />
 					</figure>
 					</td>
 
 					
-					<td>
-					 <figure>
-					<img src="antshs/Figs/sample_traj.png"  height="400" width="500" />
-					</figure>
-					</td>
+				
 					</tr>
 					</table>
 						
@@ -191,7 +201,8 @@
     					<img src="antshs/Figs/3states.png" height="300" width="300" />
 					</td>
 					<td style="vertical-align:top">
-   					<small> <ul> <li> <b> Back </b> (resp. <b> Front </b>) ants attach to <br>  left (resp. right) of vertical orange line.
+   					<small> <ul> <li> <b> Back </b>  ants attach to <i> left </i> of vertical orange line.
+							<li> <b> Front </b>  ants attach to <i> right </i> of vertical orange line.
 							<li> Two <b> Detached </b> ants at top and bottom.
 							<li> Load moves right.
 							
@@ -201,6 +212,24 @@
 					</table>
 
 
+				
+					</section>
+
+					<section>
+					<h3> OBSERVATIONS </h3>
+					
+				
+					<table>
+					<tr class="noBorder" style="text-align:top">
+					<td>
+
+    					<img src="antshs/Figs/sample_traj.png" height="450" width="500" />
+					</td>
+					
+					</tr>
+					</table>
+
+					<img src="antshs/Figs/south-mtn-park.gif"  height="170" width="300"   style="position:absolute; BOTTOM:50px; RIGHT:-200px;"  />	
 				
 					</section>
 
@@ -214,14 +243,14 @@
 					<h3> SHS : Behavioral Model </h3>
 					<table>
 					<tr class="noBorder">
-					<td style="vertical-align:top">
+					<td style="vertical-align:top" style="width:1300px;">
 					<figure>
-					<img src="antshs/Figs/StateDiag.png"  height="500" width="450" style="position:relative; "/>
+					<img src="antshs/Figs/StateDiag.png"  height="400" width="500" style="position:relative; "/>
 					
 					</figure>
 					</td>
-					<td style="vertical-align:top">
-					<normal> <p align="justify"> CRN with 6 reactions $S_i \underset{r_{ij}}{\stackrel{r_{ji}}{\rightleftharpoons}} S_j$, where $S_i, S_j$ are distinct states from $S:=\{F,B,D\}$ </p> 
+					<td style="vertical-align:top" style="width:1300px;">
+					<normal> <p align="justify"> CRN with 6 reactions $S_i \underset{r_{ij}}{\stackrel{r_{ji}}{\rightleftharpoons}} S_j$ <p> $S_i \neq S_j$ are distinct states from $S:=\{F,B,D\}$ </p> 
 					</p>
 					</normal>
 					</td>
@@ -282,10 +311,10 @@
 					<h3> SHS : Dynamical Model </h3>
 				
 					<ul>
-					<li> Dynamical components : load position and velocity $x_L, v_L$
+					<li> Load position and velocity $x_L, v_L$
 					 
 					<li> Attached ants pull with net force $F_{up} = (N_F+N_B)F_l$
-					<li> Each front ant pulls with proportional regulation
+					<li> Each front ant pulls with 
 					$$ F_{p} = K (v_L^D - v_L) $$
 					<ul>
 						<li> $K$ = proportional gain
