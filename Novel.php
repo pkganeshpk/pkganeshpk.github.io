@@ -1,22 +1,27 @@
 	<section>
 					<section>
 					<h3>Novel Contributions</h3>
-						<b> Devised Stochastic Hybrid System (SHS) model of CT in <i>A. Cockerelli</i> </b>
-						<p>  <small> <b> Source: <a href="https://goo.gl/SqG93d"> Kumar et al., HSCC '13</a> </b>  </small> </p> 
-						<p> <div style="color:blue;"> <b> My contributions </b></p>
+						 <i> Devised Stochastic Hybrid System (SHS) model of CT in <i>A. Cockerelli</i> </i>
+						<p>  <small> <b>  <a href="https://goo.gl/SqG93d"> Kumar et al., HSCC '13</a> </b>  </small> </p>
+						<!--<p> <div style="color:blue;"> <b> My contributions </b></p> -->
 						 	
 						   <ul> <li> Devised CRN <li> Derived moments of SHS <li> Helped validate parameter estimation </ul>   
-						</div> 
+						
 
 						<img src="Figs/sideview_white.jpg"  height="100" width="300" style="position:absolute; BOTTOM:-200px; RIGHT:300px;"/>	
+
+						 <figure>
+					<img src="Figs/Ganesh.png"  height="150" width="125"  style="position:absolute; TOP:300px; LEFT:-50px;"/>	
+
+					</figure>
 					</section>
 
 					
 					<section>
 					<h3>Novel Contributions</h3>
-					<b> Formulated stochastic controller for Multi-Boundary Coverage </b>
+					<i> Formulated stochastic controller for Multi-Boundary Coverage </i>
 						<p>
-						<small> <b> Sources: </b> <a href="http://goo.gl/5pCqCg"> <b> Pavlic et al., <i> ISRR '13</i> </b> </a>; <a href="https://goo.gl/DFligW"> <b> Pavlic et al., <i> SME '14 </i> </b> </a>;<a href="https://goo.gl/DbbUC1"> <b> Wilson et al., <i> Swarm Int '14 </i> </b> </a>  </small>
+						<!--<small> <b>  <a href="http://goo.gl/5pCqCg"> <b> Pavlic et al., <i> ISRR '13</i> </b> </a>; <a href="https://goo.gl/DFligW"> <b> Pavlic et al., <i> SME '14 </i> </b> </a>;<a href="https://goo.gl/DbbUC1"> <b> Wilson et al., <i> Swarm Int '14 </i> </b> </a>  </small>-->
 						</p>
 						<p> <div style="color:blue;"> <b> My contributions </b></p>
 						 	

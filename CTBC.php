@@ -6,7 +6,7 @@
 					
 
 
-						<h3> Swarms of Low-cost Robots </h3> 
+						<h3> Low-Cost Swarms </h3> 
 					
 						<table  style="width=2500px"> 
 						<tr class = "noBorder">
@@ -30,7 +30,7 @@
 					</section>		
 					
 					<section>
-						<h3> Swarms of Low-cost Robots </h3> 
+						<h3> Low-Cost Swarms </h3> 
 						
 											
 						<table  style="width=2500px"> 
@@ -97,7 +97,7 @@
 
 					<td>	
 					 <figure>
-					<img src="Figs/warehouse.jpeg"  height="300" width="300"/>	
+					<img src="Figs/warehouse.jpeg"  height="350" width="450"/>	
 					   <figcaption> <normal> <b> Warehouses <p> <i> Kiva Systems </i> </p> </normal></figcaption>
 					</figure>
 					</td>
@@ -122,24 +122,36 @@
 					<tr class = "noBorder">
 					<td>	
 					 <figure>
-					<img src="Figs/search+rescue.png"  height="300" width="300"/>
+					<img src="Figs/search+rescue.png"  height="300" width="400"/>
 					   <figcaption> <normal> <b> Search and Rescue  </normal></figcaption>
 					</figure>
 					</td>
 					
 					<td>	
 					 <figure>
-					<img src="Figs/construction.png"  height="300" width="300"/>	
+					<img src="Figs/construction.png"  height="300" width="400"/>	
 					   <figcaption> <normal> <b> Construction  </normal></figcaption>
 					</figure>	
 					</td>
+					</tr>
+					</table>
+					</section>
+
+					<section>
+					<h3>Collective Transport (CT)</h3>
+					<style type="text/css">
+		  			tr.noBorder td {border: 0; }
+					</style>
+
+					<table  style="width=2000px"> 
+					<tr class = "noBorder">
 
 					
 											
 
 					<td>	
 					 <figure>
-					<img src="Figs/Pheeno_transport.png"  height="300" width="300"/>	
+					<img src="Figs/Pheeno_transport.png"  height="300" width="400"/>	
 					   <figcaption> <normal> <b> Collective Lifting  </b> </normal></figcaption>
 					</figure>
 					</td>
@@ -154,16 +166,16 @@
 
 
 
-
+					
 					<section>
-					<h3>BOUNDARY COVERAGE</h3>
+					<h3>BOUNDARY COVERAGE(BC)</h3>
 
 					<table  style="width=2000px">
 					<tr class="noBorder">
 
 					<td>	
 					 <figure>
-					<img src="Figs/DrugDel.jpg"  height="250" width="350"/>
+					<img src="Figs/DrugDel.jpg"  height="350" width="450"/>
 					   <figcaption> <normal> <b>  Drug Delivery </b> </normal>  
 						<p> <small> <a href="http://goo.gl/zXVHGw" > Sinha et al., Mol. Cancer. Ther. '06  <small> </p> </a>
 						</figcaption>
@@ -172,17 +184,27 @@
 					
 					<td>		
 					 <figure>
-					<img src="Figs/CancerCell.png"  height="300" width="300"/>	
+					<img src="Figs/CancerCell.png"  height="300" width="400"/>	
 					   <figcaption> <normal> <b>  Imaging Cancer Cells  </b>  </normal> 
 									<p> <small>  <a href="http://goo.gl/ZhRYSb "> Qin et al., Adv. Funct. Mater. '12 </a> </small>  </p> 
 									</normal></figcaption>
 					</figure>
 
-					<td>
+					</td>
 
+					</tr>
+					</table>
+					</section>
 					
+					<section>
+					<h3>BOUNDARY COVERAGE(BC)</h3>
+
+					<table  style="width=2000px">
+					<tr class="noBorder">
+	
+					<td>
 					 <figure>
-					<img src="Figs/DistSens.png"  height="300" width="300"/>	
+					<img src="Figs/DistSens.png"  height="350" width="400"/>	
 					   <figcaption> <normal> <b> Distributed Sensing with SwarmBots </b> </normal>
 						<p> <small>  <a href="http://goo.gl/utjpbc"> J. Brandon, Digital Trends '11 </a> </small>  </p> 
 						</figcaption>
@@ -202,8 +224,8 @@
 					
 
 					<section>	
-					<h3> BOUNDARY COVERAGE PROBLEM </h3>						
-					 <b> Goal: Claim positions on boundary  </b> 
+					<h3> B.C. PROBLEM </h3>						
+					 <b> Goal: Claim random positions on boundary  </b> 
 					
 					<p class = "fragment" 	data-fragment-index="1" align="left">  Robot capabilities 	
 
@@ -244,7 +266,7 @@
 					</figure>
 							
 
-					</section>
+					</section> 
 
 
 						
