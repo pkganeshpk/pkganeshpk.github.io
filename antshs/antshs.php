@@ -110,6 +110,8 @@
 				<section>
 						<h3> Prior Work </h3>
 
+						<img src="antshs/Figs/papers.jpeg"  height="100" width="200" style="border:0px; position:absolute; TOP:-100px; LEFT:-200px;" />
+
 						<table>
 						<tr class = "noBorder">
 						<td style="width:1200px;">		
@@ -157,7 +159,7 @@
 					<section>
 				
 
-					<h3> EXPERIMENTAL DETAILS </h3>
+					<h3> EXPERIMENT </h3>
 					<ul>
 					
 					<li>17 filmed trials of ants carrying foam-mounted dime
@@ -218,7 +220,7 @@
 					<section>
 					<h3> OBSERVATIONS </h3>
 					
-				
+					<p> Load trajectory nearly straight segment</p>
 					<table>
 					<tr class="noBorder" style="text-align:top">
 					<td>
@@ -240,7 +242,7 @@
 					<section>
 				
 
-					<h3> SHS : Behavioral Model </h3>
+					<h3> Behavioral Transitions </h3>
 					<table class="reveal">
 					<tr class="noBorder">
 					<td style="vertical-align:top" style="width:2000px;" class="noBorder">
@@ -278,11 +280,11 @@
 					</section>
 
 					<section>
-					<h3> SHS : Dynamical Model </h3>
+					<h3> Dynamical Model </h3>
 				
 					<table>
 					<tr class="noBorder">
-					<td style="vertical-align:top" class="noBorder" >
+					<td  class="noBorder" style="border:0;">
 					<figure>
 					<img src="antshs/Figs/FreeBody.png"  height="200" width="650" style="position:relative; "/>
 					
@@ -291,10 +293,12 @@
 					</td>
 					
 					</tr>
-						<tr class ="noBorder">	
-					<td style="vertical-align:top" class="noBorder">
+
+						
+					<tr class ="noBorder">	
+					<td class="noBorder" style="border:0;">
 					<normal> <p align="justify"> Each front ant pulls with force $F_p$, and each attached ant lifts with force $F_l$. 
-					$$F_{up} = (N_F+N_B)F_l  \\ F_n = m_L g -F_{up}$$.</p> 
+					$$\begin{align} F_{up} &=& (N_F+N_B)F_l  \\ F_n &=& m_L g -F_{up} \end{align}$$</p> 
 					</p>
 					</normal>
 					</td>
@@ -306,12 +310,25 @@
 					</section>
 				
 					<section>
-					<h3> SHS : Dynamical Model </h3>
+					<h3> Proportional regulation </h3>
+
+
+					<table>
+					<tr class="noBorder">
+					<td  class="noBorder" style="border:0;">
+					<figure>
+					<img src="antshs/Figs/PropCont.png"  height="150" width="350" style="position:relative; "/>
+					
+					</figure>
+					
+					</td>
+					
+					</tr>
+					</table>
 				
 					<ul>
 					<li> Load position and velocity $x_L, v_L$
-					<li> Each front ant pulls with 
-					$$ F_{p} = K (v_L^D - v_L) $$
+					<li> Each front ant pulls with force $ F_{p} = K (v_L^D - v_L) $
 					<ul>
 						<li> $K$ = proportional gain
 						<li> $v_L^D$ = desired load velocity
@@ -404,42 +421,57 @@
 				
 				
 
-					<h3>   Best Fit Parameters </h3>
-					<p align="left" class="fragment" data-fragment-index="1"> <b> Transition Rates </b>
-	\begin{align*}
-    r_{DB} &= 0.0197\,\text{s}^{-1},&
-    r_{BD} &= 0.0205\,\text{s}^{-1},\\
-    %
-    r_{DF} &= 0, &
-    r_{FD} &= 0,\\
-    %
-    r_{BF} &= 0.0301\,\text{s}^{-1},&
-    r_{FB} &= 0.0184\,\text{s}^{-1},
-    %
-    %
-\end{align*}
-	</p>
-				<p align="left" class="fragment" data-fragment-index="2"> <b> Proportional Regulator Parameters </b>
+					<h3>   Best Fit Rates </h3>
 
-					\begin{align*}
-    \text{Gain} &:& K &= 0.0035\,\text{N/(cm/s)},& \\
-    \text{Velocity set-point} &:&v_L^d &= 0.3185 \,\text{cm/s}.
-\end{align*}
-	</p>
+					<table class="reveal">
+					<tr class="noBorder">
+					<td style="vertical-align:top" style="width:2000px;" class="noBorder">
+					<figure>
+					<img src="antshs/Figs/StateDiagEst.png"  height="300" width="800" style="position:relative; "/>
+					
+					</figure>
+					</td>
+					</tr>
+					</table>
 
-			
+					Zero rates $r_{DF},r_{FD}$ are artifacts of sampling.
+				
+					
+					</section>
+
+							
+					<section>
+				
+
+				
+				
+
+					<h3>   Best Fit Controller Parameters </h3>
+
+					<table class="reveal">
+					<tr class="noBorder">
+					<td style="vertical-align:top" style="width:2000px;" class="noBorder">
+					<figure>
+					<img src="antshs/Figs/PropContEst.png"  height="300" width="800" style="position:relative; "/>
+					
+					</figure>
+					</td>
+					</tr>
+					</table>
+				
 					
 					</section>
 
 
+
 					<section>
 				
-						<h3> Inferences </h3>
+					<h3> Inferences </h3>
 						
 					
-
-					Ants are more likely to attach to front of moving load ($r_{DF} > r_{DB}$)
-
+					<p>
+					Ants are more likely to attach to front of moving load $r_{DF} > r_{DB}$
+					</p>
 					<ul class="fragment" data-fragment-index="2">
 					<li class="fragment" data-fragment-index="2"> Easier to attach to back - vertically stationary
 					<li class="fragment" data-fragment-index="3"> Front may be fully occupied
