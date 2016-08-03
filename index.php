@@ -105,6 +105,19 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script>
+		Reveal.initialize();
+		// Shows the slide number using default formatting
+	Reveal.configure({ slideNumber: true });
+
+// Slide number formatting can be configured using these variables:
+//  "h.v":  horizontal . vertical slide number (default)
+//  "h/v":  horizontal / vertical slide number
+//    "c":  flattened slide number
+//  "c/t":  flattened slide number / total slides
+		Reveal.configure({ slideNumber: 'c/t' });
+		</script>
+
 
 		<script>
 

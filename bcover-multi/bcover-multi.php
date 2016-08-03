@@ -196,7 +196,7 @@
 						<li  data-fragment-index="2"> Types distinguished by weight, colour, etc.
 					</ul>	
 
-										<img src="bcover-multi/Figs/RoboZyme_problem_cartoon.png"  height="275" width="375" style="position:absolute; BOTTOM: -100px; RIGHT:-250px;"/>	
+					<img src="bcover-multi/Figs/RoboZyme_problem_cartoon.png"  height="200" width="300" style="position:absolute; BOTTOM: -300px; LEFT:-150px;"/>	
 				</section>
 
 				<section>
