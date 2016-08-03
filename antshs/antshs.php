@@ -351,10 +351,10 @@
 
 				
 
-					<p> SHS State Vector </p>
+					<b> SHS State Vector </b>
 					$$ \mathbf{x} = \begin{bmatrix} N_{F} & N_B & N_D & x_L & v_L \end{bmatrix}^T$$
 				
-					<p> Flow Equation </p>
+					<b> Flow Equation </b>
 					$$ \mathbf{\dot{x}} = \begin{bmatrix} 0 & 0 & 0& v_L & a_L \end{bmatrix}^T$$
 					
 
@@ -367,17 +367,20 @@
 
 					<h3>   Moment Dynamics </h3>
 					$$\newcommand {\Exp} {\mathbb{E}}$$
-					<b> Population Counts </b>
-					$$
-					\frac{d}{dt} \Exp(N_{i:i\in S})
+					<ul>
+					<li> <b> Population Counts </b> 
+					$$\frac{d}{dt} \Exp(N_{i:i\in S})
     						=
    				\sum_{\substack{j \in S, j \neq i}}
    				 \left( r_{ji} \Exp(N_j) - r_{ij} \Exp(N_i) \right) 
 					$$
 
-					<b> Load Position </b>
+					<img src="antshs/Figs/Flow.png"  height="150" width="500" style="position:relative; "/>
+
+					<li> <b> Load Position </b>
 					$$\frac{d}{dt} \Exp(x_L) = \Exp( v_L )$$
 
+					</ul>
 					</section>
 
 					<section>

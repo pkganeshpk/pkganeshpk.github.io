@@ -1,5 +1,48 @@
 <div class="slides">
 				<section>
+					<section>
+					<h3>Agenda</h3>
+					
+						<table> 
+						<tr class = "noBorder">
+			
+						<td class = "fragment" 	data-fragment-index="1" style="width:1000px;border:0px">	
+					 	<figure>
+						<img src="Figs/sideview_white.jpg"  height="100" width="225"/>	
+					   	<figcaption> <normal> <b style="color:green"> CT in Ants   </b> </normal></figcaption>
+						</figure>
+						</td>
+
+						<td class = "fragment" 	data-fragment-index="2"  style="border:0px">	
+					 	<figure>
+						<img src="Figs/RoboZyme_thinks.png"  height="100" width="225"/>	
+					   	<figcaption> <normal> <b> Multi-Boundary Coverage <p>  </p>  </b> </normal></figcaption>
+						</figure>
+						</td>
+					
+						</tr>
+
+						<tr class = "noBorder">
+						<td class = "fragment" 	data-fragment-index="3" style="width:1000px;border:0px">	
+					 	<figure>
+						<img src="Figs/config.svg"  height="100" width="225"/>	
+					   	<figcaption> <normal>  <b style="color:white"> Analyzing $\mathcal{G}$ <p>  </p>  </b> </normal></figcaption>
+						</figure>
+						</td>
+
+						<td class = "fragment" 	data-fragment-index="4" style="width:1000px;border:0px">	
+					 	<figure>
+						<img src="Figs/Pheeno1.jpg"  height="100" width="225"/>	
+					   	<figcaption> <normal>  <b style="color:white">Experiments <p>  </p>  </b> </normal></figcaption>
+						</figure>
+						</td>	
+
+						</table>
+				 
+						
+					</section>
+				
+
 				<section>
 					<h3> Stochastic Control Policies for Multi-Boundary Coverage    </h3>
 					<table style="width:1200px">
@@ -51,7 +94,7 @@
 					<td>
 					<figure>
 					<img src="bcover-multi/Figs/AllocationCartoon.png"  height="300" width="350" />
-					<figcaption> <small> <b> Robots (small circles) allocate to red-blue and yellow-brown loads </b></small></figcaption>	
+					<figcaption> <small> <b> Robots (small circles) allocate to red and yellow loads </b></small></figcaption>	
 					</figure>
 					</td>
 					
@@ -64,32 +107,32 @@
 				
 				<section>
 						<h3> Prior Work </h3>
+												<img src="antshs/Figs/papers.jpeg"  height="100" width="200" style="border:0px; position:absolute; TOP:00px; LEFT:-200px;" />
 
 						<table width="1200px" height="500 px" align="left">
 						<tr class="noBorder">
-						<td class = "fragment" data-fragment-index="1" align="center">
-						Multi-Robot Task Allocation  	
-						<ul class="fragment" 	data-fragment-index="1" align="left">	
-						<li class="fragment" 	data-fragment-index="1"> <a href="https://goo.gl/zrPAQE"> (Correll and Martinoli, 2008) </a> </li>
-						<li class="fragment"  	data-fragment-index="1"> <a href="http://goo.gl/gK9GLL"> (Liu and Winfield, 2013) </a></li>
-						</ul>	
+						<td class = "fragment" data-fragment-index="1" align="left" style="border:0px;width:1000px">
+						<b> Multi-Robot Task Allocation </b> 	
+
+						<p class="fragment" 	data-fragment-index="1" align="left"> <a href="https://goo.gl/zrPAQE"> <small> Correll and Martinoli, 2008  </small> </a> <br>
+						<a href="http://goo.gl/gK9GLL"> <small> Liu and Winfield, 2013 </small> </a></p>
+
 						</td>
 							
 						
-						<td class = "fragment" data-fragment-index="2" align="center">
-						Robotic Self-Assembly 
-						<ul class="fragment" 	data-fragment-index="2" align="left">	
-						<li class="fragment" 	data-fragment-index="2" align="left"> <a href="https://goo.gl/3hXfi5"> (Berman et al., 2009) </a> </li>
-						<li class="fragment" 	data-fragment-index="2" align="left"> <a href="http://goo.gl/BhmMef"> (Napp et al., 2013) </a> </li>
-						</ul>
+						<td class = "fragment" data-fragment-index="2" align="left" style="border:0px;width:1000px">
+						<b> Robotic Self-Assembly </b>
+
+						<p class="fragment" 	data-fragment-index="2" align="left"> <a href="https://goo.gl/3hXfi5"> <small> Berman et al., 2009 </small> </a> 
+						<br> <a href="http://goo.gl/BhmMef"> <small> Napp et al., 2013 </small> </a> </p>
+
 						</td>
 						</tr>
 						
 						<tr class="noBorder">
 						<td class = "fragment" data-fragment-index="3" align="center">
-						Applications: Inspection of Turbines
-						<ul class="fragment" 	data-fragment-index="3" align="left">	
-						<li class="fragment" 	data-fragment-index="3" align="left"> <a href="http://goo.gl/97BLfa"> (Correll, 2009) </a> </li>
+						<b  class="fragment" 	data-fragment-index="3" align="left">Applications: Turbine  inspection</b>
+						<p class="fragment" 	data-fragment-index="3" align="left"> <a href="http://goo.gl/97BLfa"> <small> Correll, 2009 </small> </a> </p>
 						</ul>
 
 
@@ -98,7 +141,7 @@
 	
 						</table>
 
-					<figure class="fragment" data-fragment-index="4" style="float:top;">
+					<figure class="fragment" data-fragment-index="2" style="float:top;">
 					<img src="bcover-multi/Figs/self-assem.jpg"  height="275" width="275" style="position:absolute; BOTTOM:50px; RIGHT:-250px;"/>
 					<figcaption align="right" style="position:absolute; BOTTOM:0px; RIGHT:-300px;" > <small> <b> Robotic Self Assembly <a href="http://goo.gl/0kcQEg"> (Design News 2013) </a></b></small></figcaption>	
 					</figure>
@@ -110,7 +153,7 @@
 
 
 				<section>
-					<h3> Problem Statement: Objective  </h3>
+					<h3 style="position:relative; TOP:-100px;"> Problem Statement  </h3>
 					<p align="left" class="fragment" data-fragment-index="1">
 					Get robots to allocate to multiple disk types, with  <br>
 					each type having a  <i> predefined target number </i> of attachments 
@@ -124,13 +167,13 @@
 					</p>
 
 					<figure class="fragment" data-fragment-index="4" style="float:top;">
-					<img src="bcover-multi/Figs/RoboZyme_problem_cartoon.png"  height="275" width="375" style="position:absolute; BOTTOM:50px; RIGHT:-250px;"/>
-					<figcaption align="right" style="position:absolute; BOTTOM:0px; RIGHT:-250px;" > <small> <b> Robots allocating to two disk types </b> </a></b></small></figcaption>	
+					<img src="bcover-multi/Figs/RoboZyme_problem_cartoon.png"  height="275" width="375" style="position:absolute; BOTTOM: -100px; RIGHT:-250px;"/>
+					<figcaption align="right" style="position:relative; BOTTOM:-150px; RIGHT:-100px;" >  <b> Robots allocating to two disk types </b> </a></b></figcaption>	
 					</figure>
 				</section>
 
 				<section>
-					<h3>  Assumptions: Robot Capabilities </h3>
+					<h3>  Robot capabilities </h3>
 
 
 					<p  class="fragment" data-fragment-index="1" align="left">&#10003; Sense and identify object types within limited range </p>
@@ -147,11 +190,13 @@
 				</section>
 
 				<section>
-					<h3> Assumptions: Disk Properties  </h3>
+					<h3>  Disk Properties  </h3>
 					<ul>
 						<li  data-fragment-index="1"> Placed randomly in environment
 						<li  data-fragment-index="2"> Types distinguished by weight, colour, etc.
 					</ul>	
+
+										<img src="bcover-multi/Figs/RoboZyme_problem_cartoon.png"  height="275" width="375" style="position:absolute; BOTTOM: -100px; RIGHT:-250px;"/>	
 				</section>
 
 				<section>
@@ -376,18 +421,20 @@
 				
 				<section>
 
-					<h3> Validation of Control Strategy  </h3>
+					<h3> Validation of control strategy  </h3>
 
 					<table>
 					<tr class="noBorder">
-					<td style="vertical-align:top">
+					<td style="width:600px;border:0px">
 					<figure>
 					<img src="bcover-multi/Figs/sim_traj.png"  height="500" width="600" />
 					
 					</figure>	
 					</td>
 
-					<td style="vertical-align:top">
+
+
+					<td style="width:500;border:0px;vertical-align:top">
 					<small>
 					<p align="justify">
 					Example of a single simulated trajectory of the control policy,
@@ -411,14 +458,14 @@
 
 					<table>
 					<tr class="noBorder">
-					<td style="vertical-align:top">
+					<td style="vertical-align:top;border:0px;width:600px">
 					<figure>
 					<img src="bcover-multi/Figs/av_traj.png"  height="500" width="600" />
 					
 					</figure>	
 					</td>
 
-					<td style="vertical-align:top">
+					<td style="width:500;border:0px;vertical-align:top">
 					<small>
 					<p align="justify">
 					Average of 10  simulated trajectories of the control policy,
@@ -443,14 +490,14 @@
 
 					<table align="left">
 					<tr class = "noBorder" >
-					<td style="vertical-align:top">
+					<td style="vertical-align:top;border:0px;width:600px">
 					<figure>
-					<img src="bcover-multi/Figs/EnvRob.png"  height="500" width="500" />
+					<img src="bcover-multi/Figs/EnvRob.png"  height="400" width="600" />
 					
 					</figure>	
 					</td>
 
-					<td style="vertical-align:top">
+					<td style="vertical-align:top;width:500px">
 					<small><p align="justify">
 					Effect of varying environmental parameters on robot allocations.
         Ten trials were generated for each disk size, and the
