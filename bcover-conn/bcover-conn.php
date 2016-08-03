@@ -3,6 +3,49 @@
 <section>
 
 <section>
+					<h3>Agenda</h3>
+					
+						<table> 
+						<tr class = "noBorder">
+			
+						<td class = "fragment" 	data-fragment-index="1" style="width:1000px;border:0px">	
+					 	<figure>
+						<img src="Figs/sideview_white.jpg"  height="100" width="225"/>	
+					   	<figcaption> <normal> <b style="color:green"> CT in Ants   </b> </normal></figcaption>
+						</figure>
+						</td>
+
+						<td class = "fragment" 	data-fragment-index="2"  style="border:0px">	
+					 	<figure>
+						<img src="Figs/RoboZyme_thinks.png"  height="100" width="225"/>	
+					   	<figcaption> <normal> <b style="color:green"> Multi-Boundary Coverage <p>  </p>  </b> </normal></figcaption>
+						</figure>
+						</td>
+					
+						</tr>
+
+						<tr class = "noBorder">
+						<td class = "fragment" 	data-fragment-index="3" style="width:1000px;border:0px">	
+					 	<figure>
+						<img src="Figs/config.svg"  height="100" width="225"/>	
+					   	<figcaption> <normal>  <b style="color:black"> Analyzing $\mathscr{G}$ <p>  </p>  </b> </normal></figcaption>
+						</figure>
+						</td>
+
+						<td class = "fragment" 	data-fragment-index="4" style="width:1000px;border:0px">	
+					 	<figure>
+						<img src="Figs/Pheeno1.jpg"  height="100" width="225"/>	
+					   	<figcaption> <normal>  <b style="color:white">Experiments <p>  </p>  </b> </normal></figcaption>
+						</figure>
+						</td>	
+
+						</table>
+				 
+						
+					</section>
+
+
+<section>
 <h3> Analyzing the Wireless Network of an SCS</h3>
 
 
@@ -27,8 +70,10 @@
 </tr>
 </table>
 
+
+	<img src="antshs/Figs/paper-2.jpeg"  height="100" width="125"/>	
 <small> <b> Sources <br>
-<ul> <li> <a href="https://goo.gl/z2OhbC" >(Kumar and Berman 2014) </a> <li>  (Kumar and Berman, TRO [under review]) <li> (Kumar and Berman [in prep for SICOMP])   </ul> </b> </small>
+<ul> <li> <a href="https://goo.gl/z2OhbC" >Kumar and Berman ICRA '14 </a> <li>  Kumar and Berman, TRO [under review] <li> Kumar and Berman '16 SICOMP / <a href="https://arxiv.org/pdf/1604.01452"> Arxiv </a>    </ul> </b> </small>
 
  <figure>
 	<img src="bcover-conn/Figs/sensornet.jpeg"  height="150" width="200" style="position:absolute;TOP: -100px; RIGHT:-300px;" />
@@ -69,7 +114,7 @@
 <table>
 <tr class="noBorder">
 <td>
-<img src="bcover-conn/Figs/Robot-circles.png"  height="150" width="300" style="border:none;"/>
+<img src="bcover-conn/Figs/Robot-circles.png"  height="150" width="400" style="border:none;"/>
 </td>
 
 <td style="vertical-align:top;">
