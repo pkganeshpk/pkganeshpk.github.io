@@ -1,27 +1,31 @@
-
-\documentclass{standalone}
-\usepackage{pgf}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usetikzlibrary{arrows,automata}
-\usetikzlibrary{shapes,snakes}
-\tikzstyle{every node}=[font=\Large]
-\usepackage[latin1]{inputenc}
+\documentclass[tikz,border=5]{standalone}
+\usetikzlibrary{matrix,arrows.meta}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows,calc}
+\usepackage{xypic}
 \begin{document}
-\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=5.8cm,
-                    thick,font=\Large]
-  \tikzstyle{every state}=[fill=white,draw,text=black]
 
-  \node[circle] 	       (F)                    {$F$};
-  \node[circle]         (B) [above right of=F] {$B$};
-  \node[circle]         (D) [below right of=F] {$D$};
 
-  \path (F) edge [bend left]             node {$r_{FB}$} (B) 
-            edge             		node {$r_{FD}$} (D) 
-        (B) edge [bend left]	 	 node {$r_{BF}$} (F) 
-            edge 		 node [near start] {$r_{BD}$} (D)
-        (D) edge [bend left]             node [near end] {$r_{DF}$} (F)
-            edge [bend right]  		node [pos=0.5] {$r_{DB}$} (B);
+\begin{tikzpicture}[>=Stealth,->,line width=.7pt]
+\matrix [matrix of math nodes,
+column sep={2.2cm,between origins},
+row sep={2.2cm,between origins},
+nodes={circle, draw, minimum size=1cm}]
+{
+& |(1)| F &   & |(2)| B & \\
+&  & |(3)| D & \\};
+
+\draw (1)--(2) node [midway, below] {$r_{FB}$}; 
+\draw[transform canvas={xshift=0pt,yshift=6pt}] (2)--(1) node [midway, above] {$r_{BF}$};
+
+
+
+\draw[transform canvas={xshift=2pt,yshift=2pt},shorten <= -1pt]  (3)-- (1)  node[midway, right] {$r_{DF}$};
+\draw[transform canvas={xshift=-2pt,yshift=-2pt},shorten <= -1pt] (1)--(3)
+node[midway, left] {$r_{FD}$};
+
+\draw[transform canvas={xshift=2pt,yshift=2pt},shorten >= -1pt] (3)--(2) node[midway, left] {$r_{DB}$};;
+\draw[transform canvas={xshift=6pt,yshift=-2pt},shorten >= -2pt] (2)--(3) node[midway, right] {$r_{BD}$};
+
 \end{tikzpicture}
-
 \end{document}

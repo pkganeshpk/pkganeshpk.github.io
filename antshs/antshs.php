@@ -241,21 +241,19 @@
 				
 
 					<h3> SHS : Behavioral Model </h3>
-					<table>
+					<table class="reveal">
 					<tr class="noBorder">
-					<td style="vertical-align:top" style="width:1300px;">
+					<td style="vertical-align:top" style="width:2000px;" class="noBorder">
 					<figure>
-					<img src="antshs/Figs/StateDiag.png"  height="400" width="500" style="position:relative; "/>
+					<img src="antshs/Figs/StateDiag.png"  height="300" width="800" style="position:relative; "/>
 					
 					</figure>
 					</td>
-					<td style="vertical-align:top" style="width:1300px;">
-					<normal> <p align="justify"> CRN with 6 reactions $S_i \underset{r_{ij}}{\stackrel{r_{ji}}{\rightleftharpoons}} S_j$ <p> $S_i \neq S_j$ are distinct states from $S:=\{F,B,D\}$ </p> 
-					</p>
-					</normal>
-					</td>
 					</tr>
 					</table>
+
+					 <p align="justify"> CRN with 6 reactions $S_i \underset{r_{ij}}{\stackrel{r_{ji}}{\rightleftharpoons}} S_j$ <p align="justify"> $S_i \neq S_j$ are states from $S:=\{F,B,D\}$ </p> 
+					
 					
 					</section>
 
@@ -284,7 +282,7 @@
 				
 					<table>
 					<tr class="noBorder">
-					<td style="vertical-align:top">
+					<td style="vertical-align:top" class="noBorder" >
 					<figure>
 					<img src="antshs/Figs/FreeBody.png"  height="200" width="650" style="position:relative; "/>
 					
@@ -294,8 +292,8 @@
 					
 					</tr>
 						<tr class ="noBorder">	
-					<td style="vertical-align:top">
-					<normal> <p align="justify"> Free Body Diagram of load. Each front ant pulls with force $F_p$, and each attached ant lifts with force $F_l$. 
+					<td style="vertical-align:top" class="noBorder">
+					<normal> <p align="justify"> Each front ant pulls with force $F_p$, and each attached ant lifts with force $F_l$. 
 					$$F_{up} = (N_F+N_B)F_l  \\ F_n = m_L g -F_{up}$$.</p> 
 					</p>
 					</normal>
@@ -312,8 +310,6 @@
 				
 					<ul>
 					<li> Load position and velocity $x_L, v_L$
-					 
-					<li> Attached ants pull with net force $F_{up} = (N_F+N_B)F_l$
 					<li> Each front ant pulls with 
 					$$ F_{p} = K (v_L^D - v_L) $$
 					<ul>

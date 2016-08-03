@@ -79,499 +79,481 @@
 				
 			
 
-			<section> 
-
-					<section>
-					<h3> Stochastic Boundary Coverage Strategies for Multi-Robot Systems</h3>
-					<h4><b> Ganesh P Kumar</b></h4>
-					<p> <b> Autonomous Collective Systems Lab</b>	</p>
- 					<p> <b> Arizona State University </b> </p>
-
-					<img src="Figs/ASU_Logo.jpg"  height="50" width="150" style="position:absolute; TOP:-100px; LEFT:350px;"/>
-				
-					<img src="Figs/sideview_white.jpg"  height="100" width="250" style="position:absolute; TOP:350px; LEFT:-330px;"/>	
-
-					<img src="Figs/Pheeno1.jpg"  height="150" width="250" style="position:absolute; TOP:350px; RIGHT:-330px;"/>	
-
-					<img src="Figs/Pheeno_side.jpg"  height="120" width="200" style="position:absolute; TOP:420px; RIGHT:350px;"/>
-
-
-					</section>	
-
-
-
-				
-
-					<section>
-					<h3> ACS Lab </h3>
-					<style type="text/css">
-		  			tr.noBorder td {border: 0; }
-					table {border : none;}
-					</style>
-					
-					<table "width=1200px;">
+		<!-- Example of nested vertical slides -->
+				<div class="slides">
+				<section>
+				<section>
+					<h3> C.T.  in </h3>  <p style ="font-size:125%"> <i>Novomessor Cockerelli </i> </font>  
+					<table style="width:1200px">
 					<tr class = "noBorder">
 					<td>	
 					 <figure>
-					<img src="Figs/Spring.png"  height="150" width="150"/>	
-					   <figcaption> <normal>  Prof.Spring Berman </normal> </figcaption>
+					<img src="Figs/Ganesh.png"  height="150" width="125"/>	
+
 					</figure>
 					</td>
-
-		
-
-					<td>	
-					 <figure>
-					<img src="Figs/Sean.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Sean Wilson  </normal></figcaption>
-					</figure>	
-					</td>
-
-
-					<tr class = "noBorder">
-					<td>
-					 <figure>
-					<img src="Figs/Ruben.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Ruben Gameros </normal></figcaption>
-					</figure>
-					</td>
-					</tr>
-					</table>
-
-					<img src="Figs/Pheeno_transport.png"  height="250" width="250" style="position:absolute; TOP:350px; RIGHT:-300px;"/>		
-					</section>
-					
-					<section>
-					<h3> Collaborators </h3> 
-					<style type="text/css">
-		  			tr.noBorder td {border: 0; }
-					</style>
-					
-					<table height="75%">
-					<tr class = "noBorder">
-					<td>	
-					 <figure>
-					<img src="Figs/Ted.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Prof. Ted Pavlic  <p> <small> <b> FSE / GIS / SOLS </b> </small> </p>  </normal></figcaption>
-					</figure>
-					</td>
-					
 					<td>	
 					 <figure>
 					<img src="Figs/Aurelie.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Dr. Aurelie Buffin  <p> <small> <b> SOLS </b> </small> </p>   </normal></figcaption>
-					</figure>	
-					</td>	
 
-								
-
-					<td>
-					 <figure>
-					<img src="Figs/Stephen.png"  height="150" width="150"/>	
-					   <figcaption> <normal> Prof. Stephen Pratt <p><small> <b> SOLS </b> </small> </normal></figcaption>
 					</figure>
 					</td>
+					<td>	
+					 <figure>
+					<img src="Figs/Ted.png"  height="150" width="150"/>	
+
+					</figure>
+					</td>
+					<td>	
+					 <figure>
+					<img src="Figs/Stephen.png"  height="150" width="150"/>	
+				
+					</figure>
+					</td>
+					<td>	
+					 <figure>
+					<img src="Figs/Spring.png"  height="150" width="150"/>	
+
+					</figure>
+					</td>
+
 					</tr>
-					</table> 					
-
+					</table>	
+					
 					<small>
-					<table> 
-					<tr class = "noBorder"> <td> <b>FSE </b><td>Fulton Schools of Engg. </td> </tr> 
-					<tr class = "noBorder" > <td> <b>SOLS </b> </td> <td> School of Life Sciences </td> <tr>
-										<tr class = "noBorder" > <td> <b>GIS </b> </td> <td> Global Institute of Sustainability </td> <tr>	
-					</table>
-					</small>
+					<p align="center">
+					<a href= "http://goo.gl/FKaPtN"> (Kumar et al., HSCC '13) </a>
+					</p>
+					</small>	
 
-					<img src="Figs/ant-exp.jpeg"  height="200" width="300" style="position:absolute; BOTTOM:-100px; LEFT:-300px;"/>
+					<img src="antshs/Figs/novo1.jpg"  height="150" width="200"  style="position:absolute; BOTTOM:-200px; RIGHT:-200px;"  />
+				</section>
 
-					</section>
+				
+				<section>
+						<h3> Motivation </h3>
+						<p align="left" class="fragment" data-fragment-index="1">	<b> Engineers: develop robust strategies for CT </b>
+						<p align="left" class="fragment" data-fragment-index="2"> Ant CT is Scalable, decentralized, and has no map
+						
+					<table  class="fragment" data-fragment-index="2">
+					<tr class="noBorder">
+					<td>
+					<figure>
+					<img src="antshs/Figs/cockerelli-swarm.jpeg"  height="150" width="200" />
+					</figure>
+					</td>
 
+						<td>
+					 <figure>
+					<img src="antshs/Figs/arrow.png"  height="150" width="200" style="border:none" />
+					</figure> </td>
+					
+					<td>
+					 <figure>
+					<img src="antshs/Figs/marxBot.jpeg"  height="150" width="200"  />
+					</figure> </td>
+					
+					</tr>
+					</table>	
 
 
 				</section>
-	<section>
-
-					<section> 
-
 
 					
-
-
-						<h3> Low-Cost Swarms </h3> 
-					
-						<table  style="width=2500px"> 
-						<tr class = "noBorder">
-						<td>	
-					 		<figure>
-							<img src="Figs/drone-swarms.jpeg"  height="300" width="350"/>
-					 		  <figcaption> <normal> <b> Hummingbird Quadrotors <p> <i> GRASP Lab, UPenn </i> </p>   </normal></figcaption>
-							</figure>
-						</td>
-					
-						<td>	
-					 	<figure>
-						<img src="Figs/marxbot-swarm.jpg"  height="300" width="400"/>	
-					   	<figcaption> <normal> <b> Marxbots <p> <i> EPFL </i> </p>  </normal></figcaption>
-						</figure>	
-						</td>
-
-						</tr>
-						</table>
-
-					</section>		
-					
-					<section>
-						<h3> Low-Cost Swarms </h3> 
+				<section>
+						<h3> Motivation </h3>
+						<p align="left" class="fragment" data-fragment-index="1">	<b> Biologists: understand CT in certain ant species </b>
+						<ul class="fragment" data-fragment-index="2">
+						<li class="fragment" data-fragment-index="2"> Roles played by individual ants in CT   
+						<li class="fragment" data-fragment-index="2"> Forces applied by each ant
+						<li class="fragment" data-fragment-index="2"> Transition rules
+						</ul> 
 						
-											
-						<table  style="width=2500px"> 
-						<tr class = "noBorder">
-			
-						<td>	
-					 	<figure>
-						<img src="Figs/Pheeno_transport.png"  height="300" width="450"/>	
-					   	<figcaption> <normal> <b> Pheenos <p> <i> ACS Lab </i> </p>  </b> </normal></figcaption>
-						</figure>
-						</td>
-					
-						</tr>
-						</table>
-					</section>
-					
-					
-
-
-
-					
-
-
-					<section> <h3> Swarm Applications </h3>
-
-
-				
-
-					<style type="text/css">
-		  			tr.noBorder td {border: 0; }
-					</style>
-
-					<table  style="width=2000px"> 
-					<tr class = "noBorder">
-					<td>	
-					 <figure>
-					<img src="Figs/human_swarm.jpg"  height="300" width="450"/> 
-					   <figcaption> <normal> <b> Human Swarm Interaction <p> <i> Georgia Tech</i> </p>. </normal></figcaption>
-					</figure>
-					</td>
-					
-					<td>	
-					 <figure>
-					<img src="Figs/nanobots.jpg"  height="300" width="400"/>	
-					   <figcaption> <normal> <b> Nanoscale Robots <p> <i> Univ. Sheffield </i> </p>    </normal></figcaption>
-					</figure>	
-					</td>
-
-					</tr>
-					</table>
-					</section>
-						
-
-					<section> <h3> Swarm Applications </h3>
-
-
-				
-
-					<style type="text/css">
-		  			tr.noBorder td {border: 0; }
-					</style>
-					<table  style="width=2000px"> 
-					<tr class = "noBorder">					
-
-					<td>	
-					 <figure>
-					<img src="Figs/warehouse.jpeg"  height="350" width="450"/>	
-					   <figcaption> <normal> <b> Warehouses <p> <i> Kiva Systems </i> </p> </normal></figcaption>
-					</figure>
-					</td>
-					
-					</tr>
-					</table>
-					
-					
-
-					</section>
-
-
-					
-					<section>
-					<h3>Collective Transport (CT)</h3>
-
-					<style type="text/css">
-		  			tr.noBorder td {border: 0; }
-					</style>
-
-					<table  style="width=2000px"> 
-					<tr class = "noBorder">
-					<td>	
-					 <figure>
-					<img src="Figs/search+rescue.png"  height="300" width="400"/>
-					   <figcaption> <normal> <b> Search and Rescue  </normal></figcaption>
-					</figure>
-					</td>
-					
-					<td>	
-					 <figure>
-					<img src="Figs/construction.png"  height="300" width="400"/>	
-					   <figcaption> <normal> <b> Construction  </normal></figcaption>
-					</figure>	
-					</td>
-					</tr>
-					</table>
-					</section>
-
-					<section>
-					<h3>Collective Transport (CT)</h3>
-					<style type="text/css">
-		  			tr.noBorder td {border: 0; }
-					</style>
-
-					<table  style="width=2000px"> 
-					<tr class = "noBorder">
-
-					
-											
-
-					<td>	
-					 <figure>
-					<img src="Figs/Pheeno_transport.png"  height="300" width="400"/>	
-					   <figcaption> <normal> <b> Collective Lifting  </b> </normal></figcaption>
-					</figure>
-					</td>
-					
-					</tr>
-					</table>
-					
-					
-
-					</section>
-
-
-
-
-					
-					<section>
-					<h3>BOUNDARY COVERAGE(BC)</h3>
-
-					<table  style="width=2000px">
+					<table  class="fragment" data-fragment-index="2">
 					<tr class="noBorder">
-
-					<td>	
-					 <figure>
-					<img src="Figs/DrugDel.jpg"  height="350" width="450"/>
-					   <figcaption> <normal> <b>  Drug Delivery </b> </normal>  
-						<p> <small> <a href="http://goo.gl/zXVHGw" > Sinha et al., Mol. Cancer. Ther. '06  <small> </p> </a>
-						</figcaption>
-					</figure>
-
-					
-					<td>		
-					 <figure>
-					<img src="Figs/CancerCell.png"  height="300" width="400"/>	
-					   <figcaption> <normal> <b>  Imaging Cancer Cells  </b>  </normal> 
-									<p> <small>  <a href="http://goo.gl/ZhRYSb "> Qin et al., Adv. Funct. Mater. '12 </a> </small>  </p> 
-									</normal></figcaption>
-					</figure>
-
-					</td>
-
-					</tr>
-					</table>
-					</section>
-					
-					<section>
-					<h3>BOUNDARY COVERAGE(BC)</h3>
-
-					<table  style="width=2000px">
-					<tr class="noBorder">
-	
 					<td>
-					 <figure>
-					<img src="Figs/DistSens.png"  height="350" width="400"/>	
-					   <figcaption> <normal> <b> Distributed Sensing with SwarmBots </b> </normal>
-						<p> <small>  <a href="http://goo.gl/utjpbc"> J. Brandon, Digital Trends '11 </a> </small>  </p> 
-						</figcaption>
-					</figure>	
+					<figure>
+					<img src="antshs/Figs/ants-lexan.jpg"  height="300" width="400" />
+					<figcaption> <small> <b> Ants carry  lexan structure which helps measure forces </b></small></figcaption>	
+					</figure>
+					</td>
 					
+					</tr>
+					</table>	
+
+
+				</section>
+
+				
+					
+
+
+				<section>
+						<h3> Prior Work </h3>
+
+						<table>
+						<tr class = "noBorder">
+						<td style="width:1200px;">		
+						<normal class = "fragment" data-fragment-index="1" align="center">
+						CT in Ants
+						</normal>  
+
+						<p>
+						<a href="http://goo.gl/jjZHwU" class = "fragment" data-fragment-index="1"> <small> Berman et al., 2011</small> </a> </li>
+						 <a href="https://goo.gl/Oxm0F7" class = "fragment" data-fragment-index="1"> <small> Czaczkes and Ratnieks, 2013 </small> </a></li>
+							
+
+						<td style="width:1200px;">		
+						<normal class = "fragment" data-fragment-index="2" align="center">
+						 pSHS CT Models 
+							
+						<p>
+						 <a href="http://goo.gl/dZmVtV" class = "fragment" data-fragment-index="2"> <small> Mather and Hsieh, 2011 </small> </a> </li>
+						<br>
+						 <a href="http://goo.gl/BhmMef" class = "fragment" data-fragment-index="2"> <small> Napp et al., 2013 </small> </a> </li>
+
+						</tr>
+						</table>
+
+						<figure class="fragment" data-fragment-index="2" align="center">
+					<img src="antshs/Figs/PSHS.gif"  height="150" width="650" />
+					<figcaption> <small> <b> Stochastic Hybrid System <a href="http://goo.gl/x963vx"> (Hespanha and Singh,2005) </a></b></small></figcaption>	
+					</figure>
 					</td>
 
 
+						
+				</section>
+
+
+					<section>
+					
+					<normal> <b> <i> A. cockerelli </i> team conveying payload </b> </normal>
+					<video width="1420" height="700"  controls autoplay>
+						<source  src="Videos/ant-transp.mp4" type="video/mp4" "style=position:relative;"/>
+
+					</video>
+					</section>
+
+					<section>
+				
+
+					<h3> EXPERIMENTAL DETAILS </h3>
+					<ul>
+					
+					<li>17 filmed trials of ants carrying foam-mounted dime
+					<li>Segments spanning $145~s$ extracted from each video
+					<li>Ant positions and load trajectory tracked using ImageJ and Mtrack
+
+					<table>
+					<tr class="noBorder">
+					<td style="width:600px;height:600px;">
+					 <figure>
+					<img src="antshs/Figs/south-mtn-park.gif"  height="400" width="550"  />
+					</figure>
+					</td>
+
+					
+				
+					</tr>
+					</table>
+						
+					</section>
+
+
+					<section>
+				
+
+					<h3> OBSERVATIONS </h3>
+				
+					
+					<ul>
+					
+
+					<li> Ants switched among three states: $$S:=\{F(\text{Front}), B(\text{Back}), D(\text{Detached}) \}$$
+					<li> <i> Back</i> ants lift with force $F_l = 2.65 ~\text{mN}$ measured with load cell
+					</ul>
+					
+				
+					<table>
+					<tr class="noBorder" style="text-align:top">
+					<td>
+
+    					<img src="antshs/Figs/3states.png" height="300" width="300" />
+					</td>
+					<td style="vertical-align:top">
+   					<small> <ul> <li> <b> Back </b>  ants attach to <i> left </i> of vertical orange line.
+							<li> <b> Front </b>  ants attach to <i> right </i> of vertical orange line.
+							<li> Two <b> Detached </b> ants at top and bottom.
+							<li> Load moves right.
+							
+							 </ul>
+					</td>
+					</tr>
+					</table>
+
+
+				
+					</section>
+
+					<section>
+					<h3> OBSERVATIONS </h3>
+					
+				
+					<table>
+					<tr class="noBorder" style="text-align:top">
+					<td>
+
+    					<img src="antshs/Figs/sample_traj.png" height="450" width="500" />
+					</td>
+					
+					</tr>
+					</table>
+
+					<img src="antshs/Figs/south-mtn-park.gif"  height="170" width="300"   style="position:absolute; BOTTOM:50px; RIGHT:-200px;"  />	
+				
+					</section>
+
+					
+
+					
+					 
+					<section>
+				
+
+					<h3> SHS : Behavioral Model </h3>
+					<table class="reveal">
+					<tr class="noBorder">
+					<td style="vertical-align:top" style="width:2000px;" class="noBorder">
+					<figure>
+					<img src="antshs/Figs/StateDiag.png"  height="300" width="800" style="position:relative; "/>
+					
+					</figure>
+					</td>
+					</tr>
+					</table>
+
+					 <p align="justify"> CRN with 6 reactions $S_i \underset{r_{ij}}{\stackrel{r_{ji}}{\rightleftharpoons}} S_j$ <p align="justify"> $S_i \neq S_j$ are states from $S:=\{F,B,D\}$ </p> 
+					
+					
+					</section>
+
+
+					<section>
+				
+
+					<h3> SHS : Behavioral Model </h3>
+				
+					<ul>
+					<li> Behavioral components = ant counts in each state 
+					$$\mathbf{N}_S := \begin{bmatrix} N_F & N_B & N_D \end{bmatrix}^T$$
+					<li> 6 Transitions $S_i \rightarrow S_{j}$
+					<ul>
+						<li> Intensity : $r_{ij} N_i$
+						<li> Reset Map: $(N_i,N_j) \mapsto (N_i-1,N_j+1)$
+					</ul>
+					</ul>
+
+
+					
+					</section>
+
+					<section>
+					<h3> SHS : Dynamical Model </h3>
+				
+					<table>
+					<tr class="noBorder">
+					<td style="vertical-align:top" class="noBorder" >
+					<figure>
+					<img src="antshs/Figs/FreeBody.png"  height="200" width="650" style="position:relative; "/>
+					
+					</figure>
+					
+					</td>
+					
+					</tr>
+						<tr class ="noBorder">	
+					<td style="vertical-align:top" class="noBorder">
+					<normal> <p align="justify"> Each front ant pulls with force $F_p$, and each attached ant lifts with force $F_l$. 
+					$$F_{up} = (N_F+N_B)F_l  \\ F_n = m_L g -F_{up}$$.</p> 
+					</p>
+					</normal>
+					</td>
 					</tr>
 					</table>	
 
 
 					
-
 					</section>
+				
+					<section>
+					<h3> SHS : Dynamical Model </h3>
+				
+					<ul>
+					<li> Load position and velocity $x_L, v_L$
+					<li> Each front ant pulls with 
+					$$ F_{p} = K (v_L^D - v_L) $$
+					<ul>
+						<li> $K$ = proportional gain
+						<li> $v_L^D$ = desired load velocity
 					
+					</ul>	
+
+
 					
-
-					<section>	
-					<h3> B.C. PROBLEM </h3>						
-					 <b> Goal: Claim random positions on boundary  </b> 
-					
-					<p class = "fragment" 	data-fragment-index="1" align="left">  Robot capabilities 	
-
-					<p  class="fragment" data-fragment-index="2" align="left">&#10003; Sense / Communicate within limited range </p>
-					<p  class="fragment" data-fragment-index="2" align="left">&#10006; Global Localization </p>
-					<p  class="fragment" data-fragment-index="2" align="left">&#10006; Environment Map </p>
-
-
-					<normal class="fragment" data-fragment-index="3" > <b> <small> Multi-Boundary Coverage  <p>  <a href="http://goo.gl/5pCqCg">  Pavlic et al., <i> ISRR '13</i> </a></small></p> </b>  </normal> 
-					<video width="420" height="315" controls autoplay class="fragment" data-fragment-index="3" style="position:absolute; BOTTOM:-50px; RIGHT:-150px;">
-						<source  src="Videos/netlogo-sim.mp4" type="video/mp4"/>
-
-					</video>
-					
-
 					</section>
 
+
 					
+						
+
 					
+					<section>
+
+					<h3>  Evolution of SHS </h3>
+				
+
+				
+
+					<p> SHS State Vector </p>
+					$$ \mathbf{x} = \begin{bmatrix} N_{F} & N_B & N_D & x_L & v_L \end{bmatrix}^T$$
+				
+					<p> Flow Equation </p>
+					$$ \mathbf{\dot{x}} = \begin{bmatrix} 0 & 0 & 0& v_L & a_L \end{bmatrix}^T$$
+					
+
+					
+					</section>
+					
+
+					
+					<section>
+
+					<h3>   Moment Dynamics </h3>
+					$$\newcommand {\Exp} {\mathbb{E}}$$
+					<b> Population Counts </b>
+					$$
+					\frac{d}{dt} \Exp(N_{i:i\in S})
+    						=
+   				\sum_{\substack{j \in S, j \neq i}}
+   				 \left( r_{ji} \Exp(N_j) - r_{ij} \Exp(N_i) \right) 
+					$$
+
+					<b> Load Position </b>
+					$$\frac{d}{dt} \Exp(x_L) = \Exp( v_L )$$
+
+					</section>
+
+					<section>
+					$$\newcommand{eqdef}{:=}$$
+
+					<h3>   Moment Dynamics </h3>
+					$$\newcommand {\Exp} {\mathbb{E}}$$
+					<b> Load Velocity </b>
+					<p align="left" class="fragment" data-fragment-index="1">$$
+					 \frac{d}{dt} \Exp(v_L)
+
+        \approx c_g + c_F \Exp(N_F) + c_B \Exp(N_B) + c_{Fv} \Exp( N_F ) \Exp( v_L )
+		$$
+
+			<p align ="left" class="fragment" data-fragment-index="2" >where  
+			$$
+			\begin{align}
+			c_g \eqdef -\mu g &,& c_B \eqdef \mu F_l/m_L
+			\\ c_F \eqdef (K v_L^d + \mu F_l)/m_L &,&
+			 			c_{Fv} \eqdef K/m_L
+			\end{align}
+			$$.
+			</p>
+
+				
 
 
 
-					<section>	
-					<h3> WHY STOCHASTIC COVERAGE SCHEMES (SCS) ? </h3>						
+
+
 					
-					<ul class="fragment" data-fragment-index="1" align = "left"> 
-					<li class="fragment" data-fragment-index="2"> More robust  to error in lifting and transport
-					<li class="fragment" data-fragment-index="3"> Easier to program than Deterministic Coverage Schemes (DCS)
-					<li class ="fragment"  data-fragment-index="4"> Odometric error leads even DCS to random positions 
+
+					
+					</section>
+					
+
+					
+					<section>
+				
+
+				
+				
+
+					<h3>   Best Fit Parameters </h3>
+					<p align="left" class="fragment" data-fragment-index="1"> <b> Transition Rates </b>
+	\begin{align*}
+    r_{DB} &= 0.0197\,\text{s}^{-1},&
+    r_{BD} &= 0.0205\,\text{s}^{-1},\\
+    %
+    r_{DF} &= 0, &
+    r_{FD} &= 0,\\
+    %
+    r_{BF} &= 0.0301\,\text{s}^{-1},&
+    r_{FB} &= 0.0184\,\text{s}^{-1},
+    %
+    %
+\end{align*}
+	</p>
+				<p align="left" class="fragment" data-fragment-index="2"> <b> Proportional Regulator Parameters </b>
+
+					\begin{align*}
+    \text{Gain} &:& K &= 0.0035\,\text{N/(cm/s)},& \\
+    \text{Velocity set-point} &:&v_L^d &= 0.3185 \,\text{cm/s}.
+\end{align*}
+	</p>
+
+			
+					
+					</section>
+
+
+					<section>
+				
+						<h3> Inferences </h3>
+						
+					
+
+					Ants are more likely to attach to front of moving load ($r_{DF} > r_{DB}$)
+
+					<ul class="fragment" data-fragment-index="2">
+					<li class="fragment" data-fragment-index="2"> Easier to attach to back - vertically stationary
+					<li class="fragment" data-fragment-index="3"> Front may be fully occupied
+					<li class="fragment" data-fragment-index="4"> Backward carrying is a contigent behaviour
+					<li class="fragment" data-fragment-index="4"> Model infers a large $r_{BF}=0.0301 ~\text{s}^{-1}$
+					</ul>
+							
+					
 				
 					
-					</ul>
-					<figure class="fragment" data-fragment-index="4">					  		
-					<img src="Figs/OdomError.png"  height="200" width="300"/>	
-					   <figcaption> <small> <b> Odometric error leading to  Gaussian pdf  </b> 
-						 <a href="http://goo.gl/YXnMqD"> (Thrun, et al. 2005) </a> </small> 
-						</figcaption>
-					</figure>
-							
-
-					</section> 
-
-
-						
-		
-
 					
-				</section>
-					
-	<section>
-					<section>
-					<h3>Novel Contributions</h3>
-						 <i> Devised Stochastic Hybrid System (SHS) model of CT in <i>A. Cockerelli</i> </i>
-						<p>  <small> <b>  <a href="https://goo.gl/SqG93d"> Kumar et al., HSCC '13</a> </b>  </small> </p>
-						<!--<p> <div style="color:blue;"> <b> My contributions </b></p> -->
-						 	
-						   <ul> <li> Devised CRN <li> Derived moments of SHS <li> Helped validate parameter estimation </ul>   
-						
-
-						<img src="Figs/sideview_white.jpg"  height="100" width="300" style="position:absolute; BOTTOM:-200px; RIGHT:300px;"/>	
-
-						 <figure>
-					<img src="Figs/Ganesh.png"  height="150" width="125"  style="position:absolute; TOP:250px; LEFT:-50px;"/>	
-
-					</figure>
 					</section>
 
-					
-					<section>
-					<h3>Novel Contributions</h3>
-					<i> Formulated stochastic controller for Multi-Boundary Coverage </i>
-						<p>
-						<!--<small> <b>  <a href="http://goo.gl/5pCqCg"> <b> Pavlic et al., <i> ISRR '13</i> </b> </a>; <a href="https://goo.gl/DFligW"> <b> Pavlic et al., <i> SME '14 </i> </b> </a>;<a href="https://goo.gl/DbbUC1"> <b> Wilson et al., <i> Swarm Int '14 </i> </b> </a>  </small>-->
-						</p>
-
-						 	
-						   <ul> <li> Devised a closed-form solution to bimolecular CRN <li> Analyzed the unimolecular approximation to CRN </ul>   
-						
-						<img src="Figs/RoboZyme_thinks.png"  height="100" width="300" style="position:absolute; BOTTOM:-200px; RIGHT:300px;"/>	
-						 <figure>
-					<img src="Figs/Ganesh.png"  height="150" width="125"  style="position:absolute; TOP:125px; LEFT:-150px;"/>	
-
-					</figure>	
-						
-					</section> 
+				
 
 					<section>
-					$$ 
-					\newcommand{\Poly}{\mathcal{P}}
-					\newcommand{\G} {\mathcal{G}}
-					\newcommand{\pcon}{p_{\mathsf{con}}}
-					$$
+				
+					<figure>
+					<img src="antshs/Figs/HSCC2013Plots.png"  height="400" width="1450" style="position:relative; "/>
+										   <figcaption> <normal><b> Predicted vs Observed Mean-Field Dynamics </b> </normal></figcaption>
+					</figure>		
 					
-					<h3>Novel Contributions</h3>
-					<b>  <i> Analyzed Random Communication Graph $\G$ on Boundary </i> </b>
-						<ul>
-							<li> Computed parameters of graph $\mathcal{G}$ for uniform coverage  </li>
-								<p> <small> <a href="https://goo.gl/z2OhbC" > Kumar and Berman, <i> ICRA '14 </i> </a>  </small>  </p>
-								<p> <small> Kumar and Berman, <i> IEEE-TRO (under review) </i>  </small>  </p>	
-								
-							<li> Extended to non-uniform SCS, Non-iid SCS, Finite Robots </li>
-								<p> <small> Kumar and Berman, <i> SICOMP / <a href="https://arxiv.org/pdf/1604.01452"> Arxiv </a> </i>  </small>  </p>
-	
-						</ul>
-
-											<img src="Figs/Ganesh.png"  height="150" width="125"  style="position:absolute; TOP:130x; LEFT:-160px;"/>	
-				 
-						<figure style="position:absolute; TOP: 300px; RIGHT:-200px;">
-						<img src="Figs/config.svg"  height="75" width="400" />
-
-						</figure>
-					</section>
-
-					<section>
-					<h3>Agenda</h3>
+				
 					
-						<table > 
-						<tr class = "noBorder">
-			
-						<td fragment="1">	
-					 	<figure>
-						<img src="Figs/sideview_white.jpg"  height="100" width="225"/>	
-					   	<figcaption> <normal> <b> CT in Ants <p>  </p>  </b> </normal></figcaption>
-						</figure>
-						</td>
-
-						<td fragment="2">	
-					 	<figure>
-						<img src="Figs/RoboZyme_thinks.png"  height="100" width="225"/>	
-					   	<figcaption> <normal> <b> Multi-Boundary Coverage <p>  </p>  </b> </normal></figcaption>
-						</figure>
-						</td>
 					
-						</tr>
+					</section>	
 
-						<tr class = "noBorder">
-						<td fragment="3">	
-					 	<figure>
-						<img src="Figs/config.svg"  height="100" width="225"/>	
-					   	<figcaption> <normal> <b> Analyzing $\mathcal{G}$ <p>  </p>  </b> </normal></figcaption>
-						</figure>
-						</td>
-
-						</table>
-				 
 						
-					</section>
 
-					
+				
+				
+				</section> <!-- antshs ends -->
 
-					
-						
-						
-					
-				</section> 	
 
 
 	
