@@ -54,24 +54,12 @@
 	</head>
 
 	<body>
-		<?
-		//readfile("./Macros.php");
-		?>
 		
 				<div class="reveal">
 
 				<div class="slides">
 			
-
-
-
-				
-
-			
-
-			
 		
-
 				
 
 
